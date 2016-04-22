@@ -15,7 +15,7 @@ public class PosTag extends Feature{
 	public String getname(){
 		return "Postag";
 	}
-	public String getValue(AnnotatedToken t, AnnotatedSentence s, AnnotatedDoc d, Document metadata) {
+	public String getValue(AnnotatedToken t) {
 		// TODO Auto-generated method stub
 		return t.getPos();
 	}

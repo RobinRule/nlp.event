@@ -5,7 +5,9 @@ import java.util.LinkedList;
 
 public class AnnotatedSentence implements Iterable<AnnotatedToken>{
 	private LinkedList<AnnotatedToken> tokenlist;
-	public AnnotatedSentence() {
+	private AnnotatedDoc parent;
+	public AnnotatedSentence(AnnotatedDoc p) {
+		this.parent = p;
 		tokenlist = new LinkedList<AnnotatedToken>();
 	}
 	public Boolean add(AnnotatedToken token){

@@ -13,6 +13,6 @@ public abstract class Feature {
 	}
 	abstract public String getname();
 	//abstract public String getValue(AnnotatedToken t);
-	abstract public String getValue(AnnotatedToken t, AnnotatedSentence s,AnnotatedDoc d,Document metadata);
+	abstract public String getValue(AnnotatedToken t);
 	//abstract public String getValue(AnnotatedToken t,Document metadata);
 }

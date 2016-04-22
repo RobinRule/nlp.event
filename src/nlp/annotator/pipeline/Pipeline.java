@@ -59,14 +59,14 @@ public class Pipeline {
 			tree.percolateHeads(hf);
 			System.out.println(tree.dependencies());
 			// get the tokens for the sentence and iterate over them
-			AnnotatedSentence asen = new AnnotatedSentence();
+			AnnotatedSentence asen = new AnnotatedSentence(adoc);
 			for (CoreLabel token: sentence.get(CoreAnnotations.TokensAnnotation.class)) {
 				// get token attributes
 				String tokenText = token.get(TextAnnotation.class);
 				String tokenPOS = token.get(PartOfSpeechAnnotation.class);
 				String tokenLemma = token.get(LemmaAnnotation.class);
 				String tokenNE = token.get(NamedEntityTagAnnotation.class);
-				AnnotatedToken at = new AnnotatedToken(tokenText);
+				AnnotatedToken at = new AnnotatedToken(tokenText,asen);
 				at.setPos(tokenPOS);
 				at.setLemma(tokenLemma);
 				at.setTokenNE(tokenNE);

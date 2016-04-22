@@ -8,7 +8,9 @@ public class AnnotatedToken {
 	private String lemma;
 	private String tokenNE;
 	private Pair<Integer,Integer> offset;
-	public AnnotatedToken(String token) {
+	private AnnotatedSentence parent;
+	public AnnotatedToken(String token,AnnotatedSentence parent) {
+		this.parent = parent;
 		this.token = token;
 		this.setPos(null);
 		this.setLemma(null);
@@ -51,6 +53,10 @@ public class AnnotatedToken {
 
 	public String getToken() {
 		return token;
+	}
+
+	public AnnotatedSentence getParent() {
+		return parent;
 	}
 
 }

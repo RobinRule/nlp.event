@@ -19,7 +19,7 @@ public class IsAnchorIdentifier extends Feature {
 	}
 
 	@Override
-	public String getValue(AnnotatedToken t, AnnotatedSentence s, AnnotatedDoc d, Document metadata) {
+	public String getValue(AnnotatedToken t) {
 		// TODO Auto-generated method stub
 		return null;
 	}
