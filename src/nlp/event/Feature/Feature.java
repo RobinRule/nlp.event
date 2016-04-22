@@ -2,6 +2,8 @@ package nlp.event.Feature;
 
 import org.jsoup.nodes.Document;
 
+import nlp.annotator.AnnotatedDoc;
+import nlp.annotator.AnnotatedSentence;
 import nlp.annotator.AnnotatedToken;
 
 public abstract class Feature {
@@ -10,6 +12,7 @@ public abstract class Feature {
 		// TODO Auto-generated constructor stub
 	}
 	abstract public String getname();
-	abstract public String getValue(AnnotatedToken t);
-	abstract public String getValue(AnnotatedToken t,Document metadata);
+	//abstract public String getValue(AnnotatedToken t);
+	abstract public String getValue(AnnotatedToken t, AnnotatedSentence s,AnnotatedDoc d,Document metadata);
+	//abstract public String getValue(AnnotatedToken t,Document metadata);
 }
