@@ -2,6 +2,8 @@ package nlp.event.Features;
 
 import org.jsoup.nodes.Document;
 
+import nlp.annotator.AnnotatedDoc;
+import nlp.annotator.AnnotatedSentence;
 import nlp.annotator.AnnotatedToken;
 import nlp.event.Feature.Feature;
 
@@ -13,14 +15,8 @@ public class PosTag extends Feature{
 	public String getname(){
 		return "Postag";
 	}
-	public String getValue(AnnotatedToken t){
+	public String getValue(AnnotatedToken t, AnnotatedSentence s, AnnotatedDoc d, Document metadata) {
+		// TODO Auto-generated method stub
 		return t.getPos();
-	}
-	@Override
-	public String getValue(AnnotatedToken t, Document metadata) {
-		return t.getPos();
-	}
-	public void main(String[] args){
-		
 	}
 }
