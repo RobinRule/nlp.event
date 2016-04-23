@@ -1,4 +1,4 @@
-package nlp.annotator;
+package nlp.annotator.util;
 
 import nlp.util.Pair;
 
@@ -58,5 +58,8 @@ public class AnnotatedToken {
 	public AnnotatedSentence getParent() {
 		return parent;
 	}
-
+	public String toString()
+    { 
+           return this.token; 
+    }
 }

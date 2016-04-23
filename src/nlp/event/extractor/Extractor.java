@@ -2,10 +2,10 @@ package nlp.event.extractor;
 
 import java.io.IOException;
 
-import nlp.annotator.AnnotatedDoc;
-import nlp.annotator.AnnotatedSentence;
-import nlp.annotator.AnnotatedToken;
 import nlp.annotator.pipeline.AnnotateAutomator;
+import nlp.annotator.util.AnnotatedDoc;
+import nlp.annotator.util.AnnotatedSentence;
+import nlp.annotator.util.AnnotatedToken;
 import nlp.corpus.ACECorpus;
 import nlp.corpus.Corpus;
 import nlp.corpus.document.format.TimblFormat;

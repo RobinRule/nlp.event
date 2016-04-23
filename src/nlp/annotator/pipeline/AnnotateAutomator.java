@@ -3,7 +3,7 @@ package nlp.annotator.pipeline;
 import java.io.IOException;
 import java.util.LinkedList;
 
-import nlp.annotator.AnnotatedDoc;
+import nlp.annotator.util.AnnotatedDoc;
 import nlp.corpus.Corpus;
 import nlp.corpus.document.Document;
 

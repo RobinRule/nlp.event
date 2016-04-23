@@ -2,9 +2,9 @@ package nlp.event.Feature;
 
 import org.jsoup.nodes.Document;
 
-import nlp.annotator.AnnotatedDoc;
-import nlp.annotator.AnnotatedSentence;
-import nlp.annotator.AnnotatedToken;
+import nlp.annotator.util.AnnotatedDoc;
+import nlp.annotator.util.AnnotatedSentence;
+import nlp.annotator.util.AnnotatedToken;
 
 public abstract class Feature {
 

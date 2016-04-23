@@ -1,4 +1,4 @@
-package nlp.annotator;
+package nlp.annotator.util;
 
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -25,5 +25,13 @@ public class AnnotatedDoc implements Iterable<AnnotatedSentence> {
 	}
 	public void setMetadata(org.jsoup.nodes.Document metadata) {
 		this.metadata = metadata;
+	}
+	public String toString(){
+		StringBuffer sb = new StringBuffer("{");
+		for(AnnotatedSentence aSen: senlist){
+			sb.append(aSen.toString()+'\n');
+		}
+		sb.append('\n');
+		return sb.toString();
 	}
 }

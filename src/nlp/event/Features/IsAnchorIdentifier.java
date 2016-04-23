@@ -2,9 +2,9 @@ package nlp.event.Features;
 
 import org.jsoup.nodes.Document;
 
-import nlp.annotator.AnnotatedDoc;
-import nlp.annotator.AnnotatedSentence;
-import nlp.annotator.AnnotatedToken;
+import nlp.annotator.util.AnnotatedDoc;
+import nlp.annotator.util.AnnotatedSentence;
+import nlp.annotator.util.AnnotatedToken;
 import nlp.event.Feature.Feature;
 
 public class IsAnchorIdentifier extends Feature {

@@ -4,9 +4,9 @@ import java.util.LinkedList;
 
 import org.jsoup.nodes.Document;
 
-import nlp.annotator.AnnotatedDoc;
-import nlp.annotator.AnnotatedSentence;
-import nlp.annotator.AnnotatedToken;
+import nlp.annotator.util.AnnotatedDoc;
+import nlp.annotator.util.AnnotatedSentence;
+import nlp.annotator.util.AnnotatedToken;
 import nlp.corpus.document.format.Format;
 import nlp.event.instance.Instance;
 import nlp.event.instance.InstanceToken;
@@ -37,7 +37,7 @@ public class FeatureBuilder {
 	public LinkedList<Instance> buildfeature(AnnotatedSentence aSen){
 		LinkedList<Instance> iList = new LinkedList<Instance>();
 		for(AnnotatedToken aToken: aSen){
-			iList.add(this.buildfeature(aToken,label.getValue(aToken, this.metadata)));
+			iList.add(this.buildfeature(aToken,label.getValue(aToken)));
 		}
 		return iList;
 	}
