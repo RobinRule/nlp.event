@@ -9,6 +9,10 @@ public class AnnotatedDoc implements Iterable<AnnotatedSentence> {
 	public AnnotatedDoc() {
 		senlist = new LinkedList<AnnotatedSentence>();
 	}
+	public AnnotatedDoc(org.jsoup.nodes.Document metadata) {
+		this.metadata = metadata;
+		senlist = new LinkedList<AnnotatedSentence>();
+	}
 	public Boolean add(AnnotatedSentence sen){
 		return senlist.add(sen);
 	}

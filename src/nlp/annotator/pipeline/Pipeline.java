@@ -28,6 +28,8 @@ import edu.stanford.nlp.util.CoreMap;
 import nlp.annotator.util.*;
 import nlp.corpus.document.ACEDocument;
 import nlp.corpus.document.Document;
+import nlp.event.Feature.Feature;
+import nlp.event.Features.IsAnchorIdentifier;
 import nlp.util.Pair;
 
 /**
@@ -62,11 +64,11 @@ public class Pipeline {
 		// create annotation with text
 		
 		Annotation document = new Annotation(text);
-		AnnotatedDoc adoc = new AnnotatedDoc();
+		AnnotatedDoc adoc = new AnnotatedDoc(doc.getmetadata());
 		// annotate text with pipeline
 		pipeline.annotate(document);
 		// demonstrate typical usage
-		HeadFinder hf = new CollinsHeadFinder();//UniversalSemanticHeadFinder();
+		//HeadFinder hf = new CollinsHeadFinder();//UniversalSemanticHeadFinder();
 		for (CoreMap sentence: document.get(CoreAnnotations.SentencesAnnotation.class)) {
 			//get the tree for the sentence
 			//Tree tree = sentence.get(TreeAnnotation.class);
@@ -85,7 +87,7 @@ public class Pipeline {
 				at.setPos(tokenPOS);
 				at.setLemma(tokenLemma);
 				at.setTokenNE(tokenNE);
-				at.setOffset(new Pair<Integer,Integer>(token.beginPosition()+1,token.endPosition()));
+				at.setOffset(new Pair<Integer,Integer>(token.beginPosition(),token.endPosition()-1));
 				asen.add(at);
 			}
 			asen.setDeplistConv(dep.typedDependencies());
@@ -97,11 +99,24 @@ public class Pipeline {
 		Pipeline p = new Pipeline();
 		Document d = new ACEDocument(new File("./data/ACE/bc/CNN_CF_20030303.1900.00.sgm"));
 		AnnotatedDoc aDoc = p.annotate(d);
+		Feature f = new IsAnchorIdentifier();
+		
 		Iterator<AnnotatedSentence> it = aDoc.iterator();
 		AnnotatedSentence aSen = it.next();
 		aSen = it.next();
-		System.out.print(aSen);
-		System.out.print(aSen.getDeplist());
+		aSen = it.next();
+		aSen = it.next();
+		aSen = it.next();
+		aSen = it.next();
+		aSen = it.next();
+		//System.out.println(aDoc);
+		for(AnnotatedToken aToken:aSen){
+			if(aToken.getToken().equals("election")){
+				System.out.println(aToken.getOffset());
+				System.out.println(f.getValue(aToken));
+			}
+		}
+		//System.out.print(aSen.getDeplist());
 		/*
 		LexicalizedParser lp = LexicalizedParser.loadModel(
 				"edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz",
