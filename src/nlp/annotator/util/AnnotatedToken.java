@@ -9,6 +9,7 @@ public class AnnotatedToken {
 	private String tokenNE;
 	private Pair<Integer,Integer> offset;
 	private AnnotatedSentence parent;
+	private MyTree parseNode;
 	public AnnotatedToken(String token,AnnotatedSentence parent) {
 		this.parent = parent;
 		this.token = token;
@@ -62,4 +63,12 @@ public class AnnotatedToken {
     { 
            return this.token; 
     }
+
+	public MyTree getParseNode() {
+		return parseNode;
+	}
+
+	public void setParseNode(MyTree parseNode) {
+		this.parseNode = parseNode;
+	}
 }

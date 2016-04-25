@@ -57,6 +57,7 @@ public class Pipeline {
 	/**Annotate a document, one document at a time.
 	 * @param doc
 	 * @return AnnotatedDoc
+	 * @throws IOException 
 	 * @throws Exception
 	 */
 	public AnnotatedDoc annotate(Document doc){
@@ -71,7 +72,9 @@ public class Pipeline {
 		//HeadFinder hf = new CollinsHeadFinder();//UniversalSemanticHeadFinder();
 		for (CoreMap sentence: document.get(CoreAnnotations.SentencesAnnotation.class)) {
 			//get the tree for the sentence
-			//Tree tree = sentence.get(TreeAnnotation.class);
+			Tree tree = sentence.get(TreeAnnotation.class);
+			System.out.println(tree);
+			
 			SemanticGraph dep = sentence.get(SemanticGraphCoreAnnotations.BasicDependenciesAnnotation.class);
 			
 			AnnotatedSentence asen = new AnnotatedSentence(adoc);
@@ -90,7 +93,8 @@ public class Pipeline {
 				at.setOffset(new Pair<Integer,Integer>(token.beginPosition(),token.endPosition()-1));
 				asen.add(at);
 			}
-			asen.setDeplistConv(dep.typedDependencies());
+			asen.setDeplist(dep.typedDependencies());
+			asen.setParseTree(tree);
 			adoc.add(asen);
 		}
 		return adoc;
@@ -104,18 +108,14 @@ public class Pipeline {
 		Iterator<AnnotatedSentence> it = aDoc.iterator();
 		AnnotatedSentence aSen = it.next();
 		aSen = it.next();
-		aSen = it.next();
-		aSen = it.next();
-		aSen = it.next();
-		aSen = it.next();
-		aSen = it.next();
+		System.out.println(aSen.getParseTree());
 		//System.out.println(aDoc);
-		for(AnnotatedToken aToken:aSen){
-			if(aToken.getToken().equals("election")){
-				System.out.println(aToken.getOffset());
-				System.out.println(f.getValue(aToken));
-			}
-		}
+		//for(AnnotatedToken aToken:aSen){
+		//	if(aToken.getToken().equals("election")){
+		//		System.out.println(aToken.getOffset());
+		//		System.out.println(f.getValue(aToken));
+		//	}
+		//}
 		//System.out.print(aSen.getDeplist());
 		/*
 		LexicalizedParser lp = LexicalizedParser.loadModel(

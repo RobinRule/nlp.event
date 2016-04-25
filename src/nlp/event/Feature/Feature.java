@@ -12,7 +12,5 @@ public abstract class Feature {
 		// TODO Auto-generated constructor stub
 	}
 	abstract public String getname();
-	//abstract public String getValue(AnnotatedToken t);
 	abstract public String getValue(AnnotatedToken t);
-	//abstract public String getValue(AnnotatedToken t,Document metadata);
 }
