@@ -26,27 +26,58 @@ public class FeatureBuilder {
 		}
 		this.label = ff.newFeature(label);
 	}
-	private Instance buildfeature(AnnotatedToken t,String label){
+	public Instance buildfeature(AnnotatedToken t,Boolean addlabel){
 		LinkedList<Pair<String,String>> tline = new LinkedList<Pair<String,String>>();
 		for(int i = 0; i < fs.length; i++){
 			tline.add(new Pair<String,String>(fs[i].getname(),fs[i].getValue(t)));
 		}
-		InstanceToken iToken = new InstanceToken(t.getToken(),tline,label);
+		InstanceToken iToken;
+		if(addlabel)
+			iToken = new InstanceToken(t.getToken(),tline,label.getValue(t));
+		else
+			iToken = new InstanceToken(t.getToken(),tline);
 		return iToken;
 	}
-	public LinkedList<Instance> buildfeature(AnnotatedSentence aSen){
+	public LinkedList<Instance> buildfeature(AnnotatedSentence aSen,Boolean addlabel){
 		LinkedList<Instance> iList = new LinkedList<Instance>();
 		for(AnnotatedToken aToken: aSen){
-			iList.add(this.buildfeature(aToken,label.getValue(aToken)));
+			iList.add(this.buildfeature(aToken,addlabel));
 		}
 		return iList;
 	}
-	public LinkedList<LinkedList<Instance>> buildfeature(AnnotatedDoc aDoc){
+	
+	public LinkedList<LinkedList<Instance>> buildfeature(AnnotatedDoc aDoc,Boolean addlabel){
 		this.metadata = aDoc.getMetadata();
 		LinkedList<LinkedList<Instance>> ilList = new LinkedList<LinkedList<Instance>>();
 		for(AnnotatedSentence aSen: aDoc){
-			ilList.add(buildfeature(aSen));
+			ilList.add(buildfeature(aSen,addlabel));
 		}
 		return ilList;
+	}
+	
+	
+	/** Need Modification
+	 * @param aCorpus
+	 * @return
+	 */
+	// TODO This is just a test，Need Modification
+	public LinkedList<LinkedList<Instance>> buildfeature(LinkedList<AnnotatedDoc> aCorpus, Boolean addlabel){
+		LinkedList<LinkedList<Instance>> ilList = new LinkedList<LinkedList<Instance>>();
+		for(AnnotatedDoc aDoc: aCorpus){
+			ilList.addAll(this.buildfeature(aDoc,addlabel));
+		}
+		return ilList;
+	}
+
+	/** Build feature and output it to file, format of the file is defined by format field.
+	 * @param des output destination file directory
+	 * @param label boolean indicate final output will or will not have label field
+	 */
+	public void output(String des, Boolean label,LinkedList<AnnotatedDoc> aCorpus){
+		for(AnnotatedDoc aDoc: aCorpus){
+			for(AnnotatedSentence aSen: aDoc){
+				return ;
+			}
+		}
 	}
 }

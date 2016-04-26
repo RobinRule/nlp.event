@@ -1,6 +1,6 @@
 package nlp.model;
 
 public interface Model {
-	public void train();
-	public void predict();
+	public void train(String trainfile);
+	public void predict(String testfile);
 }

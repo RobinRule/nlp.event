@@ -20,18 +20,21 @@ public class Extractor {
 	public static void main(String[] args) throws IOException, ClassNotFoundException{
 		//annotation
 		//
-		AnnotateAutomator aAutomator = new AnnotateAutomator(new ACECorpus("./data/ACE"),true);
-		String[] fs= {"postag","isanchoridentifier"};
+		String[] fs= {"postag"};
+		
+		AnnotateAutomator aAutomator = new AnnotateAutomator(true);
 		FeatureBuilder fb = new FeatureBuilder(fs,"isAnchorIdentifier",new TimblFormat());
-		while(aAutomator.annotate()){
-			AnnotatedDoc aDoc = aAutomator.getAnnotatedDoc();
-			for(AnnotatedSentence aSen: aDoc){
-				for (AnnotatedToken aToken : aSen) {
-					
-				}
-			}
-		}
+		
+		aAutomator.setCorpus(new ACECorpus("./data/ACE/train"));
+		aAutomator.annotate();
+		fb.output("./data/annotatedCorpus_train", true, aAutomator.getaCorpus());
+		
+		aAutomator.setCorpus(new ACECorpus("./data/test"));
+		aAutomator.annotate();
+		fb.output("./data/annotatedCorpus_test", true, aAutomator.getaCorpus());
 		
 		AnchorIdentifier ai = new AnchorIdentifier(new Megam());
+		ai.train("./data/annotatedCorpus_train");
+		ai.predict("./data/annotatedCorpus_test");
 	}
 }

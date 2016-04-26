@@ -71,4 +71,7 @@ public class AnnotatedToken {
 	public void setParseNode(MyTree parseNode) {
 		this.parseNode = parseNode;
 	}
+	public Boolean equals(AnnotatedToken other){
+		return other.parent == this.getParent() && this.getOffset().equals(other.getOffset());
+	}
 }

@@ -23,7 +23,15 @@ public class AnnotateAutomator {
 		this.pipe = new Pipeline();
 		this.corpus = corpus;
 		this.AnnotateLevel = doc;
-		// TODO Auto-generated constructor stub
+	}
+	/**
+	 * @param sentence set the annotation process as doc by doc
+	 * @throws ClassNotFoundException
+	 * @throws IOException
+	 */
+	public AnnotateAutomator(Boolean doc) throws ClassNotFoundException, IOException {
+		this.pipe = new Pipeline();
+		this.AnnotateLevel = doc;
 	}
 	public void setCorpus(Corpus corpus){
 		this.corpus = corpus;
@@ -51,7 +59,6 @@ public class AnnotateAutomator {
 			while(!corpus.empty()){
 				aCorpus.add(this.pipe.annotate(this.corpus.nextDocument()));
 			}
-			return aCorpus.isEmpty();
 		}
 		return true;
 	}

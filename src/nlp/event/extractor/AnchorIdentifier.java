@@ -5,22 +5,26 @@ import java.io.IOException;
 
 import nlp.corpus.ACECorpus;
 import nlp.corpus.Corpus;
+import nlp.event.Feature.FeatureBuilder;
 import nlp.model.Megam;
 import nlp.model.Model;
 
 public class AnchorIdentifier {
 	private Model model;
-	//private Corpus corpus;
 	public AnchorIdentifier(Model m) {
 		model = m;
-		//corpus = traindata; 
-		// TODO Auto-generated constructor stub
+	}
+	
+	public void setTrainingCorpus(){
 		
 	}
-	public void train(){
-		model.train();
+	public void setTestCorpus(){
+		
 	}
-	public void predict(File f){
-		model.predict();
+	public void train(String train){
+		model.train("");
+	}
+	public void predict(String f){
+		model.predict("");
 	}
 }
