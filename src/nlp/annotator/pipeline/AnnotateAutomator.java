@@ -26,7 +26,7 @@ public class AnnotateAutomator {
 	 * @throws IOException
 	 */
 	public AnnotateAutomator(Corpus corpus,Boolean doc) throws ClassNotFoundException, IOException {
-		this.pipe = new Pipeline(log);
+		this.pipe = new Pipeline();
 		this.corpus = corpus;
 		this.AnnotateLevel = doc;
 		//logger = new MyLogger();
@@ -38,7 +38,7 @@ public class AnnotateAutomator {
 	 * @throws IOException
 	 */
 	public AnnotateAutomator(Boolean doc) throws ClassNotFoundException, IOException {
-		this.pipe = new Pipeline(log);
+		this.pipe = new Pipeline();
 		this.AnnotateLevel = doc;
 	}
 	public void setCorpus(Corpus corpus){
@@ -69,9 +69,12 @@ public class AnnotateAutomator {
 		}else{
 			log.info("Work in Corpus level.");
 			aCorpus = new LinkedList<AnnotatedDoc>();
+			System.out.println(corpus.size());
 			while(!corpus.empty()){
 				aCorpus.add(this.pipe.annotate(this.corpus.nextDocument()));
 			}
+			System.out.println(corpus.size());
+			System.out.println(aCorpus.size());
 		}
 		log.info("Annotate Finished.");
 		return true;
