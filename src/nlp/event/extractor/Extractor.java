@@ -10,6 +10,7 @@ import nlp.corpus.ACECorpus;
 import nlp.corpus.Corpus;
 import nlp.corpus.document.format.TimblFormat;
 import nlp.event.Feature.FeatureBuilder;
+import nlp.model.Timbl;
 import nlp.util.*;
 
 public class Extractor {
@@ -21,18 +22,6 @@ public class Extractor {
 		//annotation
 		AnnotateAutomator aAutomator = null;
 		try {
-			aAutomator = new AnnotateAutomator(true);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		aAutomator.setCorpus(new ACECorpus("./data/ACE/bc/1"));
-		aAutomator.annotate();
-		AnnotatedDoc aDoc = aAutomator.getAnnotatedDoc();
-		System.out.println(aDoc.toString());
-		/*
-		AnnotateAutomator aAutomator = null;
-		try {
 			aAutomator = new AnnotateAutomator(false);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -40,18 +29,30 @@ public class Extractor {
 		}
 		String[] fs= {"postag"};
 		FeatureBuilder fb = new FeatureBuilder(fs,"isAnchorIdentifier",new TimblFormat());
-		Corpus corp = new ACECorpus("./data/ACE/bc/1");
-		//System.out.println("hahdshf:"+corp.size());
+		Corpus corp = new ACECorpus("./data/ACE/bc");
 		aAutomator.setCorpus(corp);
+		System.out.println("Begin for train file annotation");
 		aAutomator.annotate();
+		System.out.println("Begin for feature building");
 		fb.output("./data/annotatedCorpus_train", true, aAutomator.getaCorpus());
-		System.out.println("Done");
-		/*
-		aAutomator.setCorpus(new ACECorpus("./data/test"));
-		aAutomator.annotate();
-		fb.output("./data/annotatedCorpus_test", true, aAutomator.getaCorpus());
+		System.out.println("Done for training");
 		
-		AnchorIdentifier ai = new AnchorIdentifier(new Megam());
+		System.out.println("Begin for test file");
+		aAutomator.setCorpus(new ACECorpus("./data/ACE/bc/1"));
+		System.out.println("Begin for test file annotation");
+		aAutomator.annotate();
+		System.out.println("Begin for feature building");
+		fb.output("./data/annotatedCorpus_test", false, aAutomator.getaCorpus());
+		System.out.println("Done for Test");
+		
+		/*
+		AnchorIdentifier ai = null;
+		try {
+			ai = new AnchorIdentifier(new Timbl());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		ai.train("./data/annotatedCorpus_train");
 		ai.predict("./data/annotatedCorpus_test");*/
 	}

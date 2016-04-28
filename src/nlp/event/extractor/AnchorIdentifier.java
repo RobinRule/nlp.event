@@ -22,9 +22,19 @@ public class AnchorIdentifier {
 		
 	}
 	public void train(String train){
-		model.train("","");
+		try {
+			model.train(train,"./data/model");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	public void predict(String f){
-		model.predict("","");
+		try {
+			model.predict("./data/model",f);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

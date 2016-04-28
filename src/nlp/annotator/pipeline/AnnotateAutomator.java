@@ -56,7 +56,7 @@ public class AnnotateAutomator {
 	public Boolean annotate(){
 		log.info("Start to annotate.");
 		if(this.AnnotateLevel){
-			log.info("Work in log level.");
+			log.info("Work in doc level.");
 			if(!corpus.empty())
 				this.aDoc_now = this.pipe.annotate(this.corpus.nextDocument());
 			else{
