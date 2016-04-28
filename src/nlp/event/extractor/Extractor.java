@@ -17,17 +17,25 @@ public class Extractor {
 	public Extractor() {
 		// TODO Auto-generated constructor stub
 	}
-	public static void main(String[] args) throws IOException, ClassNotFoundException{
+	public static void main(String[] args) throws ClassNotFoundException{
 		//annotation
-		//
+		
 		String[] fs= {"postag"};
-		AnnotateAutomator aAutomator = new AnnotateAutomator(false);
+		AnnotateAutomator aAutomator = null;
+		try {
+			aAutomator = new AnnotateAutomator(false);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		FeatureBuilder fb = new FeatureBuilder(fs,"isAnchorIdentifier",new TimblFormat());
-		
-		aAutomator.setCorpus(new ACECorpus("./data/ACE/"));
+		Corpus corp = new ACECorpus("./data/ACE/bc/1");
+		System.out.println("hahdshf:"+corp.size());
+		aAutomator.setCorpus(corp);
 		aAutomator.annotate();
 		fb.output("./data/annotatedCorpus_train", true, aAutomator.getaCorpus());
+		System.out.println("Done");
 		/*
 		aAutomator.setCorpus(new ACECorpus("./data/test"));
 		aAutomator.annotate();

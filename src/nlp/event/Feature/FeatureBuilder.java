@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.LinkedList;
 
 import org.jsoup.nodes.Document;
@@ -44,8 +45,10 @@ public class FeatureBuilder {
 	}
 	public LinkedList<Instance> buildfeature(AnnotatedSentence aSen,Boolean addlabel){
 		LinkedList<Instance> iList = new LinkedList<Instance>();
-		for(AnnotatedToken aToken: aSen){
-			iList.add(this.buildfeature(aToken,addlabel));
+		Iterator<AnnotatedToken> it = aSen.iterator();
+		it.next();//skip the first root token
+		while(it.hasNext()){
+			iList.add(this.buildfeature(it.next(),addlabel));
 		}
 		return iList;
 	}
@@ -79,12 +82,18 @@ public class FeatureBuilder {
 	 */
 	public void output(String des, Boolean addlabel,LinkedList<AnnotatedDoc> aCorpus){
 		FileWriter fw = null;
+		System.out.println(des);
+		System.out.println(aCorpus.size());
 		try {
 			fw = new FileWriter(new File(des));
 			BufferedWriter bw = new BufferedWriter(fw);
 			for(AnnotatedDoc aDoc: aCorpus){
-				for(AnnotatedSentence aSen: aDoc)
-					bw.append(format.wholeFormat(this.buildfeature(aSen, addlabel)));
+				for(AnnotatedSentence aSen: aDoc){
+					String s = format.wholeFormat(this.buildfeature(aSen, addlabel));
+					System.out.println(s);
+					System.in.read();
+					bw.append(s);
+					}
 			}
 			fw.close();
 		} catch (IOException e) {

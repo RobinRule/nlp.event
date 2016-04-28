@@ -42,8 +42,8 @@ import nlp.util.Pair;
 public class Pipeline {
 	
 	private AnnotationPipeline pipeline;
-	private Logger log;
-	public Pipeline(Logger log) throws ClassNotFoundException, IOException {
+	private final Logger log = Logger.getLogger(Pipeline.class.getName());
+	public Pipeline() throws ClassNotFoundException, IOException {
 		log.info("Pipeline Initializing.");
 		pipeline = new AnnotationPipeline();
 		pipeline.addAnnotator(new TokenizerAnnotator(false, "en"));
@@ -65,7 +65,8 @@ public class Pipeline {
 	 * @throws Exception
 	 */
 	public AnnotatedDoc annotate(Document doc){
-		log.info("Pipeline Annotating:"+doc.getsource());
+		String s = "Pipeline Annotating:"+doc.getsource();
+		log.info(s);
 		String text = doc.text();
 		// create annotation with text
 		
