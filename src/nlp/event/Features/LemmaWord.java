@@ -23,15 +23,11 @@ public class LemmaWord extends Feature {
 	}
 
 	
-	public void main(String[] args){
+	public static void main(String[] args){
 		
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> master
-=======
-}
->>>>>>> master
+
+
+

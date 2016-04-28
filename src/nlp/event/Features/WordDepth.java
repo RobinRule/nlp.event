@@ -28,12 +28,8 @@ public class WordDepth extends Feature {
 		return Integer.toString(depth);
 	}
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> master
-=======
-}
->>>>>>> master
+
+
+

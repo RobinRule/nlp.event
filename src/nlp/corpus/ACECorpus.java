@@ -16,7 +16,7 @@ public class ACECorpus implements Corpus {
 	private File rootdir;
 	private LinkedList<nlp.corpus.document.ACEDocument> doclist; 
 	
-<<<<<<< HEAD
+
 	public ACECorpus(String src) throws IOException {
 		rootdir = new File(src);
 		FilenameFilter sgmFilter = new FilenameFilter() {
@@ -27,7 +27,8 @@ public class ACECorpus implements Corpus {
 					return true;
 				} else {
 					return false;
-=======
+				}
+			}
 	public ACECorpus(String src){
 		try{
 			rootdir = new File(src);
@@ -49,7 +50,7 @@ public class ACECorpus implements Corpus {
 					filelist.addAll(this.getFileList(f));
 				} else if (f.getName().endsWith(".sgm")) { // 判断文件名是否以.sgm结尾
 					filelist.add(f);
->>>>>>> master
+
 				}
 			}
 		}
@@ -75,3 +76,24 @@ public class ACECorpus implements Corpus {
 		return this.doclist.size();
 	}
 }
+
+
+	@Override
+	public Document nextDocument() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public Boolean empty() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public Integer size() {
+		// TODO Auto-generated method stub
+		return null;
+	}

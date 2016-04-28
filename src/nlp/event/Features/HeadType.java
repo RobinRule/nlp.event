@@ -37,12 +37,7 @@ public class HeadType extends Feature {
 		
 	}	
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> master
-=======
-}
->>>>>>> master
+
+
