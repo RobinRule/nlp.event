@@ -7,13 +7,13 @@ public class Megam implements Model {
 	}
 
 	@Override
-	public void train(String trainfile) {
+	public void train(String trainfile, String modelpath) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void predict(String testfile) {
+	public void predict(String modelpath, String testfile) {
 		// TODO Auto-generated method stub
 		
 	}

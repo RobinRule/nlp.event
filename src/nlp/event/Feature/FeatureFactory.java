@@ -1,6 +1,6 @@
 package nlp.event.Feature;
 
-import nlp.event.Features.PosTag;
+import nlp.event.Features.*;
 
 public class FeatureFactory{
 
@@ -9,7 +9,8 @@ public class FeatureFactory{
 	}
 	Feature newFeature(String des){
 		String low = des.toLowerCase();
-		if(des.equals("postag")) return new PosTag();
+		if(low.equals("postag")) return new PosTag();
+		if(low.equals("isanchoridentifier")) return new IsAnchorIdentifier();
 		return null;
 	}
 

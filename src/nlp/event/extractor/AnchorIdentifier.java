@@ -22,9 +22,9 @@ public class AnchorIdentifier {
 		
 	}
 	public void train(String train){
-		model.train("");
+		model.train("","");
 	}
 	public void predict(String f){
-		model.predict("");
+		model.predict("","");
 	}
 }

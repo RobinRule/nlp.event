@@ -3,6 +3,7 @@ package nlp.corpus.document.format;
 import java.io.File;
 import java.util.LinkedList;
 
+import nlp.event.instance.Instance;
 import nlp.util.Pair;
 
 public interface Format {
@@ -13,7 +14,8 @@ public interface Format {
 	 * @return			Formatted instance.
 	 */
 	public String oneFormat(String instance,String label,LinkedList<Pair<String,String>> line);
-	public void wholeFormat(LinkedList<Pair<String,String>> line);
+	public String oneFormat(Instance instance);
+	public String wholeFormat(LinkedList<Instance> instanceList);
 	/**Add the instance to the end of a formated file.
 	 * @param f			Formatted file to be append.
 	 * @param instance	Name of the instance to be added.
