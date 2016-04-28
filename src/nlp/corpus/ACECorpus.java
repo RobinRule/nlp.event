@@ -21,6 +21,7 @@ public class ACECorpus implements Corpus {
 			public boolean accept(File dir, String name) {
 				String lowercaseName = name.toLowerCase();
 				if (lowercaseName.endsWith(".sgm")) {
+					System.out.println("aaa");
 					return true;
 				} else {
 					return false;
