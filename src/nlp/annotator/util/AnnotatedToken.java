@@ -74,5 +74,5 @@ public class AnnotatedToken {
 	public Boolean equals(AnnotatedToken other){
 		return other.parent == this.getParent() && this.getOffset().equals(other.getOffset());
 	}
-	
+
 }

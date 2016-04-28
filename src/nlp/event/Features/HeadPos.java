@@ -38,7 +38,11 @@ public class HeadPos extends Feature {
 	}	
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> master
 =======
 }
 >>>>>>> master

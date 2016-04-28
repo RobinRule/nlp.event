@@ -1,5 +1,9 @@
 package nlp.event.Feature;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.LinkedList;
 
 import org.jsoup.nodes.Document;
@@ -73,11 +77,18 @@ public class FeatureBuilder {
 	 * @param des output destination file directory
 	 * @param label boolean indicate final output will or will not have label field
 	 */
-	public void output(String des, Boolean label,LinkedList<AnnotatedDoc> aCorpus){
-		for(AnnotatedDoc aDoc: aCorpus){
-			for(AnnotatedSentence aSen: aDoc){
-				return ;
+	public void output(String des, Boolean addlabel,LinkedList<AnnotatedDoc> aCorpus){
+		FileWriter fw = null;
+		try {
+			fw = new FileWriter(new File(des));
+			BufferedWriter bw = new BufferedWriter(fw);
+			for(AnnotatedDoc aDoc: aCorpus){
+				for(AnnotatedSentence aSen: aDoc)
+					bw.append(format.wholeFormat(this.buildfeature(aSen, addlabel)));
 			}
-		}
+			fw.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}	
 	}
 }

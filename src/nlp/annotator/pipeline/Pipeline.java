@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreAnnotations.*;
 import edu.stanford.nlp.ling.CoreLabel;
@@ -40,8 +42,9 @@ import nlp.util.Pair;
 public class Pipeline {
 	
 	private AnnotationPipeline pipeline;
-	
-	public Pipeline() throws ClassNotFoundException, IOException {
+	private Logger log;
+	public Pipeline(Logger log) throws ClassNotFoundException, IOException {
+		log.info("Pipeline Initializing.");
 		pipeline = new AnnotationPipeline();
 		pipeline.addAnnotator(new TokenizerAnnotator(false, "en"));
 		pipeline.addAnnotator(new WordsToSentencesAnnotator(false));
@@ -52,6 +55,7 @@ public class Pipeline {
 		/**/
 		pipeline.addAnnotator(new NERCombinerAnnotator(false));
 		pipeline.addAnnotator(new ParserAnnotator(false, -1));
+		log.info("Pipeline Initialized.");
 	}
 	
 	/**Annotate a document, one document at a time.
@@ -61,6 +65,7 @@ public class Pipeline {
 	 * @throws Exception
 	 */
 	public AnnotatedDoc annotate(Document doc){
+		log.info("Pipeline Annotating:"+doc.getsource());
 		String text = doc.text();
 		// create annotation with text
 		
@@ -73,7 +78,7 @@ public class Pipeline {
 		for (CoreMap sentence: document.get(CoreAnnotations.SentencesAnnotation.class)) {
 			//get the tree for the sentence
 			Tree tree = sentence.get(TreeAnnotation.class);
-			System.out.println(tree);
+			//System.out.println(tree);
 			
 			SemanticGraph dep = sentence.get(SemanticGraphCoreAnnotations.BasicDependenciesAnnotation.class);
 			
@@ -97,18 +102,19 @@ public class Pipeline {
 			asen.setParseTree(tree);
 			adoc.add(asen);
 		}
+		log.info("Pipeline Annotated:"+doc.getsource());
 		return adoc;
 	}
 	public static void main(String[] args) throws Exception{
-		Pipeline p = new Pipeline();
-		Document d = new ACEDocument(new File("./data/ACE/bc/CNN_CF_20030303.1900.00.sgm"));
-		AnnotatedDoc aDoc = p.annotate(d);
-		Feature f = new IsAnchorIdentifier();
+		//Pipeline p = new Pipeline();
+		//Document d = new ACEDocument(new File("./data/ACE/bc/CNN_CF_20030303.1900.00.sgm"));
+		//AnnotatedDoc aDoc = p.annotate(d);
+		//Feature f = new IsAnchorIdentifier();
 		
-		Iterator<AnnotatedSentence> it = aDoc.iterator();
-		AnnotatedSentence aSen = it.next();
-		aSen = it.next();
-		System.out.println(aSen.getParseTree());
+		//Iterator<AnnotatedSentence> it = aDoc.iterator();
+		//AnnotatedSentence aSen = it.next();
+		//aSen = it.next();
+		//System.out.println(aSen.getParseTree());
 		//System.out.println(aDoc);
 		//for(AnnotatedToken aToken:aSen){
 		//	if(aToken.getToken().equals("election")){

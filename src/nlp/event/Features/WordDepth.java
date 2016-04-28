@@ -29,7 +29,11 @@ public class WordDepth extends Feature {
 	}
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> master
 =======
 }
 >>>>>>> master

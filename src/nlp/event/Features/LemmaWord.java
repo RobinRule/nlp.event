@@ -27,7 +27,11 @@ public class LemmaWord extends Feature {
 		
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> master
 =======
 }
 >>>>>>> master
