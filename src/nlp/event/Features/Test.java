@@ -1,10 +1,12 @@
 package nlp.event.Features;
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.LinkedList;
 
 import nlp.annotator.pipeline.AnnotateAutomator;
 import nlp.annotator.util.AnnotatedDoc;
 import nlp.annotator.util.AnnotatedToken;
+import nlp.annotator.util.MyDependency;
 import nlp.annotator.util.AnnotatedSentence;
 import nlp.corpus.ACECorpus;
 
@@ -17,16 +19,20 @@ public class Test {
 		Iterator<AnnotatedSentence> it = aDoc.iterator();
 		while(it.hasNext()){
 			AnnotatedSentence sen = it.next();
-			Iterator<AnnotatedToken> itt=sen.iterator();
+			/*Iterator<AnnotatedToken> itt=sen.iterator();
 			itt.next();
 			while(itt.hasNext()){
 				AnnotatedToken toke=itt.next();
-				IsAnchorIdentifier fw = new IsAnchorIdentifier();
+				HeadType fw = new HeadType();
 				String tmp=fw.getValue(toke);
-				System.out.println(tmp);
-			}
+				System.out.println(toke.getToken()+" "+toke.getTokenNE());
+			}*/
+			LinkedList<MyDependency> depList=sen.getDeplist();
+			System.out.println(depList.toString());
+			
 			
 		}	
+		
 		 
 	}
 }
