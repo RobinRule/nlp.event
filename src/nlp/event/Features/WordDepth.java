@@ -1,5 +1,8 @@
 package nlp.event.Features;
 import nlp.annotator.util.AnnotatedToken;
+
+import java.util.Iterator;
+
 import nlp.annotator.util.AnnotatedSentence;
 import nlp.annotator.util.MyTree;
 import nlp.event.Feature.Feature;
@@ -18,14 +21,18 @@ public class WordDepth extends Feature {
 	
 	@Override
 	public String getValue(AnnotatedToken t) {
-		AnnotatedSentence Sen=t.getParent();
-		MyTree mr=Sen.getParseTree();
-		int depth=0;
-		while(!mr.getParent().getValue().equals("ROOT")){
+		MyTree node = t.getParseNode();
+		int depth = 0;
+		while(node!=null){
+			node = node.getParent();
 			depth++;
 		}
 		
+		
+		
 		return Integer.toString(depth);
 	}
+	
+
 	
 }
