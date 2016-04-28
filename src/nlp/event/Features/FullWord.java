@@ -20,8 +20,5 @@ public class FullWord extends Feature{
 		return t.getToken();
 	}
 
-	public void main(String[] args){
-		
-	}
 
 }
