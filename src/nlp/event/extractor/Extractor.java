@@ -19,8 +19,18 @@ public class Extractor {
 	}
 	public static void main(String[] args) throws ClassNotFoundException{
 		//annotation
-		
-		String[] fs= {"postag"};
+		AnnotateAutomator aAutomator = null;
+		try {
+			aAutomator = new AnnotateAutomator(true);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		aAutomator.setCorpus(new ACECorpus("./data/ACE/bc/1"));
+		aAutomator.annotate();
+		AnnotatedDoc aDoc = aAutomator.getAnnotatedDoc();
+		System.out.println(aDoc.toString());
+		/*
 		AnnotateAutomator aAutomator = null;
 		try {
 			aAutomator = new AnnotateAutomator(false);
@@ -28,10 +38,10 @@ public class Extractor {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		String[] fs= {"postag"};
 		FeatureBuilder fb = new FeatureBuilder(fs,"isAnchorIdentifier",new TimblFormat());
 		Corpus corp = new ACECorpus("./data/ACE/bc/1");
-		System.out.println("hahdshf:"+corp.size());
+		//System.out.println("hahdshf:"+corp.size());
 		aAutomator.setCorpus(corp);
 		aAutomator.annotate();
 		fb.output("./data/annotatedCorpus_train", true, aAutomator.getaCorpus());
