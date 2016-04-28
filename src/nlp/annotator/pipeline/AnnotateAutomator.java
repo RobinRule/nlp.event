@@ -30,7 +30,6 @@ public class AnnotateAutomator {
 		this.corpus = corpus;
 		this.AnnotateLevel = doc;
 		//logger = new MyLogger();
-		PropertyConfigurator.configure("log4j.properties");
 	}
 	/**
 	 * @param sentence set the annotation process as doc by doc

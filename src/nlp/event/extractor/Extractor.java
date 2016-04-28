@@ -2,6 +2,8 @@ package nlp.event.extractor;
 
 import java.io.IOException;
 
+import org.apache.log4j.PropertyConfigurator;
+
 import nlp.annotator.pipeline.AnnotateAutomator;
 import nlp.annotator.util.AnnotatedDoc;
 import nlp.annotator.util.AnnotatedSentence;
@@ -20,6 +22,7 @@ public class Extractor {
 	}
 	public static void main(String[] args) throws ClassNotFoundException{
 		//annotation
+		PropertyConfigurator.configure("log4j.properties");
 		AnnotateAutomator aAutomator = null;
 		try {
 			aAutomator = new AnnotateAutomator(false);
@@ -42,10 +45,9 @@ public class Extractor {
 		System.out.println("Begin for test file annotation");
 		aAutomator.annotate();
 		System.out.println("Begin for feature building");
-		fb.output("./data/annotatedCorpus_test", false, aAutomator.getaCorpus());
+		fb.output("./data/annotatedCorpus_test", true, aAutomator.getaCorpus());
 		System.out.println("Done for Test");
 		
-		/*
 		AnchorIdentifier ai = null;
 		try {
 			ai = new AnchorIdentifier(new Timbl());
@@ -53,7 +55,8 @@ public class Extractor {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		ai.train("./data/annotatedCorpus_train");
-		ai.predict("./data/annotatedCorpus_test");*/
+		ai.train("data/annotatedCorpus_train");
+		ai.predict("data/annotatedCorpus_test");
+		
 	}
 }

@@ -1,12 +1,6 @@
 package nlp.event.extractor;
 
-import java.io.File;
 import java.io.IOException;
-
-import nlp.corpus.ACECorpus;
-import nlp.corpus.Corpus;
-import nlp.event.Feature.FeatureBuilder;
-import nlp.model.Megam;
 import nlp.model.Model;
 
 public class AnchorIdentifier {
@@ -23,7 +17,7 @@ public class AnchorIdentifier {
 	}
 	public void train(String train){
 		try {
-			model.train(train,"./data/model");
+			model.train(train,"data/model");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -31,7 +25,7 @@ public class AnchorIdentifier {
 	}
 	public void predict(String f){
 		try {
-			model.predict("./data/model",f);
+			model.predict("data/model",f);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

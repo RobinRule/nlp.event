@@ -65,8 +65,7 @@ public class Pipeline {
 	 * @throws Exception
 	 */
 	public AnnotatedDoc annotate(Document doc){
-		String s = "Pipeline Annotating:"+doc.getsource();
-		log.info(s);
+		log.info("Pipeline Annotating:"+doc.getsource());
 		String text = doc.text();
 		// create annotation with text
 		
@@ -109,7 +108,7 @@ public class Pipeline {
 	public static void main(String[] args) throws Exception{
 		//Pipeline p = new Pipeline();
 		//Document d = new ACEDocument(new File("./data/ACE/bc/CNN_CF_20030303.1900.00.sgm"));
-		//AnnotatedDoc aDoc = p.annotate(d);
+		//AnnotatedDoc aDoc	 = p.annotate(d);
 		//Feature f = new IsAnchorIdentifier();
 		
 		//Iterator<AnnotatedSentence> it = aDoc.iterator();

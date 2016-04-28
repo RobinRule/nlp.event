@@ -7,8 +7,10 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+import org.apache.log4j.Logger;
 import org.jsoup.nodes.Document;
 
+import nlp.annotator.pipeline.Pipeline;
 import nlp.annotator.util.AnnotatedDoc;
 import nlp.annotator.util.AnnotatedSentence;
 import nlp.annotator.util.AnnotatedToken;
@@ -22,6 +24,7 @@ public class FeatureBuilder {
 	Feature label;
 	Format format;
 	Document metadata;
+	private final Logger log = Logger.getLogger(FeatureBuilder.class.getName());
 	public FeatureBuilder(String[] featureset,String label,Format format) {
 		this.format = format;
 		this.fs = new Feature[featureset.length];
@@ -81,6 +84,10 @@ public class FeatureBuilder {
 	 * @param label boolean indicate final output will or will not have label field
 	 */
 	public void output(String des, Boolean addlabel,LinkedList<AnnotatedDoc> aCorpus){
+		if(addlabel)
+			log.info("Output feature-enhanced file with label to: "+ des);
+		else
+			log.info("Output feature-enhanced file without label to: "+des);
 		FileWriter fw = null;
 		System.out.println(des);
 		System.out.println(aCorpus.size());
@@ -92,8 +99,10 @@ public class FeatureBuilder {
 					bw.append(format.wholeFormat(this.buildfeature(aSen, addlabel)));
 			}
 			fw.close();
+			log.info("Feature-enhanced file outputed.");
 		} catch (IOException e) {
 			e.printStackTrace();
+			log.error("Error:"+e.getStackTrace().toString());
 		}	
 	}
 }

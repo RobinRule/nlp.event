@@ -42,19 +42,21 @@ public class TimblFormat implements Format {
 	 * @return
 	 */
 	private String adjust(String source){
-		return source.replace("\\", "\\\\").replace(",", "~,");
+		return source.replace("\\", "\\\\").replace("~", "\\~").replace(",", "~");
 	}
 	@Override
 	public String oneFormat(Instance instance) {
 		// TODO Auto-generated method stub
 		StringBuffer response = new StringBuffer(this.adjust(instance.getValue())+',');
+		
 		Iterator<Pair<String,String>> it = instance.getFeaturesList().iterator();
 		response.append(this.adjust(it.next().getSecond()));
-		while(it.hasNext()){
+		while(it.hasNext())
 			response.append(","+this.adjust(it.next().getSecond()));
-		}
+		
 		if(instance.getLabel()!=null)
 			response.append(","+this.adjust(instance.getLabel()));
+		
 		return response.toString();
 	}
 	public String wholeFormat(LinkedList<Instance> instanceList){
@@ -62,6 +64,6 @@ public class TimblFormat implements Format {
 		StringBuffer response = new StringBuffer(this.oneFormat(it.next()));
 		while(it.hasNext())
 			response.append('\n'+this.oneFormat(it.next()));
-		return response.toString();
+		return response.toString()+'\n';
 	}
 }

@@ -27,6 +27,7 @@ public class ACECorpus implements Corpus {
 		} catch(IOException e){
 			e.printStackTrace();
 		}
+		
 	}
 	private LinkedList<File> getFileList(File strPath) {
 		File[] files = strPath.listFiles(); // 该文件目录下文件全部放入数组
