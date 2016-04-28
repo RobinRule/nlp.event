@@ -44,9 +44,7 @@ public class AnnotateAutomator {
 	public void setCorpus(Corpus corpus){
 		this.corpus = corpus;
 	}
-	public AnnotatedDoc getAnnotatedDoc(){
-		return aDoc_now;
-	}
+	
 	public void setAnnotateLevel(Boolean level){
 		this.AnnotateLevel = level;
 	}
@@ -59,9 +57,8 @@ public class AnnotateAutomator {
 		log.info("Start to annotate.");
 		if(this.AnnotateLevel){
 			log.info("Work in log level.");
-			if(!corpus.empty()){
-				aDoc_now = this.pipe.annotate(this.corpus.nextDocument());
-			}
+			if(!corpus.empty())
+				this.aDoc_now = this.pipe.annotate(this.corpus.nextDocument());
 			else{
 				log.info("Fail to annotate.");
 				return false;
@@ -69,12 +66,8 @@ public class AnnotateAutomator {
 		}else{
 			log.info("Work in Corpus level.");
 			aCorpus = new LinkedList<AnnotatedDoc>();
-			System.out.println(corpus.size());
-			while(!corpus.empty()){
+			while(!corpus.empty())
 				aCorpus.add(this.pipe.annotate(this.corpus.nextDocument()));
-			}
-			System.out.println(corpus.size());
-			System.out.println(aCorpus.size());
 		}
 		log.info("Annotate Finished.");
 		return true;
@@ -86,5 +79,8 @@ public class AnnotateAutomator {
 		if(!this.AnnotateLevel && corpus.empty())
 			return aCorpus;
 		return null;
+	}
+	public AnnotatedDoc getAnnotatedDoc(){
+		return this.aDoc_now;
 	}
 }

@@ -38,13 +38,14 @@ public class TimblFormat implements Format {
 	@Override
 	public String oneFormat(Instance instance) {
 		// TODO Auto-generated method stub
-		StringBuffer response = new StringBuffer(instance.getValue());
+		StringBuffer response = new StringBuffer(instance.getValue()+',');
 		Iterator<Pair<String,String>> it = instance.getFeaturesList().iterator();
 		response.append(it.next().getSecond());
 		while(it.hasNext()){
 			response.append(","+it.next().getSecond());
 		}
-		response.append(","+instance.getValue());
+		if(instance.getLabel()!=null)
+			response.append(","+instance.getLabel());
 		return response.toString();
 	}
 	public String wholeFormat(LinkedList<Instance> instanceList){

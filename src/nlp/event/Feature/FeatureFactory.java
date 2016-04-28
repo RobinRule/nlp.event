@@ -10,7 +10,7 @@ public class FeatureFactory{
 	Feature newFeature(String des){
 		String low = des.toLowerCase();
 		if(low.equals("postag")) return new PosTag();
-		if(low.equals("isanchoridentifier")) return new IsAnchorIdentifier();
+		else if(low.equals("isanchoridentifier")) return new IsAnchorIdentifier();
 		return null;
 	}
 
