@@ -25,7 +25,7 @@ public class Timbl implements Model{
 	@Override
 	public void predict(String modelpath, String testfile) throws IOException {
 		// TODO Auto-generated method stub
-		String testS = "-t " + testfile + " ";
+		String testS = "-t " + testfile + " -i " + modelpath;
 		exe.execute(command + testS);
 		System.out.println(exe.getStdout());
 		System.out.println(exe.getStderr());

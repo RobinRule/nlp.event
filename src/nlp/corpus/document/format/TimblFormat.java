@@ -17,6 +17,8 @@ public class TimblFormat implements Format {
 		// TODO Auto-generated method stub
 
 	}
+	
+	
 	@Override
 	public String oneFormat(String instance, String label, LinkedList<Pair<String, String>> line) {
 		StringBuffer response = new StringBuffer(instance);
@@ -34,18 +36,25 @@ public class TimblFormat implements Format {
 		// TODO Auto-generated method stub
 		
 	}
-
+	
+	/**replace all ',' with "~", replace '~' with "\~",replace '\' with "\\"
+	 * @param source
+	 * @return
+	 */
+	private String adjust(String source){
+		return source.replace("\\", "\\\\").replace(",", "~,");
+	}
 	@Override
 	public String oneFormat(Instance instance) {
 		// TODO Auto-generated method stub
-		StringBuffer response = new StringBuffer(instance.getValue()+',');
+		StringBuffer response = new StringBuffer(this.adjust(instance.getValue())+',');
 		Iterator<Pair<String,String>> it = instance.getFeaturesList().iterator();
-		response.append(it.next().getSecond());
+		response.append(this.adjust(it.next().getSecond()));
 		while(it.hasNext()){
-			response.append(","+it.next().getSecond());
+			response.append(","+this.adjust(it.next().getSecond()));
 		}
 		if(instance.getLabel()!=null)
-			response.append(","+instance.getLabel());
+			response.append(","+this.adjust(instance.getLabel()));
 		return response.toString();
 	}
 	public String wholeFormat(LinkedList<Instance> instanceList){

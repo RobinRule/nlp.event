@@ -88,12 +88,8 @@ public class FeatureBuilder {
 			fw = new FileWriter(new File(des));
 			BufferedWriter bw = new BufferedWriter(fw);
 			for(AnnotatedDoc aDoc: aCorpus){
-				for(AnnotatedSentence aSen: aDoc){
-					String s = format.wholeFormat(this.buildfeature(aSen, addlabel));
-					System.out.println(s);
-					System.in.read();
-					bw.append(s);
-					}
+				for(AnnotatedSentence aSen: aDoc)
+					bw.append(format.wholeFormat(this.buildfeature(aSen, addlabel)));
 			}
 			fw.close();
 		} catch (IOException e) {
