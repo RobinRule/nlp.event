@@ -14,6 +14,7 @@ public class AnnotatedDoc implements Iterable<AnnotatedSentence> {
 		senlist = new LinkedList<AnnotatedSentence>();
 	}
 	public Boolean add(AnnotatedSentence sen){
+		sen.setParent(this);
 		return senlist.add(sen);
 	}
 	public int size(){

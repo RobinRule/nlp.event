@@ -41,7 +41,11 @@ public class Pair<A, B> {
     { 
            return "(" + first.toString() + ", " + second.toString() + ")"; 
     }
-
+    public static Pair<Integer, Integer> valueOf(String repre){
+    	int i = repre.indexOf(',');
+    	return new Pair<Integer,Integer>(Integer.valueOf(repre.substring(1, i)),
+    									Integer.valueOf(repre.substring(i+2, repre.length()-1)));
+    }
     public A getFirst() {
     	return first;
     }

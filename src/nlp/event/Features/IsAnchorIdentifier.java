@@ -23,19 +23,20 @@ public class IsAnchorIdentifier extends Feature {
 
 	@Override
 	public String getValue(AnnotatedToken t) {
+		if(t.getIndex().equals(0))	return "-NULL-";
+
 		Document meta = t.getParent().getParent().getMetadata();
 		Elements anchors = meta.getElementsByTag("anchor");
 		int start = 0;
 		int end = 0;
 		Pair<Integer,Integer> off = t.getOffset();
 		for(Element anchor : anchors){
-			Element seq = anchor.getElementsByTag("charseq").get(0);
+			Element seq = anchor.getElementsByTag("charseq").first();
 			start = Integer.valueOf(seq.attr("START"));
 			end = Integer.valueOf(seq.attr("END"));
-			if(off.getFirst().compareTo(start)<=0 && off.getSecond().compareTo(end)>=0)
-				return "true";
+			if(off.getFirst().compareTo(start)>=0 && off.getSecond().compareTo(end)<=0)
+				return "yes";
 		}
 		return "no";
 	}
-
 }

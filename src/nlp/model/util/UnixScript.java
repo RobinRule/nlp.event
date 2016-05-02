@@ -8,6 +8,9 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
 
 /**
  * @author Bruce Yang
@@ -17,8 +20,13 @@ public class UnixScript {
 	private static ProcessBuilder pB;
 	private StringBuilder stdout;
 	private StringBuilder stderr;
-	public UnixScript(File f) throws IOException{
-		pB.directory(f);
+	private String pre;
+	public UnixScript(String f) throws IOException{
+		this.pre = f;
+		pB = new ProcessBuilder();
+		pB.directory(new File("/Users/Robin/Documents/Program/EclipseWorkSpace/EventExtractor"));
+		//pB.redirectOutput(new File("/Users/Robin/Documents/Program/EclipseWorkSpace/EventExtractor/out"));
+		//pB.redirectError(new File("/Users/Robin/Documents/Program/EclipseWorkSpace/EventExtractor/err"));
 		stdout = new StringBuilder();
 		stderr = new StringBuilder();
 	}
@@ -28,8 +36,15 @@ public class UnixScript {
 	 * @return
 	 * @throws IOException 
 	 */
-	public void execute(String command) throws IOException {
-		pB.command(command);
+	public void execute(ArrayList<String> commands) throws IOException {
+		ArrayList<String> temp = new ArrayList<String>();
+		temp.add(pre + commands.get(0));
+		Iterator<String> it = commands.iterator();
+		it.next();
+		while(it.hasNext())
+			temp.add(it.next());
+		pB.command(temp);
+		
 		Process proc = pB.start();
 		stdout = new StringBuilder();
 		stderr = new StringBuilder();
@@ -39,13 +54,13 @@ public class UnixScript {
 		BufferedReader stdError = new BufferedReader(new 
 		InputStreamReader(proc.getErrorStream()));
 		// read the output from the command
-		System.out.println("Here is the standard output of the command:\n");
+		//System.out.println("Here is the standard output of the command:\n");
 		String s = null;
 		while ((s = stdInput.readLine()) != null) {
 			stdout.append(s+'\n');
 		}
 		// read any errors from the attempted command
-		System.out.println("Here is the standard error of the command (if any):\n");
+		//System.out.println("Here is the standard error of the command (if any):\n");
 		while ((s = stdError.readLine()) != null) {
 			stderr.append(s+'\n');
 		}
@@ -66,7 +81,7 @@ public class UnixScript {
 	}
   
   public static void main(String[] args) throws Exception{
-
+	  UnixScript ux = new UnixScript("/Users/Robin/lamachine/bin/");
 	  
   }
 }

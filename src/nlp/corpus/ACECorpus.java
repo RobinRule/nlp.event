@@ -1,11 +1,8 @@
 package nlp.corpus;
 
 import java.io.File;
-import java.io.FilenameFilter;
 import java.io.IOException;
 import java.util.LinkedList;
-import java.util.List;
-import java.util.Vector;
 
 import nlp.corpus.ACECorpus;
 import nlp.corpus.document.ACEDocument;
@@ -27,6 +24,8 @@ public class ACECorpus implements Corpus {
 		} catch(IOException e){
 			e.printStackTrace();
 		}
+	}
+	public ACECorpus(){
 	}
 	private LinkedList<File> getFileList(File strPath) {
 		File[] files = strPath.listFiles(); // 该文件目录下文件全部放入数组
@@ -61,4 +60,5 @@ public class ACECorpus implements Corpus {
 		// TODO Auto-generated method stub
 		return this.doclist.size();
 	}
+
 }

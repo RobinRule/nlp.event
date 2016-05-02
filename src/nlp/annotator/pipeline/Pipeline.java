@@ -65,8 +65,7 @@ public class Pipeline {
 	 * @throws Exception
 	 */
 	public AnnotatedDoc annotate(Document doc){
-		String s = "Pipeline Annotating:"+doc.getsource();
-		log.info(s);
+		log.info("Pipeline Annotating:"+doc.getsource());
 		String text = doc.text();
 		// create annotation with text
 		
@@ -86,16 +85,14 @@ public class Pipeline {
 			AnnotatedSentence asen = new AnnotatedSentence(adoc);
 			
 			// get the tokens for the sentence and iterate over them
+			int i = 1;
 			for (CoreLabel token: sentence.get(CoreAnnotations.TokensAnnotation.class)) {
 				// get token attributes
-				String tokenText = token.get(TextAnnotation.class);
-				String tokenPOS = token.get(PartOfSpeechAnnotation.class);
-				String tokenLemma = token.get(LemmaAnnotation.class);
-				String tokenNE = token.get(NamedEntityTagAnnotation.class);
-				AnnotatedToken at = new AnnotatedToken(tokenText,asen);
-				at.setPos(tokenPOS);
-				at.setLemma(tokenLemma);
-				at.setTokenNE(tokenNE);
+				AnnotatedToken at = new AnnotatedToken(token.get(TextAnnotation.class));
+				at.setIndex(i++);
+				at.setPos(token.get(PartOfSpeechAnnotation.class));
+				at.setLemma(token.get(LemmaAnnotation.class));
+				at.setTokenNE(token.get(NamedEntityTagAnnotation.class));
 				at.setOffset(new Pair<Integer,Integer>(token.beginPosition(),token.endPosition()-1));
 				asen.add(at);
 			}
@@ -109,7 +106,7 @@ public class Pipeline {
 	public static void main(String[] args) throws Exception{
 		//Pipeline p = new Pipeline();
 		//Document d = new ACEDocument(new File("./data/ACE/bc/CNN_CF_20030303.1900.00.sgm"));
-		//AnnotatedDoc aDoc = p.annotate(d);
+		//AnnotatedDoc aDoc	 = p.annotate(d);
 		//Feature f = new IsAnchorIdentifier();
 		
 		//Iterator<AnnotatedSentence> it = aDoc.iterator();
