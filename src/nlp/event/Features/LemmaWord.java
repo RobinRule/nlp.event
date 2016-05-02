@@ -1,9 +1,6 @@
 package nlp.event.Features;
 
-import org.jsoup.nodes.Document;
-
 import nlp.annotator.util.AnnotatedToken;
-import org.jsoup.nodes.Document;
 import nlp.event.Feature.Feature;
 
 public class LemmaWord extends Feature {
@@ -18,7 +15,7 @@ public class LemmaWord extends Feature {
 	}
 	@Override
 	public String getValue(AnnotatedToken t) {
-		
+		if( t.getIndex().equals(0) ) return "-NULL-";
 		return t.getLemma();
 	}
 

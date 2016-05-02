@@ -19,6 +19,7 @@ public class HeadWord extends Feature {
 	}
 	@Override
 	public String getValue(AnnotatedToken t) {
+		if(t.getIndex().equals(0))	return "-NULL-";
 		AnnotatedSentence Sen=t.getParent();
 		LinkedList<MyDependency> depList=Sen.getDeplist();
 		for (int i=0;i<depList.size();i++){
@@ -27,8 +28,7 @@ public class HeadWord extends Feature {
 				return md.getHead().getToken();	
 			}
 		}
-		
-		return "NULL";
+		return "-NULL-";
 	}
 
 

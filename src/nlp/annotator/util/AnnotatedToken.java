@@ -8,6 +8,7 @@ public class AnnotatedToken {
 	private String lemma;
 	private String tokenNE;
 	private Pair<Integer,Integer> offset;
+	private Integer index;
 	private AnnotatedSentence parent;
 	private MyTree parseNode;
 	public AnnotatedToken(String token,AnnotatedSentence parent) {
@@ -19,7 +20,15 @@ public class AnnotatedToken {
 		this.offset = null;
 		// TODO Auto-generated constructor stub
 	}
-
+	public AnnotatedToken(String token) {
+		this.parent = null;
+		this.token = token;
+		this.setPos(null);
+		this.setLemma(null);
+		this.setTokenNE(null);
+		this.offset = null;
+		// TODO Auto-generated constructor stub
+	}
 	public String getTokenNE() {
 		return tokenNE;
 	}
@@ -59,9 +68,16 @@ public class AnnotatedToken {
 	public AnnotatedSentence getParent() {
 		return parent;
 	}
+	public void setParent(AnnotatedSentence p) {
+		this.parent = p;
+	}
 	public String toString()
     { 
            return this.token; 
+    }
+	public String toStringIndexed()
+    { 
+           return this.token +"-"+this.getIndex(); 
     }
 
 	public MyTree getParseNode() {
@@ -73,6 +89,17 @@ public class AnnotatedToken {
 	}
 	public Boolean equals(AnnotatedToken other){
 		return other.parent == this.getParent() && this.getOffset().equals(other.getOffset());
+	}
+
+	public Integer getIndex() {
+		return index;
+	}
+
+	public void setIndex(Integer index) {
+		this.index = index;
+	}
+	public void setIndex(int index) {
+		this.index = new Integer(index);
 	}
 
 }

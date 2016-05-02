@@ -1,6 +1,8 @@
 package nlp.annotator.util;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class MyTree {
 	private ArrayList<MyTree> children;
@@ -10,6 +12,7 @@ public class MyTree {
 	public MyTree(){
 		children = new ArrayList<MyTree>();
 	}
+	
 	public MyTree(String tag){
 		this.tag = tag;
 		children = new ArrayList<MyTree>();
@@ -17,9 +20,11 @@ public class MyTree {
 	public MyTree(String tag,AnnotatedToken value) {
 		this.tag = tag;
 		this.value = value;
+		value.setParseNode(this);
 		children = new ArrayList<MyTree>();
 	}
 	public Boolean addChild(MyTree child){
+		child.setParent(this);
 		return this.children.add(child);
 	}
 	public ArrayList<MyTree> getChildren(){
@@ -47,7 +52,7 @@ public class MyTree {
 		this.parent = parent;
 	}
 	public String toString(){
-		StringBuffer sb = new StringBuffer("(");
+		StringBuffer sb = new StringBuffer("( ");
 		sb.append(this.getTag());
 		
 		if(this.getValue()==null){
@@ -60,8 +65,7 @@ public class MyTree {
 			sb.append(' ');
 			sb.append(this.getValue());
 		}
-		sb.append(')');
+		sb.append(" )");
 		return sb.toString();
 	}
-	
 }

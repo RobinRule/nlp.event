@@ -42,13 +42,12 @@ public class TimblFormat implements Format {
 	 * @return
 	 */
 	private String adjust(String source){
+		if(source == null) return "#NULL#";//TODO
 		return source.replace("\\", "\\\\").replace("~", "\\~").replace(",", "~");
 	}
 	@Override
 	public String oneFormat(Instance instance) {
-		// TODO Auto-generated method stub
-		StringBuffer response = new StringBuffer(this.adjust(instance.getValue())+',');
-		
+		StringBuffer response = new StringBuffer();
 		Iterator<Pair<String,String>> it = instance.getFeaturesList().iterator();
 		response.append(this.adjust(it.next().getSecond()));
 		while(it.hasNext())

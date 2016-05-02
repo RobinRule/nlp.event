@@ -22,17 +22,12 @@ public class WordDepth extends Feature {
 	@Override
 	public String getValue(AnnotatedToken t) {
 		MyTree node = t.getParseNode();
+		if(node == null) return "-NULL-";
 		int depth = 0;
 		while(node!=null){
 			node = node.getParent();
 			depth++;
 		}
-		
-		
-		
 		return Integer.toString(depth);
 	}
-	
-
-	
 }

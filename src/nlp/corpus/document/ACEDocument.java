@@ -17,7 +17,8 @@ public class ACEDocument implements nlp.corpus.document.Document {
 		fis.read(data);
 		fis.close();
 		doc = new String(data, "UTF-8");
-		doc = doc.replaceAll("<.*?>", "");
+		System.out.println(f);
+		doc = doc.replaceAll("<((.*?)|((.*?(\\s.*?)+?)))>", "");
 		source = f.getPath();
 	}
 	public String text(){

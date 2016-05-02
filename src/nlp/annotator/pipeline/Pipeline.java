@@ -85,16 +85,14 @@ public class Pipeline {
 			AnnotatedSentence asen = new AnnotatedSentence(adoc);
 			
 			// get the tokens for the sentence and iterate over them
+			int i = 1;
 			for (CoreLabel token: sentence.get(CoreAnnotations.TokensAnnotation.class)) {
 				// get token attributes
-				String tokenText = token.get(TextAnnotation.class);
-				String tokenPOS = token.get(PartOfSpeechAnnotation.class);
-				String tokenLemma = token.get(LemmaAnnotation.class);
-				String tokenNE = token.get(NamedEntityTagAnnotation.class);
-				AnnotatedToken at = new AnnotatedToken(tokenText,asen);
-				at.setPos(tokenPOS);
-				at.setLemma(tokenLemma);
-				at.setTokenNE(tokenNE);
+				AnnotatedToken at = new AnnotatedToken(token.get(TextAnnotation.class));
+				at.setIndex(i++);
+				at.setPos(token.get(PartOfSpeechAnnotation.class));
+				at.setLemma(token.get(LemmaAnnotation.class));
+				at.setTokenNE(token.get(NamedEntityTagAnnotation.class));
 				at.setOffset(new Pair<Integer,Integer>(token.beginPosition(),token.endPosition()-1));
 				asen.add(at);
 			}

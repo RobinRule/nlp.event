@@ -1,0 +1,214 @@
+<doc metapath="./data/AnnotatedFile/Train/129.meta">
+ <sentence>
+  <dependency head="ROOT-0" dependent="charged-14" type="root"></dependency>
+  <dependency head="STORY-4" dependent="CNN_ENG_20030428_173654-1" type="compound"></dependency>
+  <dependency head="STORY-4" dependent=".13-2" type="nummod"></dependency>
+  <dependency head="STORY-4" dependent="NEWS-3" type="compound"></dependency>
+  <dependency head="STORY-4" dependent="18:46:38-6" type="dep"></dependency>
+  <dependency head="STORY-4" dependent="executives-9" type="dep"></dependency>
+  <dependency head="18:46:38-6" dependent="2003-04-28-5" type="nummod"></dependency>
+  <dependency head="executives-9" dependent="another-7" type="det"></dependency>
+  <dependency head="executives-9" dependent="six-8" type="nummod"></dependency>
+  <dependency head="executives-9" dependent="enron-11" type="nmod"></dependency>
+  <dependency head="enron-11" dependent="from-10" type="case"></dependency>
+  <dependency head="charged-14" dependent="fraud-17" type="nmod"></dependency>
+  <dependency head="charged-14" dependent="STORY-4" type="nsubjpass"></dependency>
+  <dependency head="charged-14" dependent="could-12" type="aux"></dependency>
+  <dependency head="charged-14" dependent="be-13" type="auxpass"></dependency>
+  <dependency head="fraud-17" dependent="securities-16" type="compound"></dependency>
+  <dependency head="fraud-17" dependent="and-18" type="cc"></dependency>
+  <dependency head="fraud-17" dependent="crimes-20" type="conj"></dependency>
+  <dependency head="fraud-17" dependent="with-15" type="case"></dependency>
+  <dependency head="crimes-20" dependent="other-19" type="amod"></dependency>
+  <parsetree>
+   ( ROOT ( S ( NP ( NP ( NN CNN_ENG_20030428_173654 ) ( CD .13 ) ( NN NEWS ) ( NN STORY ) ) ( NP ( CD 2003-04-28 ) ( CD 18:46:38 ) ) ( NP ( NP ( DT another ) ( CD six ) ( NNS executives ) ) ( PP ( IN from ) ( NP ( NN enron ) ) ) ) ) ( VP ( MD could ) ( VP ( VB be ) ( VP ( VBN charged ) ( PP ( IN with ) ( NP ( NP ( NNS securities ) ( NN fraud ) ) ( CC and ) ( NP ( JJ other ) ( NNS crimes ) ) ) ) ) ) ) ( . . ) ) )
+  </parsetree>
+  <token token="CNN_ENG_20030428_173654" lemma="cnn_eng_20030428_173654" pos="NN" ne="O" offset="(2, 24)" index="1"></token>
+  <token token=".13" lemma=".13" pos="CD" ne="NUMBER" offset="(25, 27)" index="2"></token>
+  <token token="NEWS" lemma="news" pos="NN" ne="O" offset="(31, 34)" index="3"></token>
+  <token token="STORY" lemma="story" pos="NN" ne="O" offset="(36, 40)" index="4"></token>
+  <token token="2003-04-28" lemma="2003-04-28" pos="CD" ne="DATE" offset="(44, 53)" index="5"></token>
+  <token token="18:46:38" lemma="18:46:38" pos="CD" ne="TIME" offset="(55, 62)" index="6"></token>
+  <token token="another" lemma="another" pos="DT" ne="O" offset="(68, 74)" index="7"></token>
+  <token token="six" lemma="six" pos="CD" ne="NUMBER" offset="(76, 78)" index="8"></token>
+  <token token="executives" lemma="executive" pos="NNS" ne="O" offset="(80, 89)" index="9"></token>
+  <token token="from" lemma="from" pos="IN" ne="O" offset="(91, 94)" index="10"></token>
+  <token token="enron" lemma="enron" pos="NN" ne="O" offset="(96, 100)" index="11"></token>
+  <token token="could" lemma="could" pos="MD" ne="O" offset="(102, 106)" index="12"></token>
+  <token token="be" lemma="be" pos="VB" ne="O" offset="(108, 109)" index="13"></token>
+  <token token="charged" lemma="charge" pos="VBN" ne="O" offset="(111, 117)" index="14"></token>
+  <token token="with" lemma="with" pos="IN" ne="O" offset="(119, 122)" index="15"></token>
+  <token token="securities" lemma="security" pos="NNS" ne="O" offset="(124, 133)" index="16"></token>
+  <token token="fraud" lemma="fraud" pos="NN" ne="O" offset="(135, 139)" index="17"></token>
+  <token token="and" lemma="and" pos="CC" ne="O" offset="(141, 143)" index="18"></token>
+  <token token="other" lemma="other" pos="JJ" ne="O" offset="(145, 149)" index="19"></token>
+  <token token="crimes" lemma="crime" pos="NNS" ne="O" offset="(151, 156)" index="20"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(157, 157)" index="21"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="notified-3" type="root"></dependency>
+  <dependency head="notified-3" dependent="employees-6" type="xcomp"></dependency>
+  <dependency head="notified-3" dependent="face-10" type="ccomp"></dependency>
+  <dependency head="notified-3" dependent="prosecutors-2" type="nsubj"></dependency>
+  <dependency head="employees-6" dependent="the-4" type="det"></dependency>
+  <dependency head="employees-6" dependent="former-5" type="amod"></dependency>
+  <dependency head="face-10" dependent="that-7" type="mark"></dependency>
+  <dependency head="face-10" dependent="they-8" type="nsubj"></dependency>
+  <dependency head="face-10" dependent="could-9" type="aux"></dependency>
+  <dependency head="face-10" dependent="charges-11" type="dobj"></dependency>
+  <dependency head="face-10" dependent="early-13" type="advmod"></dependency>
+  <dependency head="face-10" dependent="week-16" type="nmod"></dependency>
+  <dependency head="early-13" dependent="as-12" type="advmod"></dependency>
+  <dependency head="week-16" dependent="as-14" type="case"></dependency>
+  <dependency head="week-16" dependent="this-15" type="det"></dependency>
+  <dependency head="prosecutors-2" dependent="federal-1" type="amod"></dependency>
+  <parsetree>
+   ( ROOT ( S ( NP ( JJ federal ) ( NNS prosecutors ) ) ( VP ( VBN notified ) ( S ( NP ( DT the ) ( JJ former ) ( NNS employees ) ) ) ( SBAR ( IN that ) ( S ( NP ( PRP they ) ) ( VP ( MD could ) ( VP ( VB face ) ( NP ( NNS charges ) ) ( ADVP ( RB as ) ( RB early ) ) ( PP ( IN as ) ( NP ( DT this ) ( NN week ) ) ) ) ) ) ) ) ( . . ) ) )
+  </parsetree>
+  <token token="federal" lemma="federal" pos="JJ" ne="O" offset="(159, 165)" index="1"></token>
+  <token token="prosecutors" lemma="prosecutor" pos="NNS" ne="O" offset="(167, 177)" index="2"></token>
+  <token token="notified" lemma="notify" pos="VBN" ne="O" offset="(179, 186)" index="3"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(188, 190)" index="4"></token>
+  <token token="former" lemma="former" pos="JJ" ne="O" offset="(192, 197)" index="5"></token>
+  <token token="employees" lemma="employee" pos="NNS" ne="O" offset="(199, 207)" index="6"></token>
+  <token token="that" lemma="that" pos="IN" ne="O" offset="(209, 212)" index="7"></token>
+  <token token="they" lemma="they" pos="PRP" ne="O" offset="(214, 217)" index="8"></token>
+  <token token="could" lemma="could" pos="MD" ne="O" offset="(219, 223)" index="9"></token>
+  <token token="face" lemma="face" pos="VB" ne="O" offset="(225, 228)" index="10"></token>
+  <token token="charges" lemma="charge" pos="NNS" ne="O" offset="(230, 236)" index="11"></token>
+  <token token="as" lemma="as" pos="RB" ne="O" offset="(238, 239)" index="12"></token>
+  <token token="early" lemma="early" pos="RB" ne="O" offset="(241, 245)" index="13"></token>
+  <token token="as" lemma="as" pos="IN" ne="O" offset="(247, 248)" index="14"></token>
+  <token token="this" lemma="this" pos="DT" ne="O" offset="(250, 253)" index="15"></token>
+  <token token="week" lemma="week" pos="NN" ne="O" offset="(255, 258)" index="16"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(259, 259)" index="17"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="join-3" type="root"></dependency>
+  <dependency head="executives-6" dependent="charged-8" type="acl"></dependency>
+  <dependency head="executives-6" dependent="seven-4" type="nummod"></dependency>
+  <dependency head="executives-6" dependent="other-5" type="amod"></dependency>
+  <dependency head="charged-8" dependent="already-7" type="advmod"></dependency>
+  <dependency head="charged-8" dependent="abe-9" type="dobj"></dependency>
+  <dependency head="abe-9" dependent="sets-16" type="acl:relcl"></dependency>
+  <dependency head="board-15" dependent="our-10" type="nmod:poss"></dependency>
+  <dependency head="board-15" dependent="enron-11" type="compound"></dependency>
+  <dependency head="board-15" dependent="corporate-12" type="amod"></dependency>
+  <dependency head="board-15" dependent="america-13" type="compound"></dependency>
+  <dependency head="board-15" dependent="score-14" type="compound"></dependency>
+  <dependency head="sets-16" dependent="board-15" type="nsubj"></dependency>
+  <dependency head="sets-16" dependent="executives-18" type="dobj"></dependency>
+  <dependency head="executives-18" dependent="50-17" type="nummod"></dependency>
+  <dependency head="executives-18" dependent="charged-20" type="acl"></dependency>
+  <dependency head="charged-20" dependent="america-22" type="nmod"></dependency>
+  <dependency head="charged-20" dependent="now-19" type="advmod"></dependency>
+  <dependency head="america-22" dependent="in-21" type="case"></dependency>
+  <dependency head="join-3" dependent="executives-6" type="dobj"></dependency>
+  <dependency head="join-3" dependent="they-1" type="nsubj"></dependency>
+  <dependency head="join-3" dependent="would-2" type="aux"></dependency>
+  <parsetree>
+   ( ROOT ( S ( NP ( PRP they ) ) ( VP ( MD would ) ( VP ( VB join ) ( NP ( NP ( CD seven ) ( JJ other ) ( NNS executives ) ) ( VP ( ADVP ( RB already ) ) ( VBN charged ) ( NP ( NP ( NN abe ) ) ( SBAR ( S ( NP ( PRP$ our ) ( NN enron ) ( JJ corporate ) ( NN america ) ( NN score ) ( NN board ) ) ( VP ( VBZ sets ) ( NP ( NP ( CD 50 ) ( NNS executives ) ) ( VP ( ADVP ( RB now ) ) ( VBN charged ) ( PP ( IN in ) ( NP ( NN america ) ) ) ) ) ) ) ) ) ) ) ) ) ( . . ) ) )
+  </parsetree>
+  <token token="they" lemma="they" pos="PRP" ne="O" offset="(261, 264)" index="1"></token>
+  <token token="would" lemma="would" pos="MD" ne="O" offset="(266, 270)" index="2"></token>
+  <token token="join" lemma="join" pos="VB" ne="O" offset="(272, 275)" index="3"></token>
+  <token token="seven" lemma="seven" pos="CD" ne="NUMBER" offset="(277, 281)" index="4"></token>
+  <token token="other" lemma="other" pos="JJ" ne="O" offset="(283, 287)" index="5"></token>
+  <token token="executives" lemma="executive" pos="NNS" ne="O" offset="(289, 298)" index="6"></token>
+  <token token="already" lemma="already" pos="RB" ne="O" offset="(300, 306)" index="7"></token>
+  <token token="charged" lemma="charge" pos="VBN" ne="O" offset="(308, 314)" index="8"></token>
+  <token token="abe" lemma="abe" pos="NN" ne="O" offset="(316, 318)" index="9"></token>
+  <token token="our" lemma="we" pos="PRP$" ne="O" offset="(320, 322)" index="10"></token>
+  <token token="enron" lemma="enron" pos="NN" ne="O" offset="(324, 328)" index="11"></token>
+  <token token="corporate" lemma="corporate" pos="JJ" ne="O" offset="(330, 338)" index="12"></token>
+  <token token="america" lemma="america" pos="NN" ne="O" offset="(340, 346)" index="13"></token>
+  <token token="score" lemma="score" pos="NN" ne="O" offset="(348, 352)" index="14"></token>
+  <token token="board" lemma="board" pos="NN" ne="O" offset="(354, 358)" index="15"></token>
+  <token token="sets" lemma="set" pos="VBZ" ne="O" offset="(360, 363)" index="16"></token>
+  <token token="50" lemma="50" pos="CD" ne="NUMBER" offset="(365, 366)" index="17"></token>
+  <token token="executives" lemma="executive" pos="NNS" ne="O" offset="(368, 377)" index="18"></token>
+  <token token="now" lemma="now" pos="RB" ne="O" offset="(379, 381)" index="19"></token>
+  <token token="charged" lemma="charge" pos="VBN" ne="O" offset="(383, 389)" index="20"></token>
+  <token token="in" lemma="in" pos="IN" ne="O" offset="(391, 392)" index="21"></token>
+  <token token="america" lemma="america" pos="NN" ne="O" offset="(394, 400)" index="22"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(401, 401)" index="23"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="said-7" type="root"></dependency>
+  <dependency head="enron-10" dependent="at-9" type="case"></dependency>
+  <dependency head="seven-1" dependent="them-3" type="nmod"></dependency>
+  <dependency head="seven-1" dependent="i-6" type="nmod"></dependency>
+  <dependency head="them-3" dependent="of-2" type="case"></dependency>
+  <dependency head="i-6" dependent="as-5" type="case"></dependency>
+  <dependency head="said-7" dependent="enron-10" type="nmod"></dependency>
+  <dependency head="said-7" dependent="seven-1" type="nsubj"></dependency>
+  <parsetree>
+   ( ROOT ( S ( NP ( NP ( CD seven ) ) ( PP ( IN of ) ( NP ( PRP them ) ) ) ( , , ) ( PP ( IN as ) ( NP ( FW i ) ) ) ) ( VP ( VBD said ) ( , , ) ( PP ( IN at ) ( NP ( NN enron ) ) ) ) ( . . ) ) )
+  </parsetree>
+  <token token="seven" lemma="seven" pos="CD" ne="NUMBER" offset="(403, 407)" index="1"></token>
+  <token token="of" lemma="of" pos="IN" ne="O" offset="(409, 410)" index="2"></token>
+  <token token="them" lemma="they" pos="PRP" ne="O" offset="(412, 415)" index="3"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(416, 416)" index="4"></token>
+  <token token="as" lemma="as" pos="IN" ne="O" offset="(418, 419)" index="5"></token>
+  <token token="i" lemma="i" pos="FW" ne="O" offset="(421, 421)" index="6"></token>
+  <token token="said" lemma="say" pos="VBD" ne="O" offset="(423, 426)" index="7"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(427, 427)" index="8"></token>
+  <token token="at" lemma="at" pos="IN" ne="O" offset="(429, 430)" index="9"></token>
+  <token token="enron" lemma="enron" pos="NN" ne="O" offset="(432, 436)" index="10"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(437, 437)" index="11"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="sent-7" type="root"></dependency>
+  <dependency head="one-2" dependent="no-1" type="neg"></dependency>
+  <dependency head="one-2" dependent="one-5" type="appos"></dependency>
+  <dependency head="one-5" dependent="no-4" type="neg"></dependency>
+  <dependency head="sent-7" dependent="one-2" type="nsubjpass"></dependency>
+  <dependency head="sent-7" dependent="is-6" type="auxpass"></dependency>
+  <dependency head="sent-7" dependent="prison-9" type="nmod"></dependency>
+  <dependency head="prison-9" dependent="to-8" type="case"></dependency>
+  <parsetree>
+   ( ROOT ( S ( NP ( NP ( DT no ) ( NN one ) ) ( , , ) ( NP ( DT no ) ( NN one ) ) ) ( VP ( VBZ is ) ( VP ( VBN sent ) ( PP ( TO to ) ( NP ( NN prison ) ) ) ) ) ( . . ) ) )
+  </parsetree>
+  <token token="no" lemma="no" pos="DT" ne="O" offset="(439, 440)" index="1"></token>
+  <token token="one" lemma="one" pos="NN" ne="O" offset="(442, 444)" index="2"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(445, 445)" index="3"></token>
+  <token token="no" lemma="no" pos="DT" ne="O" offset="(447, 448)" index="4"></token>
+  <token token="one" lemma="one" pos="NN" ne="O" offset="(450, 452)" index="5"></token>
+  <token token="is" lemma="be" pos="VBZ" ne="O" offset="(454, 455)" index="6"></token>
+  <token token="sent" lemma="send" pos="VBN" ne="O" offset="(457, 460)" index="7"></token>
+  <token token="to" lemma="to" pos="TO" ne="O" offset="(462, 463)" index="8"></token>
+  <token token="prison" lemma="prison" pos="NN" ne="O" offset="(465, 470)" index="9"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(471, 471)" index="10"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="days-3" type="root"></dependency>
+  <dependency head="days-3" dependent="been-1" type="cop"></dependency>
+  <dependency head="days-3" dependent="511-2" type="nummod"></dependency>
+  <dependency head="days-3" dependent="enron-5" type="nmod"></dependency>
+  <dependency head="enron-5" dependent="since-4" type="case"></dependency>
+  <dependency head="enron-5" dependent="filed-6" type="acl"></dependency>
+  <dependency head="filed-6" dependent="bankruptcies-8" type="nmod"></dependency>
+  <dependency head="bankruptcies-8" dependent="for-7" type="case"></dependency>
+  <parsetree>
+   ( ROOT ( S ( VP ( VBN been ) ( NP ( CD 511 ) ( NNS days ) ) ( PP ( IN since ) ( NP ( NP ( NN enron ) ) ( VP ( VBN filed ) ( PP ( IN for ) ( NP ( NNS bankruptcies ) ) ) ) ) ) ) ( . . ) ) )
+  </parsetree>
+  <token token="been" lemma="be" pos="VBN" ne="O" offset="(473, 476)" index="1"></token>
+  <token token="511" lemma="511" pos="CD" ne="DURATION" offset="(478, 480)" index="2"></token>
+  <token token="days" lemma="day" pos="NNS" ne="DURATION" offset="(482, 485)" index="3"></token>
+  <token token="since" lemma="since" pos="IN" ne="O" offset="(487, 491)" index="4"></token>
+  <token token="enron" lemma="enron" pos="NN" ne="O" offset="(493, 497)" index="5"></token>
+  <token token="filed" lemma="file" pos="VBN" ne="O" offset="(499, 503)" index="6"></token>
+  <token token="for" lemma="for" pos="IN" ne="O" offset="(505, 507)" index="7"></token>
+  <token token="bankruptcies" lemma="bankruptcy" pos="NNS" ne="O" offset="(509, 520)" index="8"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(521, 521)" index="9"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="18:47:03-2" type="root"></dependency>
+  <dependency head="18:47:03-2" dependent="2003-04-28-1" type="nummod"></dependency>
+  <parsetree>
+   ( ROOT ( FRAG ( NP ( CD 2003-04-28 ) ( CD 18:47:03 ) ) ) )
+  </parsetree>
+  <token token="2003-04-28" lemma="2003-04-28" pos="CD" ne="DATE" offset="(527, 536)" index="1"></token>
+  <token token="18:47:03" lemma="18:47:03" pos="CD" ne="TIME" offset="(538, 545)" index="2"></token>
+ </sentence>
+</doc>

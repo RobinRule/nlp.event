@@ -31,6 +31,7 @@ public class Timbl implements Model{
 		temp.add("-I");temp.add(modelpath);
 		
 		exe.execute(temp);
+		
 		System.out.println(exe.getStdout());
 		System.out.println(exe.getStderr());
 	}
@@ -43,6 +44,7 @@ public class Timbl implements Model{
 		temp.add("-t");temp.add(testfile);
 		
 		exe.execute(temp);
+		
 		System.out.println(exe.getStdout());
 		System.out.println(exe.getStderr());
 	}

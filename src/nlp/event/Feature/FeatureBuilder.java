@@ -10,7 +10,6 @@ import java.util.LinkedList;
 import org.apache.log4j.Logger;
 import org.jsoup.nodes.Document;
 
-import nlp.annotator.pipeline.Pipeline;
 import nlp.annotator.util.AnnotatedDoc;
 import nlp.annotator.util.AnnotatedSentence;
 import nlp.annotator.util.AnnotatedToken;
@@ -29,6 +28,7 @@ public class FeatureBuilder {
 		this.format = format;
 		this.fs = new Feature[featureset.length];
 		FeatureFactory ff = new FeatureFactory();
+
 		for(int i = 0; i < featureset.length; i++){
 			fs[i] = ff.newFeature(featureset[i]);
 		}
@@ -89,8 +89,8 @@ public class FeatureBuilder {
 		else
 			log.info("Output feature-enhanced file without label to: "+des);
 		FileWriter fw = null;
-		System.out.println(des);
-		System.out.println(aCorpus.size());
+		//System.out.println(des);
+		//System.out.println(aCorpus.size());
 		try {
 			fw = new FileWriter(new File(des));
 			BufferedWriter bw = new BufferedWriter(fw);

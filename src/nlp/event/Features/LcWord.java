@@ -1,5 +1,4 @@
 package nlp.event.Features;
-import org.jsoup.nodes.Document;
 import nlp.annotator.util.AnnotatedToken;
 import nlp.event.Feature.Feature;
 
@@ -15,8 +14,8 @@ public class LcWord extends Feature{
 	}
 	@Override
 	public String getValue(AnnotatedToken t) {
-		String s=t.getToken().toLowerCase();
-		return s;
+		if(t.getIndex().equals(0))	return "-NULL-";
+		return t.getToken().toLowerCase();
 	}
 	
 	public void main(String[] args){
