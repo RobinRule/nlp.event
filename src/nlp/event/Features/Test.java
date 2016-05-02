@@ -19,16 +19,16 @@ public class Test {
 		Iterator<AnnotatedSentence> it = aDoc.iterator();
 		while(it.hasNext()){
 			AnnotatedSentence sen = it.next();
-			/*Iterator<AnnotatedToken> itt=sen.iterator();
+			Iterator<AnnotatedToken> itt=sen.iterator();
 			itt.next();
 			while(itt.hasNext()){
 				AnnotatedToken toke=itt.next();
 				HeadType fw = new HeadType();
 				String tmp=fw.getValue(toke);
-				System.out.println(toke.getToken()+" "+toke.getTokenNE());
-			}*/
-			LinkedList<MyDependency> depList=sen.getDeplist();
-			System.out.println(depList.toString());
+				System.out.println(tmp);
+			}
+			//LinkedList<MyDependency> depList=sen.getDeplist();
+			//System.out.println(depList.toString());
 			
 			
 		}	
