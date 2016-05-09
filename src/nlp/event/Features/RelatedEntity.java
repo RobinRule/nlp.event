@@ -92,7 +92,6 @@ public class RelatedEntity extends CompoundFeature {
 		visited.put(t,true);
 		typeCount.put(t.getTokenNE().toLowerCase(),typeCount.get(t.getTokenNE().toLowerCase())+1);
 		
-		//System.out.println(t);
 		
 		tokenPath.put(t,0);
 		
@@ -108,9 +107,7 @@ public class RelatedEntity extends CompoundFeature {
 					String ner=nowNb.getTokenNE().toLowerCase();
 					typeCount.put(ner,typeCount.get(ner)+1);
 					tokenPath.put(nowNb,curPath+1);
-					//System.out.println(curPath+1);
 					
-					//shortestPath.put(nowNb.getTokenNE().toLowerCase(),tokenPath.get(tok)+1);
 					q.add(nowNb);
 				}
 				else{
@@ -128,12 +125,10 @@ public class RelatedEntity extends CompoundFeature {
 			int shortestNum=tokenPath.get(tok);
 			if (!shortestPath.containsKey(ner)){
 				shortestPath.put(ner, shortestNum);
-				//System.out.println("sp"+shortestNum);
-
+				
 			}
 			else if(shortestPath.get(ner)>shortestNum){
 				shortestPath.put(ner,shortestNum);
-				//System.out.println("sp"+shortestNum);
 
 			}
 			
@@ -151,14 +146,14 @@ public class RelatedEntity extends CompoundFeature {
 			MyDependency md=depList.get(i);
 			AnnotatedToken t1=md.getHead();
 			AnnotatedToken t2=md.getDependent();
-			//System.out.println(md);
+			
 			if (!t1.getToken().equals("ROOT")&&!tokenList.contains(t1)){
 				tokenList.add(t1);
-				//System.out.println(t1);
+				
 			}
 			if (!t1.getToken().equals("ROOT")&&!tokenList.contains(t2)){
 				tokenList.add(t2);
-				//System.out.println(t2);
+				
 			}
 			
 			
@@ -176,19 +171,19 @@ public class RelatedEntity extends CompoundFeature {
 			LinkedList<AnnotatedToken> tToke=new LinkedList<AnnotatedToken>();
 			for (int j=0;j<depList.size();j++){
 				MyDependency md=depList.get(j);
-				System.out.println(md);
+				//System.out.println(md);
 				AnnotatedToken head=md.getHead();
 				AnnotatedToken dependent=md.getDependent();
-				System.out.println(head.getTokenNE());
-				System.out.println(dependent.getTokenNE());
+				//System.out.println(head.getTokenNE());
+				//System.out.println(dependent.getTokenNE());
 				if (!head.getToken().equals("ROOT")&&head.equals(t)&& !tToke.contains(dependent)){
 					tToke.add(dependent);
-					//System.out.println(md.getDependent());
+					
 
 				}
 				if (!head.getToken().equals("ROOT")&&dependent.equals(t)&& !tToke.contains(head)){
 					tToke.add(head);
-					//System.out.println(md.getHead());
+					
 				}
 				
 			}
@@ -219,7 +214,7 @@ public class RelatedEntity extends CompoundFeature {
 	}
 	@Override
 	public String getValue(AnnotatedToken t) {
-		System.out.println("candidate "+t.getToken());
+		//System.out.println("candidate "+t.getToken());
 		
 		if(t.getIndex().equals(0))	return "-NULL-";
 		
@@ -235,15 +230,9 @@ public class RelatedEntity extends CompoundFeature {
 			PriorityQueue<Order> t2=new PriorityQueue<Order>();
 			for (int i=0;i<depList.size();i++){
 				MyDependency md=depList.get(i);
-				//System.out.println(md);
-				//System.out.println(md.getHead());
-				//System.out.println(t.getTokenNE());
-				
-				//System.out.println(md.getHead().equals(t));
-				//System.out.println(md.getType());
+			
 				if (!md.getHead().getToken().equals("ROOT") && md.getHead().equals(t) && md.getType()!= null){
 					if (md.getDependent().getTokenNE().toLowerCase().equals(Ner[j])) {
-						//System.out.println("aaa");
 						num[j]++;
 						t1.add(new Order(md.getType(),md.getDependent().getIndex()));
 						t2.add(new Order(md.getDependent().getToken(),md.getDependent().getIndex()));
@@ -256,26 +245,7 @@ public class RelatedEntity extends CompoundFeature {
 			LaDe.add(t1);
 			ConHe.add(t2);
 		}
-		/**
-		 * test
-		 
-		for (int i=0;i<num.length;i++){
-			System.out.println(num[i]);
-		}
 		
-		String la="";
-		for (int i=0;i<LaDe.size();i++){
-			PriorityQueue<Order> t1=LaDe.get(i);
-			String tmp="";
-			Iterator<Order> it=t1.iterator();
-			while(it.hasNext()){
-				Order m=it.next();
-				tmp+=m.getObj()+"*";
-			}
-			tmp=tmp.substring(0,tmp.length()-1);
-			la+=tmp+":";
-		}
-		System.out.println(la);*/
 		
 		getPath(depList,Ner,t);
 		
@@ -320,7 +290,6 @@ public class RelatedEntity extends CompoundFeature {
 			String tmp1=String.valueOf(typeCount.get(Ner[i]));
 			String tmp2=String.valueOf(shortestPath.get(Ner[i]));
 			tCount+=tmp1+":";
-			System.out.println("tp2 "+tmp2);
 			if (i<Ner.length-1)
 				shortPath+=tmp2+":";
 			else shortPath+=tmp2;
