@@ -23,7 +23,7 @@ public class Test {
 			itt.next();
 			while(itt.hasNext()){
 				AnnotatedToken toke=itt.next();
-				HeadType fw = new HeadType();
+				RelatedEntity fw = new RelatedEntity();
 				String tmp=fw.getValue(toke);
 				System.out.println(tmp);
 			}

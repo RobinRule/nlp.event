@@ -23,11 +23,9 @@ public class HeadType extends Feature {
 	}
 	@Override
 	public String getValue(AnnotatedToken t) {
-<<<<<<< HEAD
-		if (t.getToken().toLowerCase().equals("root")) return "-NULL-";
-=======
+
 		if(t.getIndex().equals(0))	return "-NULL-";
->>>>>>> master
+
 		AnnotatedSentence Sen=t.getParent();
 		LinkedList<MyDependency> depList=Sen.getDeplist();
 		for (int i=0;i<depList.size();i++){
@@ -36,10 +34,8 @@ public class HeadType extends Feature {
 				return md.getHead().getTokenNE();	
 			}
 		}
-<<<<<<< HEAD
-		
-=======
->>>>>>> master
+
+
 		return "-NULL-";
 	}
 

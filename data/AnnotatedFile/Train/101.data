@@ -1,0 +1,181 @@
+<doc metapath="./data/AnnotatedFile/Train/101.meta">
+ <sentence>
+  <dependency head="ROOT-0" dependent="STORY-4" type="root"></dependency>
+  <dependency head="STORY-4" dependent="CNN_ENG_20030415_180754-1" type="compound"></dependency>
+  <dependency head="STORY-4" dependent=".5-2" type="nummod"></dependency>
+  <dependency head="STORY-4" dependent="NEWS-3" type="compound"></dependency>
+  <dependency head="STORY-4" dependent="18:06:47-6" type="dep"></dependency>
+  <dependency head="18:06:47-6" dependent="2003-04-15-5" type="compound"></dependency>
+  <dependency head="18:06:47-6" dependent="evening-8" type="nmod:tmod"></dependency>
+  <dependency head="evening-8" dependent="good-7" type="amod"></dependency>
+  <parsetree>
+   ( ROOT ( NP ( NP ( NN CNN_ENG_20030415_180754 ) ( CD .5 ) ( NN NEWS ) ( NN STORY ) ) ( NP ( NP ( QP ( CD 2003-04-15 ) ( CD 18:06:47 ) ) ) ( NP-TMP ( JJ good ) ( NN evening ) ) ) ( . . ) ) )
+  </parsetree>
+  <token token="CNN_ENG_20030415_180754" lemma="cnn_eng_20030415_180754" pos="NN" ne="O" offset="(2, 24)" index="1"></token>
+  <token token=".5" lemma=".5" pos="CD" ne="NUMBER" offset="(25, 26)" index="2"></token>
+  <token token="NEWS" lemma="news" pos="NN" ne="O" offset="(30, 33)" index="3"></token>
+  <token token="STORY" lemma="story" pos="NN" ne="O" offset="(35, 39)" index="4"></token>
+  <token token="2003-04-15" lemma="2003-04-15" pos="CD" ne="DATE" offset="(43, 52)" index="5"></token>
+  <token token="18:06:47" lemma="18:06:47" pos="CD" ne="TIME" offset="(54, 61)" index="6"></token>
+  <token token="good" lemma="good" pos="JJ" ne="O" offset="(67, 70)" index="7"></token>
+  <token token="evening" lemma="evening" pos="NN" ne="TIME" offset="(72, 78)" index="8"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(79, 79)" index="9"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="arrested-6" type="root"></dependency>
+  <dependency head="baghdad-4" dependent="in-3" type="case"></dependency>
+  <dependency head="arrested-6" dependent="have-5" type="aux"></dependency>
+  <dependency head="arrested-6" dependent="terrorist-9" type="dobj"></dependency>
+  <dependency head="arrested-6" dependent="forces-2" type="nsubj"></dependency>
+  <dependency head="terrorist-9" dependent="the-7" type="det"></dependency>
+  <dependency head="terrorist-9" dependent="palestinian-8" type="amod"></dependency>
+  <dependency head="terrorist-9" dependent="led-11" type="acl:relcl"></dependency>
+  <dependency head="led-11" dependent="lauro-21" type="nmod:tmod"></dependency>
+  <dependency head="led-11" dependent="who-10" type="nsubj"></dependency>
+  <dependency head="led-11" dependent="hijacking-13" type="dobj"></dependency>
+  <dependency head="hijacking-13" dependent="the-12" type="det"></dependency>
+  <dependency head="hijacking-13" dependent="ship-18" type="nmod"></dependency>
+  <dependency head="ship-18" dependent="of-14" type="case"></dependency>
+  <dependency head="ship-18" dependent="the-15" type="det"></dependency>
+  <dependency head="ship-18" dependent="italian-16" type="amod"></dependency>
+  <dependency head="ship-18" dependent="cruise-17" type="compound"></dependency>
+  <dependency head="lauro-21" dependent="the-19" type="det"></dependency>
+  <dependency head="lauro-21" dependent="achille-20" type="compound"></dependency>
+  <dependency head="lauro-21" dependent="1985-23" type="nmod"></dependency>
+  <dependency head="1985-23" dependent="in-22" type="case"></dependency>
+  <dependency head="forces-2" dependent="baghdad-4" type="nmod"></dependency>
+  <dependency head="forces-2" dependent="coalition-1" type="compound"></dependency>
+  <parsetree>
+   ( ROOT ( S ( NP ( NP ( NN coalition ) ( NNS forces ) ) ( PP ( IN in ) ( NP ( NN baghdad ) ) ) ) ( VP ( VBP have ) ( VP ( VBN arrested ) ( NP ( NP ( DT the ) ( JJ palestinian ) ( NN terrorist ) ) ( SBAR ( WHNP ( WP who ) ) ( S ( VP ( VBD led ) ( NP ( NP ( DT the ) ( NN hijacking ) ) ( PP ( IN of ) ( NP ( DT the ) ( JJ italian ) ( NN cruise ) ( NN ship ) ) ) ) ( NP-TMP ( NP ( DT the ) ( NN achille ) ( NN lauro ) ) ( PP ( IN in ) ( NP ( CD 1985 ) ) ) ) ) ) ) ) ) ) ( . . ) ) )
+  </parsetree>
+  <token token="coalition" lemma="coalition" pos="NN" ne="O" offset="(81, 89)" index="1"></token>
+  <token token="forces" lemma="force" pos="NNS" ne="O" offset="(91, 96)" index="2"></token>
+  <token token="in" lemma="in" pos="IN" ne="O" offset="(98, 99)" index="3"></token>
+  <token token="baghdad" lemma="baghdad" pos="NN" ne="O" offset="(101, 107)" index="4"></token>
+  <token token="have" lemma="have" pos="VBP" ne="O" offset="(109, 112)" index="5"></token>
+  <token token="arrested" lemma="arrest" pos="VBN" ne="O" offset="(114, 121)" index="6"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(123, 125)" index="7"></token>
+  <token token="palestinian" lemma="palestinian" pos="JJ" ne="O" offset="(127, 137)" index="8"></token>
+  <token token="terrorist" lemma="terrorist" pos="NN" ne="O" offset="(139, 147)" index="9"></token>
+  <token token="who" lemma="who" pos="WP" ne="O" offset="(149, 151)" index="10"></token>
+  <token token="led" lemma="lead" pos="VBD" ne="O" offset="(153, 155)" index="11"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(157, 159)" index="12"></token>
+  <token token="hijacking" lemma="hijacking" pos="NN" ne="O" offset="(161, 169)" index="13"></token>
+  <token token="of" lemma="of" pos="IN" ne="O" offset="(171, 172)" index="14"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(174, 176)" index="15"></token>
+  <token token="italian" lemma="italian" pos="JJ" ne="O" offset="(178, 184)" index="16"></token>
+  <token token="cruise" lemma="cruise" pos="NN" ne="O" offset="(186, 191)" index="17"></token>
+  <token token="ship" lemma="ship" pos="NN" ne="O" offset="(193, 196)" index="18"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(198, 200)" index="19"></token>
+  <token token="achille" lemma="achille" pos="NN" ne="O" offset="(202, 208)" index="20"></token>
+  <token token="lauro" lemma="lauro" pos="NN" ne="O" offset="(210, 214)" index="21"></token>
+  <token token="in" lemma="in" pos="IN" ne="O" offset="(216, 217)" index="22"></token>
+  <token token="1985" lemma="1985" pos="CD" ne="DATE" offset="(219, 222)" index="23"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(223, 223)" index="24"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="killed-8" type="root"></dependency>
+  <dependency head="killed-8" dependent="american-11" type="nsubj"></dependency>
+  <dependency head="killed-8" dependent="that-2" type="nmod"></dependency>
+  <dependency head="american-11" dependent="a-9" type="det"></dependency>
+  <dependency head="american-11" dependent="disabled-10" type="amod"></dependency>
+  <dependency head="american-11" dependent="klinghoffer-14" type="appos"></dependency>
+  <dependency head="klinghoffer-14" dependent="leon-13" type="compound"></dependency>
+  <dependency head="klinghoffer-14" dependent="sat-18" type="acl:relcl"></dependency>
+  <dependency head="sat-18" dependent="as-16" type="mark"></dependency>
+  <dependency head="sat-18" dependent="he-17" type="nsubj"></dependency>
+  <dependency head="sat-18" dependent="wheelchair-21" type="nmod"></dependency>
+  <dependency head="wheelchair-21" dependent="in-19" type="case"></dependency>
+  <dependency head="wheelchair-21" dependent="his-20" type="nmod:poss"></dependency>
+  <dependency head="that-2" dependent="during-1" type="case"></dependency>
+  <dependency head="that-2" dependent="hijacking-3" type="acl"></dependency>
+  <dependency head="hijacking-3" dependent="and-7" type="cc"></dependency>
+  <dependency head="hijacking-3" dependent="terrorists-5" type="dobj"></dependency>
+  <dependency head="terrorists-5" dependent="shot-6" type="dep"></dependency>
+  <dependency head="terrorists-5" dependent="the-4" type="det"></dependency>
+  <parsetree>
+   ( ROOT ( SINV ( PP ( IN during ) ( NP ( NP ( DT that ) ) ( VP ( VBG hijacking ) ( NP ( NP ( DT the ) ( NNS terrorists ) ) ( NP ( NN shot ) ) ) ( CC and ) ) ) ) ( VP ( VBD killed ) ) ( NP ( NP ( DT a ) ( JJ disabled ) ( NN american ) ) ( , , ) ( NP ( NP ( NN leon ) ( NN klinghoffer ) ) ( , , ) ( SBAR ( IN as ) ( S ( NP ( PRP he ) ) ( VP ( VBD sat ) ( PP ( IN in ) ( NP ( PRP$ his ) ( NN wheelchair ) ) ) ) ) ) ) ) ( . . ) ) )
+  </parsetree>
+  <token token="during" lemma="during" pos="IN" ne="O" offset="(225, 230)" index="1"></token>
+  <token token="that" lemma="that" pos="DT" ne="O" offset="(232, 235)" index="2"></token>
+  <token token="hijacking" lemma="hijack" pos="VBG" ne="O" offset="(237, 245)" index="3"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(247, 249)" index="4"></token>
+  <token token="terrorists" lemma="terrorist" pos="NNS" ne="O" offset="(251, 260)" index="5"></token>
+  <token token="shot" lemma="shot" pos="NN" ne="O" offset="(262, 265)" index="6"></token>
+  <token token="and" lemma="and" pos="CC" ne="O" offset="(267, 269)" index="7"></token>
+  <token token="killed" lemma="kill" pos="VBD" ne="O" offset="(271, 276)" index="8"></token>
+  <token token="a" lemma="a" pos="DT" ne="O" offset="(278, 278)" index="9"></token>
+  <token token="disabled" lemma="disabled" pos="JJ" ne="O" offset="(280, 287)" index="10"></token>
+  <token token="american" lemma="american" pos="NN" ne="O" offset="(289, 296)" index="11"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(297, 297)" index="12"></token>
+  <token token="leon" lemma="leon" pos="NN" ne="O" offset="(299, 302)" index="13"></token>
+  <token token="klinghoffer" lemma="klinghoffer" pos="NN" ne="O" offset="(304, 314)" index="14"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(315, 315)" index="15"></token>
+  <token token="as" lemma="as" pos="IN" ne="O" offset="(317, 318)" index="16"></token>
+  <token token="he" lemma="he" pos="PRP" ne="O" offset="(320, 321)" index="17"></token>
+  <token token="sat" lemma="sit" pos="VBD" ne="O" offset="(323, 325)" index="18"></token>
+  <token token="in" lemma="in" pos="IN" ne="O" offset="(327, 328)" index="19"></token>
+  <token token="his" lemma="he" pos="PRP$" ne="O" offset="(330, 332)" index="20"></token>
+  <token token="wheelchair" lemma="wheelchair" pos="NN" ne="O" offset="(334, 343)" index="21"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(344, 344)" index="22"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="threw-2" type="root"></dependency>
+  <dependency head="threw-2" dependent="they-1" type="nsubj"></dependency>
+  <dependency head="threw-2" dependent="body-4" type="dobj"></dependency>
+  <dependency head="threw-2" dependent="overboard-5" type="advmod"></dependency>
+  <dependency head="body-4" dependent="his-3" type="nmod:poss"></dependency>
+  <parsetree>
+   ( ROOT ( S ( NP ( PRP they ) ) ( VP ( VBD threw ) ( NP ( PRP$ his ) ( NN body ) ) ( ADVP ( RB overboard ) ) ) ( . . ) ) )
+  </parsetree>
+  <token token="they" lemma="they" pos="PRP" ne="O" offset="(346, 349)" index="1"></token>
+  <token token="threw" lemma="throw" pos="VBD" ne="O" offset="(351, 355)" index="2"></token>
+  <token token="his" lemma="he" pos="PRP$" ne="O" offset="(357, 359)" index="3"></token>
+  <token token="body" lemma="body" pos="NN" ne="O" offset="(361, 364)" index="4"></token>
+  <token token="overboard" lemma="overboard" pos="RB" ne="O" offset="(366, 374)" index="5"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(375, 375)" index="6"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="joins-6" type="root"></dependency>
+  <dependency head="correspondent-3" dependent="national-1" type="amod"></dependency>
+  <dependency head="correspondent-3" dependent="security-2" type="compound"></dependency>
+  <dependency head="correspondent-3" dependent="ensor-5" type="dep"></dependency>
+  <dependency head="ensor-5" dependent="david-4" type="compound"></dependency>
+  <dependency head="joins-6" dependent="correspondent-3" type="nsubj"></dependency>
+  <dependency head="joins-6" dependent="live-8" type="ccomp"></dependency>
+  <dependency head="live-8" dependent="us-7" type="nsubj"></dependency>
+  <dependency head="live-8" dependent="washington-10" type="nmod"></dependency>
+  <dependency head="washington-10" dependent="from-9" type="case"></dependency>
+  <parsetree>
+   ( ROOT ( S ( NP ( NP ( JJ national ) ( NN security ) ( NN correspondent ) ) ( NP ( NN david ) ( NN ensor ) ) ) ( VP ( VBZ joins ) ( S ( NP ( PRP us ) ) ( VP ( VB live ) ( PP ( IN from ) ( NP ( NN washington ) ) ) ) ) ) ( . . ) ) )
+  </parsetree>
+  <token token="national" lemma="national" pos="JJ" ne="O" offset="(377, 384)" index="1"></token>
+  <token token="security" lemma="security" pos="NN" ne="O" offset="(386, 393)" index="2"></token>
+  <token token="correspondent" lemma="correspondent" pos="NN" ne="O" offset="(395, 407)" index="3"></token>
+  <token token="david" lemma="david" pos="NN" ne="PERSON" offset="(409, 413)" index="4"></token>
+  <token token="ensor" lemma="ensor" pos="NN" ne="PERSON" offset="(415, 419)" index="5"></token>
+  <token token="joins" lemma="join" pos="VBZ" ne="O" offset="(421, 425)" index="6"></token>
+  <token token="us" lemma="we" pos="PRP" ne="O" offset="(427, 428)" index="7"></token>
+  <token token="live" lemma="live" pos="VB" ne="O" offset="(430, 433)" index="8"></token>
+  <token token="from" lemma="from" pos="IN" ne="O" offset="(435, 438)" index="9"></token>
+  <token token="washington" lemma="washington" pos="NN" ne="LOCATION" offset="(440, 449)" index="10"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(450, 450)" index="11"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="david-1" type="root"></dependency>
+  <parsetree>
+   ( ROOT ( FRAG ( NP ( NN david ) ) ( . ? ) ) )
+  </parsetree>
+  <token token="david" lemma="david" pos="NN" ne="O" offset="(452, 456)" index="1"></token>
+  <token token="?" lemma="?" pos="." ne="O" offset="(457, 457)" index="2"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="18:07:08-2" type="root"></dependency>
+  <dependency head="18:07:08-2" dependent="2003-04-15-1" type="nummod"></dependency>
+  <parsetree>
+   ( ROOT ( FRAG ( NP ( CD 2003-04-15 ) ( CD 18:07:08 ) ) ) )
+  </parsetree>
+  <token token="2003-04-15" lemma="2003-04-15" pos="CD" ne="DATE" offset="(463, 472)" index="1"></token>
+  <token token="18:07:08" lemma="18:07:08" pos="CD" ne="TIME" offset="(474, 481)" index="2"></token>
+ </sentence>
+</doc>

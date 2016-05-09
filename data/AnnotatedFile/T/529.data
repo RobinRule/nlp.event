@@ -1,0 +1,832 @@
+<doc metapath="./data/AnnotatedFile/T/529.meta">
+ <sentence>
+  <dependency head="ROOT-0" dependent="TEXT-4" type="root"></dependency>
+  <dependency head="TEXT-4" dependent="MARKETVIEW_20050209-1" type="compound"></dependency>
+  <dependency head="TEXT-4" dependent=".1923-2" type="nummod"></dependency>
+  <dependency head="TEXT-4" dependent="WEB-3" type="compound"></dependency>
+  <dependency head="TEXT-4" dependent="Satellite-8" type="dep"></dependency>
+  <dependency head="TEXT-4" dependent="Brilliant-10" type="dep"></dependency>
+  <dependency head="Satellite-8" dependent="2005-02-09T19-5" type="compound"></dependency>
+  <dependency head="Satellite-8" dependent=":23:00-6" type="nummod"></dependency>
+  <dependency head="Satellite-8" dependent="Sirius-7" type="compound"></dependency>
+  <dependency head="Brilliant-10" dependent="Plan-11" type="dep"></dependency>
+  <dependency head="Plan-11" dependent="or-13" type="cc"></dependency>
+  <dependency head="Plan-11" dependent="Grasping-14" type="acl"></dependency>
+  <dependency head="Grasping-14" dependent="Straws-16" type="nmod"></dependency>
+  <dependency head="Straws-16" dependent="at-15" type="case"></dependency>
+  <parsetree>
+   ( ROOT ( NP ( NP ( NP ( NN MARKETVIEW_20050209 ) ( CD .1923 ) ( NN WEB ) ( NN TEXT ) ) ( NP ( NN 2005-02-09T19 ) ( CD :23:00 ) ( NNP Sirius ) ( NNP Satellite ) ) ) ( : -- ) ( NP ( NP ( JJ Brilliant ) ) ( UCP ( NP ( NN Plan ) ) ( , , ) ( CC or ) ( VP ( VBG Grasping ) ( PP ( IN at ) ( NP ( NNP Straws ) ) ) ) ) ) ( . ? ) ) )
+  </parsetree>
+  <token token="MARKETVIEW_20050209" lemma="marketview_20050209" pos="NN" ne="O" offset="(2, 20)" index="1"></token>
+  <token token=".1923" lemma=".1923" pos="CD" ne="NUMBER" offset="(21, 25)" index="2"></token>
+  <token token="WEB" lemma="web" pos="NN" ne="O" offset="(29, 31)" index="3"></token>
+  <token token="TEXT" lemma="text" pos="NN" ne="O" offset="(33, 36)" index="4"></token>
+  <token token="2005-02-09T19" lemma="2005-02-09t19" pos="NN" ne="O" offset="(40, 52)" index="5"></token>
+  <token token=":23:00" lemma=":23:00" pos="CD" ne="NUMBER" offset="(53, 58)" index="6"></token>
+  <token token="Sirius" lemma="Sirius" pos="NNP" ne="O" offset="(63, 68)" index="7"></token>
+  <token token="Satellite" lemma="Satellite" pos="NNP" ne="O" offset="(70, 78)" index="8"></token>
+  <token token="--" lemma="--" pos=":" ne="O" offset="(80, 81)" index="9"></token>
+  <token token="Brilliant" lemma="brilliant" pos="JJ" ne="O" offset="(83, 91)" index="10"></token>
+  <token token="Plan" lemma="plan" pos="NN" ne="O" offset="(93, 96)" index="11"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(97, 97)" index="12"></token>
+  <token token="or" lemma="or" pos="CC" ne="O" offset="(99, 100)" index="13"></token>
+  <token token="Grasping" lemma="grasp" pos="VBG" ne="O" offset="(102, 109)" index="14"></token>
+  <token token="at" lemma="at" pos="IN" ne="O" offset="(111, 112)" index="15"></token>
+  <token token="Straws" lemma="Straws" pos="NNP" ne="O" offset="(114, 119)" index="16"></token>
+  <token token="?" lemma="?" pos="." ne="O" offset="(120, 120)" index="17"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="pushing-7" type="root"></dependency>
+  <dependency head="2005-02-09T19-2" dependent="Karmazin-5" type="dep"></dependency>
+  <dependency head="2005-02-09T19-2" dependent="Byrne-1" type="compound"></dependency>
+  <dependency head="Karmazin-5" dependent=":23:00-3" type="nummod"></dependency>
+  <dependency head="Karmazin-5" dependent="Mel-4" type="compound"></dependency>
+  <dependency head="pushing-7" dependent="is-6" type="aux"></dependency>
+  <dependency head="pushing-7" dependent="add-9" type="xcomp"></dependency>
+  <dependency head="pushing-7" dependent="2005-02-09T19-2" type="nsubj"></dependency>
+  <dependency head="add-9" dependent="seems-23" type="advcl"></dependency>
+  <dependency head="add-9" dependent="to-8" type="mark"></dependency>
+  <dependency head="add-9" dependent="services-12" type="dobj"></dependency>
+  <dependency head="add-9" dependent="iPods-14" type="nmod"></dependency>
+  <dependency head="services-12" dependent="Sirius-10" type="compound"></dependency>
+  <dependency head="services-12" dependent="Satellite-11" type="compound"></dependency>
+  <dependency head="iPods-14" dependent="to-13" type="case"></dependency>
+  <dependency head="iPods-14" dependent="idea-18" type="dep"></dependency>
+  <dependency head="idea-18" dependent="inasmuch-20" type="appos"></dependency>
+  <dependency head="idea-18" dependent="an-16" type="det"></dependency>
+  <dependency head="idea-18" dependent="interesting-17" type="amod"></dependency>
+  <dependency head="seems-23" dependent="as-21" type="mark"></dependency>
+  <dependency head="seems-23" dependent="it-22" type="nsubj"></dependency>
+  <dependency head="seems-23" dependent="defeat-25" type="xcomp"></dependency>
+  <dependency head="defeat-25" dependent="to-24" type="mark"></dependency>
+  <dependency head="defeat-25" dependent="purpose-27" type="dobj"></dependency>
+  <dependency head="purpose-27" dependent="the-26" type="det"></dependency>
+  <dependency head="purpose-27" dependent="both-29" type="nmod"></dependency>
+  <dependency head="both-29" dependent="of-28" type="case"></dependency>
+  <parsetree>
+   ( ROOT ( S ( NP ( NP ( NNP Byrne ) ( NNP 2005-02-09T19 ) ) ( NP ( CD :23:00 ) ( NNP Mel ) ( NNP Karmazin ) ) ) ( VP ( VBZ is ) ( VP ( VBG pushing ) ( S ( VP ( TO to ) ( VP ( VB add ) ( NP ( NNP Sirius ) ( NNP Satellite ) ( NNS services ) ) ( PP ( TO to ) ( NP ( NP ( NNS iPods ) ) ( : -- ) ( NP ( NP ( DT an ) ( JJ interesting ) ( NN idea ) ) ( , , ) ( NP ( NN inasmuch ) ) ) ) ) ( SBAR ( IN as ) ( S ( NP ( PRP it ) ) ( VP ( VBZ seems ) ( S ( VP ( TO to ) ( VP ( VB defeat ) ( NP ( NP ( DT the ) ( NN purpose ) ) ( PP ( IN of ) ( NP ( DT both ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ( . . ) ) )
+  </parsetree>
+  <token token="Byrne" lemma="Byrne" pos="NNP" ne="PERSON" offset="(126, 130)" index="1"></token>
+  <token token="2005-02-09T19" lemma="2005-02-09T19" pos="NNP" ne="O" offset="(134, 146)" index="2"></token>
+  <token token=":23:00" lemma=":23:00" pos="CD" ne="NUMBER" offset="(147, 152)" index="3"></token>
+  <token token="Mel" lemma="Mel" pos="NNP" ne="PERSON" offset="(155, 157)" index="4"></token>
+  <token token="Karmazin" lemma="Karmazin" pos="NNP" ne="PERSON" offset="(159, 166)" index="5"></token>
+  <token token="is" lemma="be" pos="VBZ" ne="O" offset="(168, 169)" index="6"></token>
+  <token token="pushing" lemma="push" pos="VBG" ne="O" offset="(171, 177)" index="7"></token>
+  <token token="to" lemma="to" pos="TO" ne="O" offset="(179, 180)" index="8"></token>
+  <token token="add" lemma="add" pos="VB" ne="O" offset="(182, 184)" index="9"></token>
+  <token token="Sirius" lemma="Sirius" pos="NNP" ne="ORGANIZATION" offset="(186, 191)" index="10"></token>
+  <token token="Satellite" lemma="Satellite" pos="NNP" ne="ORGANIZATION" offset="(193, 201)" index="11"></token>
+  <token token="services" lemma="service" pos="NNS" ne="O" offset="(203, 210)" index="12"></token>
+  <token token="to" lemma="to" pos="TO" ne="O" offset="(212, 213)" index="13"></token>
+  <token token="iPods" lemma="ipod" pos="NNS" ne="O" offset="(215, 219)" index="14"></token>
+  <token token="--" lemma="--" pos=":" ne="O" offset="(221, 222)" index="15"></token>
+  <token token="an" lemma="a" pos="DT" ne="O" offset="(224, 225)" index="16"></token>
+  <token token="interesting" lemma="interesting" pos="JJ" ne="O" offset="(227, 237)" index="17"></token>
+  <token token="idea" lemma="idea" pos="NN" ne="O" offset="(239, 242)" index="18"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(243, 243)" index="19"></token>
+  <token token="inasmuch" lemma="inasmuch" pos="NN" ne="O" offset="(245, 252)" index="20"></token>
+  <token token="as" lemma="as" pos="IN" ne="O" offset="(254, 255)" index="21"></token>
+  <token token="it" lemma="it" pos="PRP" ne="O" offset="(257, 258)" index="22"></token>
+  <token token="seems" lemma="seem" pos="VBZ" ne="O" offset="(260, 264)" index="23"></token>
+  <token token="to" lemma="to" pos="TO" ne="O" offset="(266, 267)" index="24"></token>
+  <token token="defeat" lemma="defeat" pos="VB" ne="O" offset="(269, 274)" index="25"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(276, 278)" index="26"></token>
+  <token token="purpose" lemma="purpose" pos="NN" ne="O" offset="(280, 286)" index="27"></token>
+  <token token="of" lemma="of" pos="IN" ne="O" offset="(288, 289)" index="28"></token>
+  <token token="both" lemma="both" pos="DT" ne="O" offset="(291, 294)" index="29"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(295, 295)" index="30"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="way-17" type="root"></dependency>
+  <dependency head="container-7" dependent="possible-6" type="amod"></dependency>
+  <dependency head="container-7" dependent="libraries-11" type="nmod"></dependency>
+  <dependency head="container-7" dependent="and-13" type="cc"></dependency>
+  <dependency head="container-7" dependent="Sirius-14" type="conj"></dependency>
+  <dependency head="container-7" dependent="the-4" type="det"></dependency>
+  <dependency head="container-7" dependent="tiniest-5" type="amod"></dependency>
+  <dependency head="libraries-11" dependent="for-8" type="case"></dependency>
+  <dependency head="libraries-11" dependent="vast-9" type="amod"></dependency>
+  <dependency head="libraries-11" dependent="music-10" type="compound"></dependency>
+  <dependency head="way-17" dependent="is-15" type="cop"></dependency>
+  <dependency head="way-17" dependent="a-16" type="det"></dependency>
+  <dependency head="way-17" dependent="iPod-2" type="nsubj"></dependency>
+  <dependency head="way-17" dependent="get-19" type="acl"></dependency>
+  <dependency head="get-19" dependent="said-25" type="advcl"></dependency>
+  <dependency head="get-19" dependent="to-18" type="mark"></dependency>
+  <dependency head="get-19" dependent="lots-21" type="nmod"></dependency>
+  <dependency head="lots-21" dependent="content-23" type="nmod"></dependency>
+  <dependency head="lots-21" dependent="at-20" type="case"></dependency>
+  <dependency head="content-23" dependent="of-22" type="case"></dependency>
+  <dependency head="said-25" dependent="when-24" type="advmod"></dependency>
+  <dependency head="said-25" dependent="unavailable-29" type="ccomp"></dependency>
+  <dependency head="library-27" dependent="music-26" type="compound"></dependency>
+  <dependency head="unavailable-29" dependent="library-27" type="nsubj"></dependency>
+  <dependency head="unavailable-29" dependent="is-28" type="cop"></dependency>
+  <dependency head="iPod-2" dependent="container-7" type="dep"></dependency>
+  <dependency head="iPod-2" dependent="The-1" type="det"></dependency>
+  <dependency head="iPod-2" dependent="'s-3" type="case"></dependency>
+  <parsetree>
+   ( ROOT ( S ( NP ( NP ( DT The ) ( NNP iPod ) ( POS 's ) ) ( NP ( NP ( NP ( DT the ) ( JJS tiniest ) ( JJ possible ) ( NN container ) ) ( PP ( IN for ) ( NP ( JJ vast ) ( NN music ) ( NNS libraries ) ) ) ) ( , , ) ( CC and ) ( NP ( NNP Sirius ) ) ) ) ( VP ( VBZ is ) ( NP ( DT a ) ( NN way ) ( S ( VP ( TO to ) ( VP ( VB get ) ( PP ( IN at ) ( NP ( NP ( NNS lots ) ) ( PP ( IN of ) ( NP ( NN content ) ) ) ) ) ( SBAR ( WHADVP ( WRB when ) ) ( S ( VP ( VBD said ) ( SBAR ( S ( NP ( NN music ) ( NN library ) ) ( VP ( VBZ is ) ( ADJP ( JJ unavailable ) ) ) ) ) ) ) ) ) ) ) ) ) ( . . ) ) )
+  </parsetree>
+  <token token="The" lemma="the" pos="DT" ne="O" offset="(297, 299)" index="1"></token>
+  <token token="iPod" lemma="iPod" pos="NNP" ne="O" offset="(301, 304)" index="2"></token>
+  <token token="'s" lemma="'s" pos="POS" ne="O" offset="(305, 306)" index="3"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(308, 310)" index="4"></token>
+  <token token="tiniest" lemma="tiniest" pos="JJS" ne="O" offset="(312, 318)" index="5"></token>
+  <token token="possible" lemma="possible" pos="JJ" ne="O" offset="(320, 327)" index="6"></token>
+  <token token="container" lemma="container" pos="NN" ne="O" offset="(329, 337)" index="7"></token>
+  <token token="for" lemma="for" pos="IN" ne="O" offset="(339, 341)" index="8"></token>
+  <token token="vast" lemma="vast" pos="JJ" ne="O" offset="(343, 346)" index="9"></token>
+  <token token="music" lemma="music" pos="NN" ne="O" offset="(348, 352)" index="10"></token>
+  <token token="libraries" lemma="library" pos="NNS" ne="O" offset="(354, 362)" index="11"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(363, 363)" index="12"></token>
+  <token token="and" lemma="and" pos="CC" ne="O" offset="(365, 367)" index="13"></token>
+  <token token="Sirius" lemma="Sirius" pos="NNP" ne="ORGANIZATION" offset="(369, 374)" index="14"></token>
+  <token token="is" lemma="be" pos="VBZ" ne="O" offset="(376, 377)" index="15"></token>
+  <token token="a" lemma="a" pos="DT" ne="O" offset="(379, 379)" index="16"></token>
+  <token token="way" lemma="way" pos="NN" ne="O" offset="(381, 383)" index="17"></token>
+  <token token="to" lemma="to" pos="TO" ne="O" offset="(385, 386)" index="18"></token>
+  <token token="get" lemma="get" pos="VB" ne="O" offset="(388, 390)" index="19"></token>
+  <token token="at" lemma="at" pos="IN" ne="O" offset="(392, 393)" index="20"></token>
+  <token token="lots" lemma="lot" pos="NNS" ne="O" offset="(395, 398)" index="21"></token>
+  <token token="of" lemma="of" pos="IN" ne="O" offset="(400, 401)" index="22"></token>
+  <token token="content" lemma="content" pos="NN" ne="O" offset="(403, 409)" index="23"></token>
+  <token token="when" lemma="when" pos="WRB" ne="O" offset="(411, 414)" index="24"></token>
+  <token token="said" lemma="say" pos="VBD" ne="O" offset="(416, 419)" index="25"></token>
+  <token token="music" lemma="music" pos="NN" ne="O" offset="(421, 425)" index="26"></token>
+  <token token="library" lemma="library" pos="NN" ne="O" offset="(427, 433)" index="27"></token>
+  <token token="is" lemma="be" pos="VBZ" ne="O" offset="(435, 436)" index="28"></token>
+  <token token="unavailable" lemma="unavailable" pos="JJ" ne="O" offset="(438, 448)" index="29"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(449, 449)" index="30"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="two-10" type="root"></dependency>
+  <dependency head="hand-4" dependent="On-1" type="case"></dependency>
+  <dependency head="hand-4" dependent="the-2" type="det"></dependency>
+  <dependency head="hand-4" dependent="other-3" type="amod"></dependency>
+  <dependency head="Karmazin-6" dependent="and-7" type="cc"></dependency>
+  <dependency head="Karmazin-6" dependent="Jobs-8" type="conj"></dependency>
+  <dependency head="two-10" dependent="are-9" type="cop"></dependency>
+  <dependency head="two-10" dependent="dealmakers-14" type="nmod"></dependency>
+  <dependency head="two-10" dependent="around-15" type="advmod"></dependency>
+  <dependency head="two-10" dependent="hand-4" type="nmod"></dependency>
+  <dependency head="two-10" dependent="find-20" type="advcl"></dependency>
+  <dependency head="two-10" dependent="Karmazin-6" type="nsubj"></dependency>
+  <dependency head="dealmakers-14" dependent="of-11" type="case"></dependency>
+  <dependency head="dealmakers-14" dependent="the-12" type="det"></dependency>
+  <dependency head="dealmakers-14" dependent="smartest-13" type="amod"></dependency>
+  <dependency head="find-20" dependent="or-26" type="cc"></dependency>
+  <dependency head="find-20" dependent="spin-27" type="conj"></dependency>
+  <dependency head="find-20" dependent="so-17" type="mark"></dependency>
+  <dependency head="find-20" dependent="they-18" type="nsubj"></dependency>
+  <dependency head="find-20" dependent="might-19" type="aux"></dependency>
+  <dependency head="find-20" dependent="way-22" type="dobj"></dependency>
+  <dependency head="find-20" dependent="structure-24" type="nmod"></dependency>
+  <dependency head="way-22" dependent="a-21" type="det"></dependency>
+  <dependency head="structure-24" dependent="this-25" type="dep"></dependency>
+  <dependency head="structure-24" dependent="to-23" type="case"></dependency>
+  <dependency head="spin-27" dependent="it-28" type="dobj"></dependency>
+  <dependency head="spin-27" dependent="benefit-31" type="nmod"></dependency>
+  <dependency head="benefit-31" dependent="to-29" type="case"></dependency>
+  <dependency head="benefit-31" dependent="the-30" type="det"></dependency>
+  <dependency head="benefit-31" dependent="everyone-33" type="nmod"></dependency>
+  <dependency head="everyone-33" dependent="of-32" type="case"></dependency>
+  <parsetree>
+   ( ROOT ( S ( PP ( IN On ) ( NP ( DT the ) ( JJ other ) ( NN hand ) ) ) ( , , ) ( NP ( NNP Karmazin ) ( CC and ) ( NNP Jobs ) ) ( VP ( VBP are ) ( NP ( NP ( CD two ) ) ( PP ( IN of ) ( NP ( DT the ) ( JJS smartest ) ( NNS dealmakers ) ) ) ) ( ADVP ( IN around ) ) ( , , ) ( SBAR ( IN so ) ( S ( NP ( PRP they ) ) ( VP ( MD might ) ( VP ( VP ( VB find ) ( NP ( DT a ) ( NN way ) ) ( PP ( TO to ) ( NP ( NN structure ) ( DT this ) ) ) ) ( CC or ) ( VP ( VB spin ) ( NP ( PRP it ) ) ( PP ( TO to ) ( NP ( NP ( DT the ) ( NN benefit ) ) ( PP ( IN of ) ( NP ( NN everyone ) ) ) ) ) ) ) ) ) ) ) ( . . ) ) )
+  </parsetree>
+  <token token="On" lemma="on" pos="IN" ne="O" offset="(451, 452)" index="1"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(454, 456)" index="2"></token>
+  <token token="other" lemma="other" pos="JJ" ne="O" offset="(458, 462)" index="3"></token>
+  <token token="hand" lemma="hand" pos="NN" ne="O" offset="(464, 467)" index="4"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(468, 468)" index="5"></token>
+  <token token="Karmazin" lemma="Karmazin" pos="NNP" ne="PERSON" offset="(470, 477)" index="6"></token>
+  <token token="and" lemma="and" pos="CC" ne="O" offset="(479, 481)" index="7"></token>
+  <token token="Jobs" lemma="Jobs" pos="NNP" ne="O" offset="(483, 486)" index="8"></token>
+  <token token="are" lemma="be" pos="VBP" ne="O" offset="(488, 490)" index="9"></token>
+  <token token="two" lemma="two" pos="CD" ne="NUMBER" offset="(492, 494)" index="10"></token>
+  <token token="of" lemma="of" pos="IN" ne="O" offset="(496, 497)" index="11"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(499, 501)" index="12"></token>
+  <token token="smartest" lemma="smartest" pos="JJS" ne="O" offset="(503, 510)" index="13"></token>
+  <token token="dealmakers" lemma="dealmaker" pos="NNS" ne="O" offset="(512, 521)" index="14"></token>
+  <token token="around" lemma="around" pos="IN" ne="O" offset="(523, 528)" index="15"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(529, 529)" index="16"></token>
+  <token token="so" lemma="so" pos="IN" ne="O" offset="(531, 532)" index="17"></token>
+  <token token="they" lemma="they" pos="PRP" ne="O" offset="(534, 537)" index="18"></token>
+  <token token="might" lemma="might" pos="MD" ne="O" offset="(539, 543)" index="19"></token>
+  <token token="find" lemma="find" pos="VB" ne="O" offset="(545, 548)" index="20"></token>
+  <token token="a" lemma="a" pos="DT" ne="O" offset="(550, 550)" index="21"></token>
+  <token token="way" lemma="way" pos="NN" ne="O" offset="(552, 554)" index="22"></token>
+  <token token="to" lemma="to" pos="TO" ne="O" offset="(556, 557)" index="23"></token>
+  <token token="structure" lemma="structure" pos="NN" ne="O" offset="(559, 567)" index="24"></token>
+  <token token="this" lemma="this" pos="DT" ne="O" offset="(569, 572)" index="25"></token>
+  <token token="or" lemma="or" pos="CC" ne="O" offset="(574, 575)" index="26"></token>
+  <token token="spin" lemma="spin" pos="VB" ne="O" offset="(577, 580)" index="27"></token>
+  <token token="it" lemma="it" pos="PRP" ne="O" offset="(582, 583)" index="28"></token>
+  <token token="to" lemma="to" pos="TO" ne="O" offset="(585, 586)" index="29"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(588, 590)" index="30"></token>
+  <token token="benefit" lemma="benefit" pos="NN" ne="O" offset="(592, 598)" index="31"></token>
+  <token token="of" lemma="of" pos="IN" ne="O" offset="(600, 601)" index="32"></token>
+  <token token="everyone" lemma="everyone" pos="NN" ne="O" offset="(603, 610)" index="33"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(611, 611)" index="34"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="C-E-friggin-32" type="root"></dependency>
+  <dependency head="phrase-13" dependent="the-12" type="det"></dependency>
+  <dependency head="Karmazin-16" dependent="phrase-13" type="dep"></dependency>
+  <dependency head="Karmazin-16" dependent="Mel-15" type="compound"></dependency>
+  <dependency head="right-23" dependent="That-21" type="nsubj"></dependency>
+  <dependency head="right-23" dependent="'s-22" type="cop"></dependency>
+  <dependency head="says-27" dependent="himself-29" type="nmod"></dependency>
+  <dependency head="says-27" dependent="Mel-26" type="nsubj"></dependency>
+  <dependency head="himself-29" dependent="to-28" type="case"></dependency>
+  <dependency head="C-E-friggin-32" dependent="CEO-18" type="nsubj"></dependency>
+  <dependency head="C-E-friggin-32" dependent="O-34" type="dep"></dependency>
+  <dependency head="C-E-friggin-32" dependent="is-4" type="ccomp"></dependency>
+  <dependency head="C-E-friggin-32" dependent="right-23" type="dep"></dependency>
+  <dependency head="C-E-friggin-32" dependent="says-27" type="dep"></dependency>
+  <dependency head="suspicion-3" dependent="My-1" type="nmod:poss"></dependency>
+  <dependency head="suspicion-3" dependent="main-2" type="amod"></dependency>
+  <dependency head="is-4" dependent="suspicion-3" type="nsubj"></dependency>
+  <dependency head="is-4" dependent="Karmazin-8" type="ccomp"></dependency>
+  <dependency head="Karmazin-8" dependent="that-5" type="mark"></dependency>
+  <dependency head="Karmazin-8" dependent="this-6" type="nsubj"></dependency>
+  <dependency head="Karmazin-8" dependent="is-7" type="cop"></dependency>
+  <dependency head="Karmazin-8" dependent="hoping-9" type="acl"></dependency>
+  <dependency head="hoping-9" dependent="see-11" type="xcomp"></dependency>
+  <dependency head="see-11" dependent="Karmazin-16" type="xcomp"></dependency>
+  <dependency head="see-11" dependent="to-10" type="mark"></dependency>
+  <parsetree>
+   ( ROOT ( S ( S ( NP ( PRP$ My ) ( JJ main ) ( NN suspicion ) ) ( VP ( VBZ is ) ( SBAR ( IN that ) ( S ( NP ( DT this ) ) ( VP ( VBZ is ) ( NP ( NP ( NNP Karmazin ) ) ( VP ( VBG hoping ) ( S ( VP ( TO to ) ( VP ( VB see ) ( S ( NP ( DT the ) ( NN phrase ) ) ( `` `` ) ( NP ( NNP Mel ) ( NNP Karmazin ) ) ) ) ) ) ) ) ) ) ) ) ) ( , , ) ( NP ( NNP CEO ) ) ( VP ( -LRB- -LSB- ) ( FRAG ( `` `` ) ( S ( NP ( DT That ) ) ( VP ( VBZ 's ) ( ADJP ( RB right ) ) ) ) ( PRN ( , , ) ( '' '' ) ( S ( NP ( NNP Mel ) ) ( VP ( VBZ says ) ( PP ( TO to ) ( NP ( PRP himself ) ) ) ) ) ( , , ) ) ( `` `` ) ( NP ( NP ( NN C-E-friggin ) ) ( : - ) ( NP ( NN O ) ) ) ( . ! ) ( '' '' ) ) ) ( -RRB- -RSB- ) ) )
+  </parsetree>
+  <token token="My" lemma="my" pos="PRP$" ne="O" offset="(613, 614)" index="1"></token>
+  <token token="main" lemma="main" pos="JJ" ne="O" offset="(616, 619)" index="2"></token>
+  <token token="suspicion" lemma="suspicion" pos="NN" ne="O" offset="(621, 629)" index="3"></token>
+  <token token="is" lemma="be" pos="VBZ" ne="O" offset="(631, 632)" index="4"></token>
+  <token token="that" lemma="that" pos="IN" ne="O" offset="(634, 637)" index="5"></token>
+  <token token="this" lemma="this" pos="DT" ne="O" offset="(639, 642)" index="6"></token>
+  <token token="is" lemma="be" pos="VBZ" ne="O" offset="(644, 645)" index="7"></token>
+  <token token="Karmazin" lemma="Karmazin" pos="NNP" ne="PERSON" offset="(647, 654)" index="8"></token>
+  <token token="hoping" lemma="hope" pos="VBG" ne="O" offset="(656, 661)" index="9"></token>
+  <token token="to" lemma="to" pos="TO" ne="O" offset="(663, 664)" index="10"></token>
+  <token token="see" lemma="see" pos="VB" ne="O" offset="(666, 668)" index="11"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(670, 672)" index="12"></token>
+  <token token="phrase" lemma="phrase" pos="NN" ne="O" offset="(674, 679)" index="13"></token>
+  <token token="``" lemma="``" pos="``" ne="O" offset="(681, 681)" index="14"></token>
+  <token token="Mel" lemma="Mel" pos="NNP" ne="PERSON" offset="(682, 684)" index="15"></token>
+  <token token="Karmazin" lemma="Karmazin" pos="NNP" ne="PERSON" offset="(686, 693)" index="16"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(694, 694)" index="17"></token>
+  <token token="CEO" lemma="CEO" pos="NNP" ne="O" offset="(696, 698)" index="18"></token>
+  <token token="-LSB-" lemma="-lsb-" pos="-LRB-" ne="O" offset="(700, 700)" index="19"></token>
+  <token token="``" lemma="``" pos="``" ne="O" offset="(701, 701)" index="20"></token>
+  <token token="That" lemma="that" pos="DT" ne="O" offset="(702, 705)" index="21"></token>
+  <token token="'s" lemma="be" pos="VBZ" ne="O" offset="(706, 707)" index="22"></token>
+  <token token="right" lemma="right" pos="RB" ne="O" offset="(709, 713)" index="23"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(714, 714)" index="24"></token>
+  <token token="''" lemma="''" pos="''" ne="O" offset="(715, 715)" index="25"></token>
+  <token token="Mel" lemma="Mel" pos="NNP" ne="PERSON" offset="(717, 719)" index="26"></token>
+  <token token="says" lemma="say" pos="VBZ" ne="O" offset="(721, 724)" index="27"></token>
+  <token token="to" lemma="to" pos="TO" ne="O" offset="(726, 727)" index="28"></token>
+  <token token="himself" lemma="himself" pos="PRP" ne="O" offset="(729, 735)" index="29"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(736, 736)" index="30"></token>
+  <token token="``" lemma="``" pos="``" ne="O" offset="(738, 738)" index="31"></token>
+  <token token="C-E-friggin" lemma="c-e-friggin" pos="NN" ne="O" offset="(739, 749)" index="32"></token>
+  <token token="-" lemma="-" pos=":" ne="O" offset="(750, 750)" index="33"></token>
+  <token token="O" lemma="o" pos="NN" ne="O" offset="(752, 752)" index="34"></token>
+  <token token="!" lemma="!" pos="." ne="O" offset="(754, 754)" index="35"></token>
+  <token token="''" lemma="''" pos="''" ne="O" offset="(755, 755)" index="36"></token>
+  <token token="-RSB-" lemma="-rsb-" pos="-RRB-" ne="O" offset="(756, 756)" index="37"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="Radio-4" type="root"></dependency>
+  <dependency head="Sirius-2" dependent="of-1" type="case"></dependency>
+  <dependency head="Radio-4" dependent="Sirius-2" type="nmod"></dependency>
+  <dependency head="Radio-4" dependent="Satellite-3" type="compound"></dependency>
+  <dependency head="Radio-4" dependent="????-8" type="dep"></dependency>
+  <dependency head="????-8" dependent="ira-cam-7" type="amod"></dependency>
+  <parsetree>
+   ( ROOT ( FRAG ( PP ( IN of ) ( NP ( NNP Sirius ) ) ) ( NP ( NP ( NNP Satellite ) ( NNP Radio ) ) ( : ... ) ( NP ( '' '' ) ( JJ ira-cam ) ( CD ???? ) ) ) ) )
+  </parsetree>
+  <token token="of" lemma="of" pos="IN" ne="O" offset="(758, 759)" index="1"></token>
+  <token token="Sirius" lemma="Sirius" pos="NNP" ne="ORGANIZATION" offset="(761, 766)" index="2"></token>
+  <token token="Satellite" lemma="Satellite" pos="NNP" ne="ORGANIZATION" offset="(768, 776)" index="3"></token>
+  <token token="Radio" lemma="Radio" pos="NNP" ne="ORGANIZATION" offset="(778, 782)" index="4"></token>
+  <token token="..." lemma="..." pos=":" ne="O" offset="(783, 785)" index="5"></token>
+  <token token="''" lemma="''" pos="''" ne="O" offset="(786, 786)" index="6"></token>
+  <token token="ira-cam" lemma="ira-cam" pos="JJ" ne="O" offset="(791, 797)" index="7"></token>
+  <token token="????" lemma="????" pos="CD" ne="NUMBER" offset="(801, 804)" index="8"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="??-2" type="root"></dependency>
+  <parsetree>
+   ( ROOT ( PRN ( : - ) ( ADVP ( NN ?? ) ) ) )
+  </parsetree>
+  <token token="-" lemma="-" pos=":" ne="O" offset="(805, 805)" index="1"></token>
+  <token token="??" lemma="??" pos="NN" ne="O" offset="(806, 807)" index="2"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="??-2" type="root"></dependency>
+  <parsetree>
+   ( ROOT ( PRN ( : - ) ( ADVP ( NN ?? ) ) ) )
+  </parsetree>
+  <token token="-" lemma="-" pos=":" ne="O" offset="(808, 808)" index="1"></token>
+  <token token="??" lemma="??" pos="NN" ne="O" offset="(809, 810)" index="2"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="knows-5" type="root"></dependency>
+  <dependency head="T23-1" dependent=":58:00-2" type="nummod"></dependency>
+  <dependency head="T23-1" dependent="Jobs-4" type="dep"></dependency>
+  <dependency head="Jobs-4" dependent="Steve-3" type="compound"></dependency>
+  <dependency head="knows-5" dependent="idea-8" type="dobj"></dependency>
+  <dependency head="knows-5" dependent="T23-1" type="nsubj"></dependency>
+  <dependency head="idea-8" dependent="pitched-12" type="acl:relcl"></dependency>
+  <dependency head="idea-8" dependent="a-6" type="det"></dependency>
+  <dependency head="idea-8" dependent="bad-7" type="amod"></dependency>
+  <dependency head="pitched-12" dependent="when-9" type="advmod"></dependency>
+  <dependency head="pitched-12" dependent="he-10" type="nsubjpass"></dependency>
+  <dependency head="pitched-12" dependent="'s-11" type="auxpass"></dependency>
+  <dependency head="pitched-12" dependent="it-13" type="dobj"></dependency>
+  <dependency head="pitched-12" dependent="reasons-18" type="nmod"></dependency>
+  <dependency head="reasons-18" dependent="for-15" type="case"></dependency>
+  <dependency head="reasons-18" dependent="exactly-16" type="advmod"></dependency>
+  <dependency head="reasons-18" dependent="the-17" type="det"></dependency>
+  <dependency head="reasons-18" dependent="point-20" type="acl:relcl"></dependency>
+  <dependency head="point-20" dependent="you-19" type="nsubj"></dependency>
+  <dependency head="point-20" dependent="out-21" type="compound:prt"></dependency>
+  <parsetree>
+   ( ROOT ( S ( NP ( NP ( NN T23 ) ( CD :58:00 ) ) ( NP ( NNP Steve ) ( NNP Jobs ) ) ) ( VP ( VBZ knows ) ( NP ( NP ( DT a ) ( JJ bad ) ( NN idea ) ) ( SBAR ( WHADVP ( WRB when ) ) ( S ( NP ( PRP he ) ) ( VP ( VBZ 's ) ( VP ( VBN pitched ) ( NP ( PRP it ) ) ( , , ) ( PP ( IN for ) ( NP ( NP ( RB exactly ) ( DT the ) ( NNS reasons ) ) ( SBAR ( S ( NP ( PRP you ) ) ( VP ( VBP point ) ( PRT ( RP out ) ) ) ) ) ) ) ) ) ) ) ) ) ( . . ) ) )
+  </parsetree>
+  <token token="T23" lemma="t23" pos="NN" ne="O" offset="(811, 813)" index="1"></token>
+  <token token=":58:00" lemma=":58:00" pos="CD" ne="NUMBER" offset="(814, 819)" index="2"></token>
+  <token token="Steve" lemma="Steve" pos="NNP" ne="PERSON" offset="(822, 826)" index="3"></token>
+  <token token="Jobs" lemma="Jobs" pos="NNP" ne="PERSON" offset="(828, 831)" index="4"></token>
+  <token token="knows" lemma="know" pos="VBZ" ne="O" offset="(833, 837)" index="5"></token>
+  <token token="a" lemma="a" pos="DT" ne="O" offset="(839, 839)" index="6"></token>
+  <token token="bad" lemma="bad" pos="JJ" ne="O" offset="(841, 843)" index="7"></token>
+  <token token="idea" lemma="idea" pos="NN" ne="O" offset="(845, 848)" index="8"></token>
+  <token token="when" lemma="when" pos="WRB" ne="O" offset="(850, 853)" index="9"></token>
+  <token token="he" lemma="he" pos="PRP" ne="O" offset="(855, 856)" index="10"></token>
+  <token token="'s" lemma="be" pos="VBZ" ne="O" offset="(857, 858)" index="11"></token>
+  <token token="pitched" lemma="pitch" pos="VBN" ne="O" offset="(860, 866)" index="12"></token>
+  <token token="it" lemma="it" pos="PRP" ne="O" offset="(868, 869)" index="13"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(870, 870)" index="14"></token>
+  <token token="for" lemma="for" pos="IN" ne="O" offset="(872, 874)" index="15"></token>
+  <token token="exactly" lemma="exactly" pos="RB" ne="O" offset="(876, 882)" index="16"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(884, 886)" index="17"></token>
+  <token token="reasons" lemma="reason" pos="NNS" ne="O" offset="(888, 894)" index="18"></token>
+  <token token="you" lemma="you" pos="PRP" ne="O" offset="(896, 898)" index="19"></token>
+  <token token="point" lemma="point" pos="VBP" ne="O" offset="(900, 904)" index="20"></token>
+  <token token="out" lemma="out" pos="RP" ne="O" offset="(906, 908)" index="21"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(909, 909)" index="22"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="Plus-1" type="root"></dependency>
+  <dependency head="Plus-1" dependent="burns-6" type="appos"></dependency>
+  <dependency head="burns-6" dependent="a-3" type="det"></dependency>
+  <dependency head="burns-6" dependent="satellite-4" type="compound"></dependency>
+  <dependency head="burns-6" dependent="receiver-5" type="compound"></dependency>
+  <dependency head="burns-6" dependent="lot-8" type="dep"></dependency>
+  <dependency head="burns-6" dependent="power-10" type="nmod"></dependency>
+  <dependency head="lot-8" dependent="a-7" type="det"></dependency>
+  <dependency head="power-10" dependent="made-17" type="dep"></dependency>
+  <dependency head="power-10" dependent="of-9" type="case"></dependency>
+  <dependency head="made-17" dependent="even-12" type="advmod"></dependency>
+  <dependency head="made-17" dependent="if-13" type="mark"></dependency>
+  <dependency head="made-17" dependent="it-14" type="nsubjpass"></dependency>
+  <dependency head="made-17" dependent="could-15" type="aux"></dependency>
+  <dependency head="made-17" dependent="be-16" type="auxpass"></dependency>
+  <dependency head="made-17" dependent="tiny-18" type="xcomp"></dependency>
+  <parsetree>
+   ( ROOT ( NP ( NP ( NN Plus ) ) ( , , ) ( NP ( NP ( NP ( DT a ) ( NN satellite ) ( NN receiver ) ( NNS burns ) ) ( NP ( DT a ) ( NN lot ) ) ) ( PP ( IN of ) ( NP ( NP ( NN power ) ) ( , , ) ( SBAR ( RB even ) ( IN if ) ( S ( NP ( PRP it ) ) ( VP ( MD could ) ( VP ( VB be ) ( VP ( VBN made ) ( S ( ADJP ( JJ tiny ) ) ) ) ) ) ) ) ) ) ) ( . . ) ) )
+  </parsetree>
+  <token token="Plus" lemma="plus" pos="NN" ne="O" offset="(911, 914)" index="1"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(915, 915)" index="2"></token>
+  <token token="a" lemma="a" pos="DT" ne="O" offset="(917, 917)" index="3"></token>
+  <token token="satellite" lemma="satellite" pos="NN" ne="O" offset="(919, 927)" index="4"></token>
+  <token token="receiver" lemma="receiver" pos="NN" ne="O" offset="(929, 936)" index="5"></token>
+  <token token="burns" lemma="burn" pos="NNS" ne="O" offset="(938, 942)" index="6"></token>
+  <token token="a" lemma="a" pos="DT" ne="O" offset="(944, 944)" index="7"></token>
+  <token token="lot" lemma="lot" pos="NN" ne="O" offset="(946, 948)" index="8"></token>
+  <token token="of" lemma="of" pos="IN" ne="O" offset="(950, 951)" index="9"></token>
+  <token token="power" lemma="power" pos="NN" ne="O" offset="(953, 957)" index="10"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(958, 958)" index="11"></token>
+  <token token="even" lemma="even" pos="RB" ne="O" offset="(960, 963)" index="12"></token>
+  <token token="if" lemma="if" pos="IN" ne="O" offset="(965, 966)" index="13"></token>
+  <token token="it" lemma="it" pos="PRP" ne="O" offset="(968, 969)" index="14"></token>
+  <token token="could" lemma="could" pos="MD" ne="O" offset="(971, 975)" index="15"></token>
+  <token token="be" lemma="be" pos="VB" ne="O" offset="(977, 978)" index="16"></token>
+  <token token="made" lemma="make" pos="VBN" ne="O" offset="(980, 983)" index="17"></token>
+  <token token="tiny" lemma="tiny" pos="JJ" ne="O" offset="(985, 988)" index="18"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(989, 989)" index="19"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="Byrne-1" type="root"></dependency>
+  <dependency head="Byrne-1" dependent="????-2" type="dep"></dependency>
+  <parsetree>
+   ( ROOT ( NP ( NP ( NNP Byrne ) ) ( NP ( CD ???? ) ) ) )
+  </parsetree>
+  <token token="Byrne" lemma="Byrne" pos="NNP" ne="PERSON" offset="(994, 998)" index="1"></token>
+  <token token="????" lemma="????" pos="CD" ne="NUMBER" offset="(1002, 1005)" index="2"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="??-2" type="root"></dependency>
+  <parsetree>
+   ( ROOT ( PRN ( : - ) ( ADVP ( NN ?? ) ) ) )
+  </parsetree>
+  <token token="-" lemma="-" pos=":" ne="O" offset="(1006, 1006)" index="1"></token>
+  <token token="??" lemma="??" pos="NN" ne="O" offset="(1007, 1008)" index="2"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="??-2" type="root"></dependency>
+  <parsetree>
+   ( ROOT ( PRN ( : - ) ( ADVP ( NN ?? ) ) ) )
+  </parsetree>
+  <token token="-" lemma="-" pos=":" ne="O" offset="(1009, 1009)" index="1"></token>
+  <token token="??" lemma="??" pos="NN" ne="O" offset="(1010, 1011)" index="2"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="convinced-11" type="root"></dependency>
+  <dependency head="guy-9" dependent="the-8" type="det"></dependency>
+  <dependency head="convinced-11" dependent="guy-9" type="nsubj"></dependency>
+  <dependency head="convinced-11" dependent="is-25" type="parataxis"></dependency>
+  <dependency head="convinced-11" dependent="has-10" type="aux"></dependency>
+  <dependency head="convinced-11" dependent="people-15" type="dobj"></dependency>
+  <dependency head="convinced-11" dependent="T12-1" type="nmod"></dependency>
+  <dependency head="convinced-11" dependent="spend-17" type="xcomp"></dependency>
+  <dependency head="smart-14" dependent="very-13" type="advmod"></dependency>
+  <dependency head="people-15" dependent="some-12" type="det"></dependency>
+  <dependency head="people-15" dependent="smart-14" type="amod"></dependency>
+  <dependency head="spend-17" dependent="to-16" type="mark"></dependency>
+  <dependency head="spend-17" dependent="sums-19" type="dobj"></dependency>
+  <dependency head="spend-17" dependent="ideas-22" type="nmod"></dependency>
+  <dependency head="sums-19" dependent="huge-18" type="amod"></dependency>
+  <dependency head="ideas-22" dependent="on-20" type="case"></dependency>
+  <dependency head="ideas-22" dependent="stupid-21" type="amod"></dependency>
+  <dependency head="is-25" dependent="there-24" type="expl"></dependency>
+  <dependency head="is-25" dependent="n't-26" type="neg"></dependency>
+  <dependency head="is-25" dependent="talk-28" type="nsubj"></dependency>
+  <dependency head="is-25" dependent="it-30" type="nmod"></dependency>
+  <dependency head="is-25" dependent="now-31" type="advmod"></dependency>
+  <dependency head="is-25" dependent="but-33" type="cc"></dependency>
+  <dependency head="is-25" dependent="talked-50" type="conj"></dependency>
+  <dependency head="talk-28" dependent="much-27" type="amod"></dependency>
+  <dependency head="it-30" dependent="about-29" type="case"></dependency>
+  <dependency head="reputation-37" dependent="his-36" type="nmod:poss"></dependency>
+  <dependency head="hot-41" dependent="n't-39" type="neg"></dependency>
+  <dependency head="hot-41" dependent="so-40" type="advmod"></dependency>
+  <dependency head="hot-41" dependent="'80s-44" type="dep"></dependency>
+  <dependency head="hot-41" dependent="back-34" type="advmod"></dependency>
+  <dependency head="hot-41" dependent="when-35" type="advmod"></dependency>
+  <dependency head="hot-41" dependent="reputation-37" type="nsubj"></dependency>
+  <dependency head="hot-41" dependent="was-38" type="cop"></dependency>
+  <dependency head="'80s-44" dependent="late-43" type="amod"></dependency>
+  <dependency head="lots-47" dependent="journalists-49" type="nmod"></dependency>
+  <dependency head="journalists-49" dependent="of-48" type="case"></dependency>
+  <dependency head="talked-50" dependent="hot-41" type="advcl"></dependency>
+  <dependency head="talked-50" dependent="lots-47" type="nsubj"></dependency>
+  <dependency head="talked-50" dependent="about-51" type="dep"></dependency>
+  <dependency head="about-51" dependent="Field-58" type="xcomp"></dependency>
+  <dependency head="Field-58" dependent="Jobs-55" type="compound"></dependency>
+  <dependency head="Field-58" dependent="Reality-56" type="compound"></dependency>
+  <dependency head="Field-58" dependent="Distortion-57" type="compound"></dependency>
+  <dependency head="Field-58" dependent="the-52" type="det"></dependency>
+  <dependency head="Field-58" dependent="Steve-54" type="compound"></dependency>
+  <dependency head="T12-1" dependent=":04:00-2" type="nummod"></dependency>
+  <dependency head="T12-1" dependent="On-3" type="case"></dependency>
+  <dependency head="T12-1" dependent="hand-6" type="dep"></dependency>
+  <dependency head="hand-6" dependent="the-4" type="det"></dependency>
+  <dependency head="hand-6" dependent="other-5" type="amod"></dependency>
+  <parsetree>
+   ( ROOT ( S ( S ( PP ( NP ( NN T12 ) ( CD :04:00 ) ) ( IN On ) ( NP ( DT the ) ( JJ other ) ( NN hand ) ) ) ( , , ) ( NP ( DT the ) ( NN guy ) ) ( VP ( VBZ has ) ( VP ( VBN convinced ) ( NP ( DT some ) ( ADJP ( RB very ) ( JJ smart ) ) ( NNS people ) ) ( S ( VP ( TO to ) ( VP ( VB spend ) ( NP ( JJ huge ) ( NNS sums ) ) ( PP ( IN on ) ( NP ( JJ stupid ) ( NNS ideas ) ) ) ) ) ) ) ) ) ( : -- ) ( S ( S ( NP ( EX there ) ) ( VP ( VBZ is ) ( RB n't ) ( NP ( JJ much ) ( NN talk ) ) ( PP ( IN about ) ( NP ( PRP it ) ) ) ( ADVP ( RB now ) ) ) ) ( , , ) ( CC but ) ( S ( SBAR ( ADVP ( RB back ) ) ( WHADVP ( WRB when ) ) ( S ( NP ( PRP$ his ) ( NN reputation ) ) ( VP ( VBD was ) ( RB n't ) ( ADJP ( ADJP ( RB so ) ( JJ hot ) ) ( PRN ( -LRB- -LRB- ) ( NP ( JJ late ) ( NNS '80s ) ) ( -RRB- -RRB- ) ) ) ) ) ) ( , , ) ( NP ( NP ( NNS lots ) ) ( PP ( IN of ) ( NP ( NNS journalists ) ) ) ) ( VP ( VBD talked ) ( VP ( IN about ) ( S ( NP ( DT the ) ( `` `` ) ( NNP Steve ) ( NNP Jobs ) ( NN Reality ) ( NNP Distortion ) ( NNP Field ) ) ) ) ) ) ) ( . . ) ( '' '' ) ) )
+  </parsetree>
+  <token token="T12" lemma="t12" pos="NN" ne="O" offset="(1012, 1014)" index="1"></token>
+  <token token=":04:00" lemma=":04:00" pos="CD" ne="NUMBER" offset="(1015, 1020)" index="2"></token>
+  <token token="On" lemma="on" pos="IN" ne="O" offset="(1023, 1024)" index="3"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(1026, 1028)" index="4"></token>
+  <token token="other" lemma="other" pos="JJ" ne="O" offset="(1030, 1034)" index="5"></token>
+  <token token="hand" lemma="hand" pos="NN" ne="O" offset="(1036, 1039)" index="6"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(1040, 1040)" index="7"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(1042, 1044)" index="8"></token>
+  <token token="guy" lemma="guy" pos="NN" ne="O" offset="(1046, 1048)" index="9"></token>
+  <token token="has" lemma="have" pos="VBZ" ne="O" offset="(1050, 1052)" index="10"></token>
+  <token token="convinced" lemma="convince" pos="VBN" ne="O" offset="(1054, 1062)" index="11"></token>
+  <token token="some" lemma="some" pos="DT" ne="O" offset="(1064, 1067)" index="12"></token>
+  <token token="very" lemma="very" pos="RB" ne="O" offset="(1069, 1072)" index="13"></token>
+  <token token="smart" lemma="smart" pos="JJ" ne="O" offset="(1074, 1078)" index="14"></token>
+  <token token="people" lemma="people" pos="NNS" ne="O" offset="(1080, 1085)" index="15"></token>
+  <token token="to" lemma="to" pos="TO" ne="O" offset="(1087, 1088)" index="16"></token>
+  <token token="spend" lemma="spend" pos="VB" ne="O" offset="(1090, 1094)" index="17"></token>
+  <token token="huge" lemma="huge" pos="JJ" ne="O" offset="(1096, 1099)" index="18"></token>
+  <token token="sums" lemma="sum" pos="NNS" ne="O" offset="(1101, 1104)" index="19"></token>
+  <token token="on" lemma="on" pos="IN" ne="O" offset="(1106, 1107)" index="20"></token>
+  <token token="stupid" lemma="stupid" pos="JJ" ne="O" offset="(1109, 1114)" index="21"></token>
+  <token token="ideas" lemma="idea" pos="NNS" ne="O" offset="(1116, 1120)" index="22"></token>
+  <token token="--" lemma="--" pos=":" ne="O" offset="(1122, 1123)" index="23"></token>
+  <token token="there" lemma="there" pos="EX" ne="O" offset="(1125, 1129)" index="24"></token>
+  <token token="is" lemma="be" pos="VBZ" ne="O" offset="(1131, 1132)" index="25"></token>
+  <token token="n't" lemma="not" pos="RB" ne="O" offset="(1133, 1135)" index="26"></token>
+  <token token="much" lemma="much" pos="JJ" ne="O" offset="(1137, 1140)" index="27"></token>
+  <token token="talk" lemma="talk" pos="NN" ne="O" offset="(1142, 1145)" index="28"></token>
+  <token token="about" lemma="about" pos="IN" ne="O" offset="(1147, 1151)" index="29"></token>
+  <token token="it" lemma="it" pos="PRP" ne="O" offset="(1153, 1154)" index="30"></token>
+  <token token="now" lemma="now" pos="RB" ne="O" offset="(1156, 1158)" index="31"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(1159, 1159)" index="32"></token>
+  <token token="but" lemma="but" pos="CC" ne="O" offset="(1161, 1163)" index="33"></token>
+  <token token="back" lemma="back" pos="RB" ne="O" offset="(1165, 1168)" index="34"></token>
+  <token token="when" lemma="when" pos="WRB" ne="O" offset="(1170, 1173)" index="35"></token>
+  <token token="his" lemma="he" pos="PRP$" ne="O" offset="(1175, 1177)" index="36"></token>
+  <token token="reputation" lemma="reputation" pos="NN" ne="O" offset="(1179, 1188)" index="37"></token>
+  <token token="was" lemma="be" pos="VBD" ne="O" offset="(1190, 1192)" index="38"></token>
+  <token token="n't" lemma="not" pos="RB" ne="O" offset="(1193, 1195)" index="39"></token>
+  <token token="so" lemma="so" pos="RB" ne="O" offset="(1197, 1198)" index="40"></token>
+  <token token="hot" lemma="hot" pos="JJ" ne="O" offset="(1200, 1202)" index="41"></token>
+  <token token="-LRB-" lemma="-lrb-" pos="-LRB-" ne="O" offset="(1204, 1204)" index="42"></token>
+  <token token="late" lemma="late" pos="JJ" ne="O" offset="(1205, 1208)" index="43"></token>
+  <token token="'80s" lemma="'80" pos="NNS" ne="O" offset="(1210, 1213)" index="44"></token>
+  <token token="-RRB-" lemma="-rrb-" pos="-RRB-" ne="O" offset="(1214, 1214)" index="45"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(1215, 1215)" index="46"></token>
+  <token token="lots" lemma="lot" pos="NNS" ne="O" offset="(1217, 1220)" index="47"></token>
+  <token token="of" lemma="of" pos="IN" ne="O" offset="(1222, 1223)" index="48"></token>
+  <token token="journalists" lemma="journalist" pos="NNS" ne="O" offset="(1225, 1235)" index="49"></token>
+  <token token="talked" lemma="talk" pos="VBD" ne="O" offset="(1237, 1242)" index="50"></token>
+  <token token="about" lemma="about" pos="IN" ne="O" offset="(1244, 1248)" index="51"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(1250, 1252)" index="52"></token>
+  <token token="``" lemma="``" pos="``" ne="O" offset="(1254, 1254)" index="53"></token>
+  <token token="Steve" lemma="Steve" pos="NNP" ne="O" offset="(1255, 1259)" index="54"></token>
+  <token token="Jobs" lemma="Jobs" pos="NNP" ne="O" offset="(1261, 1264)" index="55"></token>
+  <token token="Reality" lemma="reality" pos="NN" ne="O" offset="(1266, 1272)" index="56"></token>
+  <token token="Distortion" lemma="Distortion" pos="NNP" ne="O" offset="(1274, 1283)" index="57"></token>
+  <token token="Field" lemma="Field" pos="NNP" ne="O" offset="(1285, 1289)" index="58"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(1290, 1290)" index="59"></token>
+  <token token="''" lemma="''" pos="''" ne="O" offset="(1291, 1291)" index="60"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="get-3" type="root"></dependency>
+  <dependency head="obstacle-10" dependent="every-7" type="det"></dependency>
+  <dependency head="obstacle-10" dependent="single-8" type="amod"></dependency>
+  <dependency head="obstacle-10" dependent="technical-9" type="amod"></dependency>
+  <dependency head="idea-13" dependent="to-11" type="case"></dependency>
+  <dependency head="idea-13" dependent="an-12" type="det"></dependency>
+  <dependency head="invest-16" dependent="basis-19" type="nmod"></dependency>
+  <dependency head="invest-16" dependent="beautifully-22" type="advmod"></dependency>
+  <dependency head="basis-19" dependent="on-17" type="case"></dependency>
+  <dependency head="basis-19" dependent="the-18" type="det"></dependency>
+  <dependency head="basis-19" dependent="something-21" type="nmod"></dependency>
+  <dependency head="something-21" dependent="of-20" type="case"></dependency>
+  <dependency head="get-3" dependent="simple-27" type="xcomp"></dependency>
+  <dependency head="get-3" dependent="He-1" type="nsubj"></dependency>
+  <dependency head="get-3" dependent="could-2" type="aux"></dependency>
+  <dependency head="get-3" dependent="people-4" type="dobj"></dependency>
+  <dependency head="get-3" dependent="ignore-6" type="xcomp"></dependency>
+  <dependency head="ignore-6" dependent="obstacle-10" type="dobj"></dependency>
+  <dependency head="ignore-6" dependent="idea-13" type="nmod"></dependency>
+  <dependency head="ignore-6" dependent="and-15" type="cc"></dependency>
+  <dependency head="ignore-6" dependent="invest-16" type="conj"></dependency>
+  <dependency head="ignore-6" dependent="to-5" type="mark"></dependency>
+  <dependency head="ignore-6" dependent="but-24" type="cc"></dependency>
+  <dependency head="ignore-6" dependent="ridiculously-25" type="conj"></dependency>
+  <parsetree>
+   ( ROOT ( S ( NP ( PRP He ) ) ( VP ( MD could ) ( VP ( VB get ) ( S ( NP ( NNS people ) ) ( VP ( TO to ) ( VP ( VP ( VB ignore ) ( NP ( DT every ) ( JJ single ) ( JJ technical ) ( NN obstacle ) ) ( PP ( TO to ) ( NP ( DT an ) ( NN idea ) ) ) ) ( , , ) ( CC and ) ( VP ( VB invest ) ( PP ( IN on ) ( NP ( NP ( DT the ) ( NN basis ) ) ( PP ( IN of ) ( NP ( NN something ) ) ) ) ) ( ADVP ( RB beautifully ) ) ) ( , , ) ( CC but ) ( VP ( ADVP ( RB ridiculously ) ) ) ) ) ) ( , , ) ( ADJP ( JJ simple ) ) ) ) ( . . ) ) )
+  </parsetree>
+  <token token="He" lemma="he" pos="PRP" ne="O" offset="(1293, 1294)" index="1"></token>
+  <token token="could" lemma="could" pos="MD" ne="O" offset="(1296, 1300)" index="2"></token>
+  <token token="get" lemma="get" pos="VB" ne="O" offset="(1302, 1304)" index="3"></token>
+  <token token="people" lemma="people" pos="NNS" ne="O" offset="(1306, 1311)" index="4"></token>
+  <token token="to" lemma="to" pos="TO" ne="O" offset="(1313, 1314)" index="5"></token>
+  <token token="ignore" lemma="ignore" pos="VB" ne="O" offset="(1316, 1321)" index="6"></token>
+  <token token="every" lemma="every" pos="DT" ne="O" offset="(1323, 1327)" index="7"></token>
+  <token token="single" lemma="single" pos="JJ" ne="O" offset="(1329, 1334)" index="8"></token>
+  <token token="technical" lemma="technical" pos="JJ" ne="O" offset="(1336, 1344)" index="9"></token>
+  <token token="obstacle" lemma="obstacle" pos="NN" ne="O" offset="(1346, 1353)" index="10"></token>
+  <token token="to" lemma="to" pos="TO" ne="O" offset="(1355, 1356)" index="11"></token>
+  <token token="an" lemma="a" pos="DT" ne="O" offset="(1358, 1359)" index="12"></token>
+  <token token="idea" lemma="idea" pos="NN" ne="O" offset="(1361, 1364)" index="13"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(1365, 1365)" index="14"></token>
+  <token token="and" lemma="and" pos="CC" ne="O" offset="(1367, 1369)" index="15"></token>
+  <token token="invest" lemma="invest" pos="VB" ne="O" offset="(1371, 1376)" index="16"></token>
+  <token token="on" lemma="on" pos="IN" ne="O" offset="(1378, 1379)" index="17"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(1381, 1383)" index="18"></token>
+  <token token="basis" lemma="basis" pos="NN" ne="O" offset="(1385, 1389)" index="19"></token>
+  <token token="of" lemma="of" pos="IN" ne="O" offset="(1391, 1392)" index="20"></token>
+  <token token="something" lemma="something" pos="NN" ne="O" offset="(1394, 1402)" index="21"></token>
+  <token token="beautifully" lemma="beautifully" pos="RB" ne="O" offset="(1404, 1414)" index="22"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(1415, 1415)" index="23"></token>
+  <token token="but" lemma="but" pos="CC" ne="O" offset="(1417, 1419)" index="24"></token>
+  <token token="ridiculously" lemma="ridiculously" pos="RB" ne="O" offset="(1421, 1432)" index="25"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(1433, 1433)" index="26"></token>
+  <token token="simple" lemma="simple" pos="JJ" ne="O" offset="(1435, 1440)" index="27"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(1441, 1441)" index="28"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="sells-4" type="root"></dependency>
+  <dependency head="Mini-13" dependent="the-11" type="det"></dependency>
+  <dependency head="Mini-13" dependent="Mac-12" type="compound"></dependency>
+  <dependency head="times-16" dependent="are-14" type="cop"></dependency>
+  <dependency head="times-16" dependent="just-15" type="advmod"></dependency>
+  <dependency head="times-16" dependent="got-18" type="acl:relcl"></dependency>
+  <dependency head="times-16" dependent="and-20" type="cc"></dependency>
+  <dependency head="times-16" dependent="future-22" type="conj"></dependency>
+  <dependency head="times-16" dependent="iPod-9" type="nsubj"></dependency>
+  <dependency head="got-18" dependent="he-17" type="nsubj"></dependency>
+  <dependency head="got-18" dependent="lucky-19" type="xcomp"></dependency>
+  <dependency head="future-22" dependent="the-21" type="det"></dependency>
+  <dependency head="future-22" dependent="caught-23" type="acl"></dependency>
+  <dependency head="caught-23" dependent="up-24" type="compound:prt"></dependency>
+  <dependency head="sells-4" dependent="times-16" type="parataxis"></dependency>
+  <dependency head="sells-4" dependent="Basically-1" type="advmod"></dependency>
+  <dependency head="sells-4" dependent="he-3" type="nsubj"></dependency>
+  <dependency head="sells-4" dependent="future-6" type="dobj"></dependency>
+  <dependency head="future-6" dependent="the-5" type="det"></dependency>
+  <dependency head="iPod-9" dependent="Mini-13" type="conj"></dependency>
+  <dependency head="iPod-9" dependent="the-8" type="det"></dependency>
+  <dependency head="iPod-9" dependent="and-10" type="cc"></dependency>
+  <parsetree>
+   ( ROOT ( S ( S ( ADVP ( RB Basically ) ) ( , , ) ( NP ( PRP he ) ) ( VP ( VBZ sells ) ( NP ( DT the ) ( NN future ) ) ) ) ( : ; ) ( S ( NP ( NP ( DT the ) ( NN iPod ) ) ( CC and ) ( NP ( DT the ) ( NNP Mac ) ( NNP Mini ) ) ) ( VP ( VBP are ) ( ADVP ( RB just ) ) ( NP ( NP ( NP ( NNS times ) ) ( SBAR ( S ( NP ( PRP he ) ) ( VP ( VBD got ) ( ADJP ( JJ lucky ) ) ) ) ) ) ( CC and ) ( NP ( NP ( DT the ) ( JJ future ) ) ( VP ( VBN caught ) ( PRT ( RP up ) ) ) ) ) ) ) ( . . ) ) )
+  </parsetree>
+  <token token="Basically" lemma="basically" pos="RB" ne="O" offset="(1443, 1451)" index="1"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(1452, 1452)" index="2"></token>
+  <token token="he" lemma="he" pos="PRP" ne="O" offset="(1454, 1455)" index="3"></token>
+  <token token="sells" lemma="sell" pos="VBZ" ne="O" offset="(1457, 1461)" index="4"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(1463, 1465)" index="5"></token>
+  <token token="future" lemma="future" pos="NN" ne="O" offset="(1467, 1472)" index="6"></token>
+  <token token=";" lemma=";" pos=":" ne="O" offset="(1473, 1473)" index="7"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(1475, 1477)" index="8"></token>
+  <token token="iPod" lemma="ipod" pos="NN" ne="O" offset="(1479, 1482)" index="9"></token>
+  <token token="and" lemma="and" pos="CC" ne="O" offset="(1484, 1486)" index="10"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(1488, 1490)" index="11"></token>
+  <token token="Mac" lemma="Mac" pos="NNP" ne="ORGANIZATION" offset="(1492, 1494)" index="12"></token>
+  <token token="Mini" lemma="Mini" pos="NNP" ne="ORGANIZATION" offset="(1496, 1499)" index="13"></token>
+  <token token="are" lemma="be" pos="VBP" ne="O" offset="(1501, 1503)" index="14"></token>
+  <token token="just" lemma="just" pos="RB" ne="O" offset="(1505, 1508)" index="15"></token>
+  <token token="times" lemma="time" pos="NNS" ne="O" offset="(1510, 1514)" index="16"></token>
+  <token token="he" lemma="he" pos="PRP" ne="O" offset="(1516, 1517)" index="17"></token>
+  <token token="got" lemma="get" pos="VBD" ne="O" offset="(1519, 1521)" index="18"></token>
+  <token token="lucky" lemma="lucky" pos="JJ" ne="O" offset="(1523, 1527)" index="19"></token>
+  <token token="and" lemma="and" pos="CC" ne="O" offset="(1529, 1531)" index="20"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(1533, 1535)" index="21"></token>
+  <token token="future" lemma="future" pos="JJ" ne="O" offset="(1537, 1542)" index="22"></token>
+  <token token="caught" lemma="catch" pos="VBN" ne="O" offset="(1544, 1549)" index="23"></token>
+  <token token="up" lemma="up" pos="RP" ne="O" offset="(1551, 1552)" index="24"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(1553, 1553)" index="25"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="jontait-1" type="root"></dependency>
+  <dependency head="jontait-1" dependent="????-2" type="nummod"></dependency>
+  <parsetree>
+   ( ROOT ( NP ( NN jontait ) ( CD ???? ) ) )
+  </parsetree>
+  <token token="jontait" lemma="jontait" pos="NN" ne="O" offset="(1558, 1564)" index="1"></token>
+  <token token="????" lemma="????" pos="CD" ne="NUMBER" offset="(1568, 1571)" index="2"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="??-2" type="root"></dependency>
+  <parsetree>
+   ( ROOT ( PRN ( : - ) ( ADVP ( NN ?? ) ) ) )
+  </parsetree>
+  <token token="-" lemma="-" pos=":" ne="O" offset="(1572, 1572)" index="1"></token>
+  <token token="??" lemma="??" pos="NN" ne="O" offset="(1573, 1574)" index="2"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="??-2" type="root"></dependency>
+  <parsetree>
+   ( ROOT ( PRN ( : - ) ( ADVP ( NN ?? ) ) ) )
+  </parsetree>
+  <token token="-" lemma="-" pos=":" ne="O" offset="(1575, 1575)" index="1"></token>
+  <token token="??" lemma="??" pos="NN" ne="O" offset="(1576, 1577)" index="2"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="T17-1" type="root"></dependency>
+  <dependency head="T17-1" dependent="Yea-3" type="dep"></dependency>
+  <dependency head="Yea-3" dependent=":32:00-2" type="nummod"></dependency>
+  <parsetree>
+   ( ROOT ( NP ( NP ( NN T17 ) ) ( NP ( CD :32:00 ) ( NN Yea ) ) ( . . ) ) )
+  </parsetree>
+  <token token="T17" lemma="t17" pos="NN" ne="O" offset="(1578, 1580)" index="1"></token>
+  <token token=":32:00" lemma=":32:00" pos="CD" ne="NUMBER" offset="(1581, 1586)" index="2"></token>
+  <token token="Yea" lemma="yea" pos="NN" ne="O" offset="(1589, 1591)" index="3"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(1592, 1592)" index="4"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="Yea-1" type="root"></dependency>
+  <parsetree>
+   ( ROOT ( FRAG ( NP ( NNP Yea ) ) ( . . ) ) )
+  </parsetree>
+  <token token="Yea" lemma="Yea" pos="NNP" ne="O" offset="(1595, 1597)" index="1"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(1598, 1598)" index="2"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="Yea-1" type="root"></dependency>
+  <parsetree>
+   ( ROOT ( FRAG ( NP ( NNP Yea ) ) ( . . ) ) )
+  </parsetree>
+  <token token="Yea" lemma="Yea" pos="NNP" ne="O" offset="(1601, 1603)" index="1"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(1604, 1604)" index="2"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="president-4" type="root"></dependency>
+  <dependency head="president-4" dependent="'m-2" type="cop"></dependency>
+  <dependency head="president-4" dependent="the-3" type="det"></dependency>
+  <dependency head="president-4" dependent="I-1" type="nsubj"></dependency>
+  <parsetree>
+   ( ROOT ( S ( NP ( PRP I ) ) ( VP ( VBP 'm ) ( NP ( DT the ) ( NN president ) ) ) ( . . ) ) )
+  </parsetree>
+  <token token="I" lemma="I" pos="PRP" ne="O" offset="(1607, 1607)" index="1"></token>
+  <token token="'m" lemma="be" pos="VBP" ne="O" offset="(1608, 1609)" index="2"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(1611, 1613)" index="3"></token>
+  <token token="president" lemma="president" pos="NN" ne="O" offset="(1615, 1623)" index="4"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(1624, 1624)" index="5"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="yea-2" type="root"></dependency>
+  <dependency head="yea-2" dependent="Oh-1" type="discourse"></dependency>
+  <parsetree>
+   ( ROOT ( S ( VP ( NP ( INTJ ( UH Oh ) ) ( NP ( FW yea ) ) ) ) ( . ! ) ) )
+  </parsetree>
+  <token token="Oh" lemma="oh" pos="UH" ne="O" offset="(1626, 1627)" index="1"></token>
+  <token token="yea" lemma="yea" pos="FW" ne="O" offset="(1629, 1631)" index="2"></token>
+  <token token="!" lemma="!" pos="." ne="O" offset="(1632, 1632)" index="3"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="yea-2" type="root"></dependency>
+  <dependency head="yea-2" dependent="Oh-1" type="discourse"></dependency>
+  <parsetree>
+   ( ROOT ( S ( VP ( NP ( INTJ ( UH Oh ) ) ( NP ( FW yea ) ) ) ) ( . ! ) ) )
+  </parsetree>
+  <token token="Oh" lemma="oh" pos="UH" ne="O" offset="(1635, 1636)" index="1"></token>
+  <token token="yea" lemma="yea" pos="FW" ne="O" offset="(1638, 1640)" index="2"></token>
+  <token token="!" lemma="!" pos="." ne="O" offset="(1641, 1641)" index="3"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="jontait-5" type="root"></dependency>
+  <dependency head="dumbass-3" dependent="you-2" type="nsubj"></dependency>
+  <dependency head="jontait-5" dependent="dumbass-3" type="parataxis"></dependency>
+  <dependency head="jontait-5" dependent="????-6" type="nsubj"></dependency>
+  <parsetree>
+   ( ROOT ( SINV ( VP ( -LRB- -LRB- ) ( PRN ( S ( NP ( PRP you ) ) ( VP ( VBP dumbass ) ) ) ( -RRB- -RRB- ) ) ( NP ( NN jontait ) ) ) ( NP ( CD ???? ) ) ) )
+  </parsetree>
+  <token token="-LRB-" lemma="-lrb-" pos="-LRB-" ne="O" offset="(1644, 1644)" index="1"></token>
+  <token token="you" lemma="you" pos="PRP" ne="O" offset="(1645, 1647)" index="2"></token>
+  <token token="dumbass" lemma="dumbass" pos="VBP" ne="O" offset="(1649, 1655)" index="3"></token>
+  <token token="-RRB-" lemma="-rrb-" pos="-RRB-" ne="O" offset="(1656, 1656)" index="4"></token>
+  <token token="jontait" lemma="jontait" pos="NN" ne="O" offset="(1661, 1667)" index="5"></token>
+  <token token="????" lemma="????" pos="CD" ne="NUMBER" offset="(1671, 1674)" index="6"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="??-2" type="root"></dependency>
+  <parsetree>
+   ( ROOT ( PRN ( : - ) ( ADVP ( NN ?? ) ) ) )
+  </parsetree>
+  <token token="-" lemma="-" pos=":" ne="O" offset="(1675, 1675)" index="1"></token>
+  <token token="??" lemma="??" pos="NN" ne="O" offset="(1676, 1677)" index="2"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="??-2" type="root"></dependency>
+  <parsetree>
+   ( ROOT ( PRN ( : - ) ( ADVP ( NN ?? ) ) ) )
+  </parsetree>
+  <token token="-" lemma="-" pos=":" ne="O" offset="(1678, 1678)" index="1"></token>
+  <token token="??" lemma="??" pos="NN" ne="O" offset="(1679, 1680)" index="2"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="commercial-3" type="root"></dependency>
+  <dependency head="commercial-3" dependent="knows-12" type="acl:relcl"></dependency>
+  <dependency head="commercial-3" dependent="m-16" type="dep"></dependency>
+  <dependency head="commercial-3" dependent="T17-1" type="compound"></dependency>
+  <dependency head="commercial-3" dependent=":42:00-2" type="nummod"></dependency>
+  <dependency head="video-5" dependent="A-4" type="det"></dependency>
+  <dependency head="video-5" dependent="commercial-8" type="nmod"></dependency>
+  <dependency head="commercial-8" dependent="of-6" type="case"></dependency>
+  <dependency head="commercial-8" dependent="a-7" type="det"></dependency>
+  <dependency head="commercial-8" dependent="nobody-11" type="nmod"></dependency>
+  <dependency head="nobody-11" dependent="in-9" type="case"></dependency>
+  <dependency head="nobody-11" dependent="case-10" type="compound"></dependency>
+  <dependency head="knows-12" dependent="video-5" type="nsubj"></dependency>
+  <dependency head="I-14" dependent="what-13" type="dep"></dependency>
+  <dependency head="m-16" dependent="I-14" type="dep"></dependency>
+  <dependency head="m-16" dependent="talking-17" type="acl:relcl"></dependency>
+  <dependency head="talking-17" dependent="=-RRB--19" type="nmod"></dependency>
+  <dependency head="=-RRB--19" dependent="about-18" type="case"></dependency>
+  <parsetree>
+   ( ROOT ( FRAG ( NP ( NP ( NN T17 ) ( CD :42:00 ) ( NN commercial ) ) ( SBAR ( S ( NP ( NP ( DT A ) ( NN video ) ) ( PP ( IN of ) ( NP ( NP ( DT a ) ( JJ commercial ) ) ( PP ( IN in ) ( NP ( NN case ) ( NN nobody ) ) ) ) ) ) ( VP ( VBZ knows ) ) ) ) ) ( X ( X ( X ( WP what ) ) ( NP ( PRP I ) ) ) ( NP ( NP ( `` `` ) ( NN m ) ) ( SBAR ( S ( VP ( VBG talking ) ( PP ( IN about ) ( NP ( NN =-RRB- ) ) ) ) ) ) ) ) ) )
+  </parsetree>
+  <token token="T17" lemma="t17" pos="NN" ne="O" offset="(1681, 1683)" index="1"></token>
+  <token token=":42:00" lemma=":42:00" pos="CD" ne="NUMBER" offset="(1684, 1689)" index="2"></token>
+  <token token="commercial" lemma="commercial" pos="NN" ne="O" offset="(1692, 1701)" index="3"></token>
+  <token token="A" lemma="a" pos="DT" ne="O" offset="(1703, 1703)" index="4"></token>
+  <token token="video" lemma="video" pos="NN" ne="O" offset="(1705, 1709)" index="5"></token>
+  <token token="of" lemma="of" pos="IN" ne="O" offset="(1711, 1712)" index="6"></token>
+  <token token="a" lemma="a" pos="DT" ne="O" offset="(1714, 1714)" index="7"></token>
+  <token token="commercial" lemma="commercial" pos="JJ" ne="O" offset="(1716, 1725)" index="8"></token>
+  <token token="in" lemma="in" pos="IN" ne="O" offset="(1727, 1728)" index="9"></token>
+  <token token="case" lemma="case" pos="NN" ne="O" offset="(1730, 1733)" index="10"></token>
+  <token token="nobody" lemma="nobody" pos="NN" ne="O" offset="(1735, 1740)" index="11"></token>
+  <token token="knows" lemma="know" pos="VBZ" ne="O" offset="(1742, 1746)" index="12"></token>
+  <token token="what" lemma="what" pos="WP" ne="O" offset="(1748, 1751)" index="13"></token>
+  <token token="I" lemma="I" pos="PRP" ne="O" offset="(1753, 1753)" index="14"></token>
+  <token token="``" lemma="``" pos="``" ne="O" offset="(1754, 1754)" index="15"></token>
+  <token token="m" lemma="m" pos="NN" ne="NUMBER" offset="(1755, 1755)" index="16"></token>
+  <token token="talking" lemma="talk" pos="VBG" ne="O" offset="(1757, 1763)" index="17"></token>
+  <token token="about" lemma="about" pos="IN" ne="O" offset="(1765, 1769)" index="18"></token>
+  <token token="=-RRB-" lemma="=-rrb-" pos="NN" ne="O" offset="(1771, 1772)" index="19"></token>
+ </sentence>
+</doc>

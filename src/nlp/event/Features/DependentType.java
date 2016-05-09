@@ -22,14 +22,11 @@ public class DependentType extends Feature {
 	}
 	@Override
 	public String getValue(AnnotatedToken t) {
-<<<<<<< HEAD
-		if (t.getToken().toLowerCase().equals("root")) return "-NULL-";
-		AnnotatedSentence Sen=t.getParent();
-=======
+
 		if(t.getIndex().equals(0))	return "-NULL-";
 		
 		AnnotatedSentence Sen = t.getParent();
->>>>>>> master
+
 		LinkedList<MyDependency> depList=Sen.getDeplist();
 		for (int i=0;i<depList.size();i++){
 			MyDependency md=depList.get(i);
@@ -37,17 +34,8 @@ public class DependentType extends Feature {
 				return md.getType();	
 			}
 		}
-<<<<<<< HEAD
-		
-		return "-NULL-";
-	}
 
-
-	
-	public void main(String[] args){
-		
-=======
 		return "-NULL-";
->>>>>>> master
+
 	}	
 }

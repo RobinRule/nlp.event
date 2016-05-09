@@ -1,0 +1,357 @@
+<doc metapath="./data/AnnotatedFile/T/510.meta">
+ <sentence>
+  <dependency head="ROOT-0" dependent="Worsens-10" type="root"></dependency>
+  <dependency head="TEXT-4" dependent="MARKETVIEW_20041217-1" type="compound"></dependency>
+  <dependency head="TEXT-4" dependent=".0801-2" type="nummod"></dependency>
+  <dependency head="TEXT-4" dependent="WEB-3" type="compound"></dependency>
+  <dependency head="TEXT-4" dependent="2004-12-17T08-5" type="dep"></dependency>
+  <dependency head="TEXT-4" dependent=":01:00-6" type="dep"></dependency>
+  <dependency head=":01:00-6" dependent="Situation-9" type="dep"></dependency>
+  <dependency head="Russia-7" dependent="'s-8" type="case"></dependency>
+  <dependency head="Situation-9" dependent="Russia-7" type="nmod:poss"></dependency>
+  <dependency head="Worsens-10" dependent="TEXT-4" type="nsubj"></dependency>
+  <dependency head="Worsens-10" dependent="denied-24" type="ccomp"></dependency>
+  <dependency head="Gazprom-14" dependent="company-20" type="appos"></dependency>
+  <dependency head="Gazprom-14" dependent="Byrne-11" type="compound"></dependency>
+  <dependency head="Gazprom-14" dependent="2004-12-17T08-12" type="compound"></dependency>
+  <dependency head="Gazprom-14" dependent=":01:00-13" type="nummod"></dependency>
+  <dependency head="company-20" dependent="the-16" type="det"></dependency>
+  <dependency head="company-20" dependent="main-17" type="amod"></dependency>
+  <dependency head="company-20" dependent="Russian-18" type="amod"></dependency>
+  <dependency head="company-20" dependent="gas-19" type="compound"></dependency>
+  <dependency head="denied-24" dependent="situation-35" type="nmod"></dependency>
+  <dependency head="denied-24" dependent="has-22" type="aux"></dependency>
+  <dependency head="denied-24" dependent="been-23" type="auxpass"></dependency>
+  <dependency head="denied-24" dependent="Gazprom-14" type="nsubjpass"></dependency>
+  <dependency head="denied-24" dependent="line-30" type="dobj"></dependency>
+  <dependency head="$-26" dependent="billion-28" type="nummod"></dependency>
+  <dependency head="billion-28" dependent="10-27" type="compound"></dependency>
+  <dependency head="line-30" dependent="a-25" type="det"></dependency>
+  <dependency head="line-30" dependent="$-26" type="amod"></dependency>
+  <dependency head="line-30" dependent="credit-29" type="compound"></dependency>
+  <dependency head="due-31" dependent="to-32" type="mwe"></dependency>
+  <dependency head="situation-35" dependent="the-33" type="det"></dependency>
+  <dependency head="situation-35" dependent="political-34" type="amod"></dependency>
+  <dependency head="situation-35" dependent="Russia-37" type="nmod"></dependency>
+  <dependency head="situation-35" dependent="due-31" type="case"></dependency>
+  <dependency head="Russia-37" dependent="in-36" type="case"></dependency>
+  <parsetree>
+   ( ROOT ( S ( NP ( NP ( NN MARKETVIEW_20041217 ) ( CD .0801 ) ( NN WEB ) ( NN TEXT ) ) ( NP ( NN 2004-12-17T08 ) ) ( NP ( NP ( CD :01:00 ) ) ( NP ( NP ( NNP Russia ) ( POS 's ) ) ( NN Situation ) ) ) ) ( VP ( VBZ Worsens ) ( SBAR ( S ( NP ( NP ( NNP Byrne ) ( NNP 2004-12-17T08 ) ( CD :01:00 ) ( NNP Gazprom ) ) ( , , ) ( NP ( DT the ) ( JJ main ) ( JJ Russian ) ( NN gas ) ( NN company ) ) ( , , ) ) ( VP ( VBZ has ) ( VP ( VBN been ) ( VP ( VBN denied ) ( NP ( DT a ) ( ADJP ( QP ( $ $ ) ( CD 10 ) ( CD billion ) ) ) ( NN credit ) ( NN line ) ) ( PP ( JJ due ) ( TO to ) ( NP ( NP ( DT the ) ( JJ political ) ( NN situation ) ) ( PP ( IN in ) ( NP ( NNP Russia ) ) ) ) ) ) ) ) ) ) ) ( . . ) ) )
+  </parsetree>
+  <token token="MARKETVIEW_20041217" lemma="marketview_20041217" pos="NN" ne="O" offset="(2, 20)" index="1"></token>
+  <token token=".0801" lemma=".0801" pos="CD" ne="NUMBER" offset="(21, 25)" index="2"></token>
+  <token token="WEB" lemma="web" pos="NN" ne="O" offset="(29, 31)" index="3"></token>
+  <token token="TEXT" lemma="text" pos="NN" ne="O" offset="(33, 36)" index="4"></token>
+  <token token="2004-12-17T08" lemma="2004-12-17t08" pos="NN" ne="O" offset="(40, 52)" index="5"></token>
+  <token token=":01:00" lemma=":01:00" pos="CD" ne="NUMBER" offset="(53, 58)" index="6"></token>
+  <token token="Russia" lemma="Russia" pos="NNP" ne="LOCATION" offset="(63, 68)" index="7"></token>
+  <token token="'s" lemma="'s" pos="POS" ne="O" offset="(69, 70)" index="8"></token>
+  <token token="Situation" lemma="situation" pos="NN" ne="O" offset="(72, 80)" index="9"></token>
+  <token token="Worsens" lemma="worsen" pos="VBZ" ne="O" offset="(82, 88)" index="10"></token>
+  <token token="Byrne" lemma="Byrne" pos="NNP" ne="O" offset="(94, 98)" index="11"></token>
+  <token token="2004-12-17T08" lemma="2004-12-17T08" pos="NNP" ne="O" offset="(102, 114)" index="12"></token>
+  <token token=":01:00" lemma=":01:00" pos="CD" ne="NUMBER" offset="(115, 120)" index="13"></token>
+  <token token="Gazprom" lemma="Gazprom" pos="NNP" ne="ORGANIZATION" offset="(123, 129)" index="14"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(130, 130)" index="15"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(132, 134)" index="16"></token>
+  <token token="main" lemma="main" pos="JJ" ne="O" offset="(136, 139)" index="17"></token>
+  <token token="Russian" lemma="russian" pos="JJ" ne="O" offset="(141, 147)" index="18"></token>
+  <token token="gas" lemma="gas" pos="NN" ne="O" offset="(149, 151)" index="19"></token>
+  <token token="company" lemma="company" pos="NN" ne="O" offset="(153, 159)" index="20"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(160, 160)" index="21"></token>
+  <token token="has" lemma="have" pos="VBZ" ne="O" offset="(162, 164)" index="22"></token>
+  <token token="been" lemma="be" pos="VBN" ne="O" offset="(166, 169)" index="23"></token>
+  <token token="denied" lemma="deny" pos="VBN" ne="O" offset="(171, 176)" index="24"></token>
+  <token token="a" lemma="a" pos="DT" ne="O" offset="(178, 178)" index="25"></token>
+  <token token="$" lemma="$" pos="$" ne="MONEY" offset="(180, 180)" index="26"></token>
+  <token token="10" lemma="10" pos="CD" ne="MONEY" offset="(181, 182)" index="27"></token>
+  <token token="billion" lemma="billion" pos="CD" ne="MONEY" offset="(184, 190)" index="28"></token>
+  <token token="credit" lemma="credit" pos="NN" ne="O" offset="(192, 197)" index="29"></token>
+  <token token="line" lemma="line" pos="NN" ne="O" offset="(199, 202)" index="30"></token>
+  <token token="due" lemma="due" pos="JJ" ne="O" offset="(204, 206)" index="31"></token>
+  <token token="to" lemma="to" pos="TO" ne="O" offset="(208, 209)" index="32"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(211, 213)" index="33"></token>
+  <token token="political" lemma="political" pos="JJ" ne="O" offset="(215, 223)" index="34"></token>
+  <token token="situation" lemma="situation" pos="NN" ne="O" offset="(225, 233)" index="35"></token>
+  <token token="in" lemma="in" pos="IN" ne="O" offset="(235, 236)" index="36"></token>
+  <token token="Russia" lemma="Russia" pos="NNP" ne="LOCATION" offset="(238, 243)" index="37"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(244, 244)" index="38"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="intended-3" type="root"></dependency>
+  <dependency head="company-2" dependent="The-1" type="det"></dependency>
+  <dependency head="intended-3" dependent="use-5" type="xcomp"></dependency>
+  <dependency head="intended-3" dependent="company-2" type="nsubj"></dependency>
+  <dependency head="use-5" dependent="to-4" type="mark"></dependency>
+  <dependency head="use-5" dependent="cash-7" type="dobj"></dependency>
+  <dependency head="cash-7" dependent="the-6" type="det"></dependency>
+  <dependency head="cash-7" dependent="pay-9" type="acl"></dependency>
+  <dependency head="pay-9" dependent="to-8" type="mark"></dependency>
+  <dependency head="pay-9" dependent="price-13" type="dobj"></dependency>
+  <dependency head="low-12" dependent="artificially-11" type="advmod"></dependency>
+  <dependency head="price-13" dependent="an-10" type="det"></dependency>
+  <dependency head="price-13" dependent="low-12" type="amod"></dependency>
+  <dependency head="price-13" dependent="know-30" type="dep"></dependency>
+  <dependency head="price-13" dependent="assets-16" type="nmod"></dependency>
+  <dependency head="assets-16" dependent="for-14" type="case"></dependency>
+  <dependency head="assets-16" dependent="Yukos-15" type="compound"></dependency>
+  <dependency head="firm-20" dependent="'s-21" type="case"></dependency>
+  <dependency head="bankruptcy-22" dependent="firm-20" type="nmod:poss"></dependency>
+  <dependency head="bankruptcy-22" dependent="filing-23" type="acl"></dependency>
+  <dependency head="filing-23" dependent="ago-27" type="advmod"></dependency>
+  <dependency head="filing-23" dependent="you-29" type="parataxis"></dependency>
+  <dependency head="days-26" dependent="a-24" type="det"></dependency>
+  <dependency head="days-26" dependent="few-25" type="amod"></dependency>
+  <dependency head="ago-27" dependent="days-26" type="nmod:npmod"></dependency>
+  <dependency head="know-30" dependent="that-19" type="mark"></dependency>
+  <dependency head="know-30" dependent="bankruptcy-22" type="nsubj"></dependency>
+  <dependency head="know-30" dependent="bad-33" type="ccomp"></dependency>
+  <dependency head="know-30" dependent="hence-18" type="advmod"></dependency>
+  <dependency head="bad-33" dependent="have-36" type="advcl"></dependency>
+  <dependency head="bad-33" dependent="it-31" type="nsubj"></dependency>
+  <dependency head="bad-33" dependent="'s-32" type="cop"></dependency>
+  <dependency head="have-36" dependent="you-35" type="nsubj"></dependency>
+  <dependency head="have-36" dependent="use-38" type="xcomp"></dependency>
+  <dependency head="have-36" dependent="when-34" type="advmod"></dependency>
+  <dependency head="use-38" dependent="to-37" type="mark"></dependency>
+  <dependency head="use-38" dependent="courts-40" type="dobj"></dependency>
+  <dependency head="use-38" dependent="protect-42" type="xcomp"></dependency>
+  <dependency head="courts-40" dependent="US-39" type="compound"></dependency>
+  <dependency head="protect-42" dependent="country-51" type="nmod"></dependency>
+  <dependency head="protect-42" dependent="to-41" type="mark"></dependency>
+  <dependency head="protect-42" dependent="assets-45" type="dobj"></dependency>
+  <dependency head="protect-42" dependent="appropriation-47" type="nmod"></dependency>
+  <dependency head="assets-45" dependent="your-43" type="nmod:poss"></dependency>
+  <dependency head="assets-45" dependent="own-44" type="amod"></dependency>
+  <dependency head="appropriation-47" dependent="from-46" type="case"></dependency>
+  <dependency head="country-51" dependent="by-48" type="case"></dependency>
+  <dependency head="country-51" dependent="your-49" type="nmod:poss"></dependency>
+  <dependency head="country-51" dependent="home-50" type="compound"></dependency>
+  <parsetree>
+   ( ROOT ( S ( NP ( DT The ) ( NN company ) ) ( VP ( VBD intended ) ( S ( VP ( TO to ) ( VP ( VB use ) ( NP ( DT the ) ( NN cash ) ( S ( VP ( TO to ) ( VP ( VB pay ) ( NP ( NP ( DT an ) ( ADJP ( RB artificially ) ( JJ low ) ) ( NN price ) ) ( PP ( IN for ) ( NP ( NNP Yukos ) ( NNS assets ) ) ) ( PRN ( -LRB- -LRB- ) ( SBAR ( ADVP ( RB hence ) ) ( IN that ) ( S ( NP ( NP ( NP ( NN firm ) ( POS 's ) ) ( NN bankruptcy ) ) ( VP ( VBG filing ) ( ADVP ( NP ( DT a ) ( JJ few ) ( NNS days ) ) ( RB ago ) ) ( : -- ) ( S ( NP ( PRP you ) ) ) ) ) ( VP ( VBP know ) ( SBAR ( S ( NP ( PRP it ) ) ( VP ( VBZ 's ) ( ADJP ( JJ bad ) ) ( SBAR ( WHADVP ( WRB when ) ) ( S ( NP ( PRP you ) ) ( VP ( VBP have ) ( S ( VP ( TO to ) ( VP ( VB use ) ( S ( NP ( NNP US ) ( NNS courts ) ) ( VP ( TO to ) ( VP ( VB protect ) ( NP ( PRP$ your ) ( JJ own ) ( NNS assets ) ) ( PP ( IN from ) ( NP ( NN appropriation ) ) ) ( PP ( IN by ) ( NP ( PRP$ your ) ( NN home ) ( NN country ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ( -RRB- -RRB- ) ) ) ) ) ) ) ) ) ) ) ( . . ) ) )
+  </parsetree>
+  <token token="The" lemma="the" pos="DT" ne="O" offset="(246, 248)" index="1"></token>
+  <token token="company" lemma="company" pos="NN" ne="O" offset="(250, 256)" index="2"></token>
+  <token token="intended" lemma="intend" pos="VBD" ne="O" offset="(258, 265)" index="3"></token>
+  <token token="to" lemma="to" pos="TO" ne="O" offset="(267, 268)" index="4"></token>
+  <token token="use" lemma="use" pos="VB" ne="O" offset="(270, 272)" index="5"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(274, 276)" index="6"></token>
+  <token token="cash" lemma="cash" pos="NN" ne="O" offset="(278, 281)" index="7"></token>
+  <token token="to" lemma="to" pos="TO" ne="O" offset="(283, 284)" index="8"></token>
+  <token token="pay" lemma="pay" pos="VB" ne="O" offset="(286, 288)" index="9"></token>
+  <token token="an" lemma="a" pos="DT" ne="O" offset="(290, 291)" index="10"></token>
+  <token token="artificially" lemma="artificially" pos="RB" ne="O" offset="(293, 304)" index="11"></token>
+  <token token="low" lemma="low" pos="JJ" ne="O" offset="(306, 308)" index="12"></token>
+  <token token="price" lemma="price" pos="NN" ne="O" offset="(310, 314)" index="13"></token>
+  <token token="for" lemma="for" pos="IN" ne="O" offset="(316, 318)" index="14"></token>
+  <token token="Yukos" lemma="Yukos" pos="NNP" ne="ORGANIZATION" offset="(320, 324)" index="15"></token>
+  <token token="assets" lemma="asset" pos="NNS" ne="O" offset="(326, 331)" index="16"></token>
+  <token token="-LRB-" lemma="-lrb-" pos="-LRB-" ne="O" offset="(333, 333)" index="17"></token>
+  <token token="hence" lemma="hence" pos="RB" ne="O" offset="(334, 338)" index="18"></token>
+  <token token="that" lemma="that" pos="IN" ne="O" offset="(340, 343)" index="19"></token>
+  <token token="firm" lemma="firm" pos="NN" ne="O" offset="(345, 348)" index="20"></token>
+  <token token="'s" lemma="'s" pos="POS" ne="O" offset="(349, 350)" index="21"></token>
+  <token token="bankruptcy" lemma="bankruptcy" pos="NN" ne="O" offset="(352, 361)" index="22"></token>
+  <token token="filing" lemma="file" pos="VBG" ne="O" offset="(363, 368)" index="23"></token>
+  <token token="a" lemma="a" pos="DT" ne="O" offset="(370, 370)" index="24"></token>
+  <token token="few" lemma="few" pos="JJ" ne="O" offset="(372, 374)" index="25"></token>
+  <token token="days" lemma="day" pos="NNS" ne="O" offset="(376, 379)" index="26"></token>
+  <token token="ago" lemma="ago" pos="RB" ne="O" offset="(381, 383)" index="27"></token>
+  <token token="--" lemma="--" pos=":" ne="O" offset="(385, 386)" index="28"></token>
+  <token token="you" lemma="you" pos="PRP" ne="O" offset="(388, 390)" index="29"></token>
+  <token token="know" lemma="know" pos="VBP" ne="O" offset="(392, 395)" index="30"></token>
+  <token token="it" lemma="it" pos="PRP" ne="O" offset="(397, 398)" index="31"></token>
+  <token token="'s" lemma="be" pos="VBZ" ne="O" offset="(399, 400)" index="32"></token>
+  <token token="bad" lemma="bad" pos="JJ" ne="O" offset="(402, 404)" index="33"></token>
+  <token token="when" lemma="when" pos="WRB" ne="O" offset="(406, 409)" index="34"></token>
+  <token token="you" lemma="you" pos="PRP" ne="O" offset="(411, 413)" index="35"></token>
+  <token token="have" lemma="have" pos="VBP" ne="O" offset="(415, 418)" index="36"></token>
+  <token token="to" lemma="to" pos="TO" ne="O" offset="(420, 421)" index="37"></token>
+  <token token="use" lemma="use" pos="VB" ne="O" offset="(423, 425)" index="38"></token>
+  <token token="US" lemma="US" pos="NNP" ne="LOCATION" offset="(427, 428)" index="39"></token>
+  <token token="courts" lemma="court" pos="NNS" ne="O" offset="(430, 435)" index="40"></token>
+  <token token="to" lemma="to" pos="TO" ne="O" offset="(437, 438)" index="41"></token>
+  <token token="protect" lemma="protect" pos="VB" ne="O" offset="(440, 446)" index="42"></token>
+  <token token="your" lemma="you" pos="PRP$" ne="O" offset="(448, 451)" index="43"></token>
+  <token token="own" lemma="own" pos="JJ" ne="O" offset="(453, 455)" index="44"></token>
+  <token token="assets" lemma="asset" pos="NNS" ne="O" offset="(457, 462)" index="45"></token>
+  <token token="from" lemma="from" pos="IN" ne="O" offset="(464, 467)" index="46"></token>
+  <token token="appropriation" lemma="appropriation" pos="NN" ne="O" offset="(469, 481)" index="47"></token>
+  <token token="by" lemma="by" pos="IN" ne="O" offset="(483, 484)" index="48"></token>
+  <token token="your" lemma="you" pos="PRP$" ne="O" offset="(486, 489)" index="49"></token>
+  <token token="home" lemma="home" pos="NN" ne="O" offset="(491, 494)" index="50"></token>
+  <token token="country" lemma="country" pos="NN" ne="O" offset="(496, 502)" index="51"></token>
+  <token token="-RRB-" lemma="-rrb-" pos="-RRB-" ne="O" offset="(503, 503)" index="52"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(504, 504)" index="53"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="starting-3" type="root"></dependency>
+  <dependency head="Putin-7" dependent="'s-8" type="case"></dependency>
+  <dependency head="goal-9" dependent="Putin-7" type="nmod:poss"></dependency>
+  <dependency head="sort-12" dependent="like-6" type="mark"></dependency>
+  <dependency head="sort-12" dependent="goal-9" type="nsubj"></dependency>
+  <dependency head="sort-12" dependent="is-10" type="cop"></dependency>
+  <dependency head="sort-12" dependent="a-11" type="det"></dependency>
+  <dependency head="sort-12" dependent="nationalization-15" type="nmod"></dependency>
+  <dependency head="nationalization-15" dependent="of-13" type="case"></dependency>
+  <dependency head="nationalization-15" dependent="judicial-14" type="amod"></dependency>
+  <dependency head="taking-17" dependent="control-18" type="dobj"></dependency>
+  <dependency head="control-18" dependent="assets-21" type="nmod"></dependency>
+  <dependency head="assets-21" dependent="court-23" type="nmod"></dependency>
+  <dependency head="assets-21" dependent="rather-25" type="cc"></dependency>
+  <dependency head="assets-21" dependent="executive-27" type="conj"></dependency>
+  <dependency head="assets-21" dependent="of-19" type="case"></dependency>
+  <dependency head="assets-21" dependent="key-20" type="amod"></dependency>
+  <dependency head="court-23" dependent="through-22" type="case"></dependency>
+  <dependency head="rather-25" dependent="than-26" type="mwe"></dependency>
+  <dependency head="executive-27" dependent="fiat-29" type="appos"></dependency>
+  <dependency head="starting-3" dependent="It-1" type="nsubj"></dependency>
+  <dependency head="starting-3" dependent="taking-17" type="parataxis"></dependency>
+  <dependency head="starting-3" dependent="'s-2" type="aux"></dependency>
+  <dependency head="starting-3" dependent="look-5" type="xcomp"></dependency>
+  <dependency head="look-5" dependent="sort-12" type="advcl"></dependency>
+  <dependency head="look-5" dependent="to-4" type="mark"></dependency>
+  <parsetree>
+   ( ROOT ( S ( S ( NP ( PRP It ) ) ( VP ( VBZ 's ) ( VP ( VBG starting ) ( S ( VP ( TO to ) ( VP ( VB look ) ( SBAR ( IN like ) ( S ( NP ( NP ( NNP Putin ) ( POS 's ) ) ( NN goal ) ) ( VP ( VBZ is ) ( NP ( NP ( DT a ) ( NN sort ) ) ( PP ( IN of ) ( NP ( JJ judicial ) ( NN nationalization ) ) ) ) ) ) ) ) ) ) ) ) ) ( : -- ) ( S ( VP ( VBG taking ) ( NP ( NP ( NN control ) ) ( PP ( IN of ) ( NP ( NP ( NP ( JJ key ) ( NNS assets ) ) ( PP ( IN through ) ( NP ( NN court ) ) ) ) ( , , ) ( CONJP ( RB rather ) ( IN than ) ) ( NP ( NP ( NN executive ) ) ( , , ) ( NP ( NN fiat ) ) ) ) ) ) ) ) ( . . ) ) )
+  </parsetree>
+  <token token="It" lemma="it" pos="PRP" ne="O" offset="(506, 507)" index="1"></token>
+  <token token="'s" lemma="be" pos="VBZ" ne="O" offset="(508, 509)" index="2"></token>
+  <token token="starting" lemma="start" pos="VBG" ne="O" offset="(511, 518)" index="3"></token>
+  <token token="to" lemma="to" pos="TO" ne="O" offset="(520, 521)" index="4"></token>
+  <token token="look" lemma="look" pos="VB" ne="O" offset="(523, 526)" index="5"></token>
+  <token token="like" lemma="like" pos="IN" ne="O" offset="(528, 531)" index="6"></token>
+  <token token="Putin" lemma="Putin" pos="NNP" ne="PERSON" offset="(533, 537)" index="7"></token>
+  <token token="'s" lemma="'s" pos="POS" ne="O" offset="(538, 539)" index="8"></token>
+  <token token="goal" lemma="goal" pos="NN" ne="O" offset="(541, 544)" index="9"></token>
+  <token token="is" lemma="be" pos="VBZ" ne="O" offset="(546, 547)" index="10"></token>
+  <token token="a" lemma="a" pos="DT" ne="O" offset="(549, 549)" index="11"></token>
+  <token token="sort" lemma="sort" pos="NN" ne="O" offset="(551, 554)" index="12"></token>
+  <token token="of" lemma="of" pos="IN" ne="O" offset="(556, 557)" index="13"></token>
+  <token token="judicial" lemma="judicial" pos="JJ" ne="O" offset="(559, 566)" index="14"></token>
+  <token token="nationalization" lemma="nationalization" pos="NN" ne="O" offset="(568, 582)" index="15"></token>
+  <token token="--" lemma="--" pos=":" ne="O" offset="(584, 585)" index="16"></token>
+  <token token="taking" lemma="take" pos="VBG" ne="O" offset="(587, 592)" index="17"></token>
+  <token token="control" lemma="control" pos="NN" ne="O" offset="(594, 600)" index="18"></token>
+  <token token="of" lemma="of" pos="IN" ne="O" offset="(602, 603)" index="19"></token>
+  <token token="key" lemma="key" pos="JJ" ne="O" offset="(605, 607)" index="20"></token>
+  <token token="assets" lemma="asset" pos="NNS" ne="O" offset="(609, 614)" index="21"></token>
+  <token token="through" lemma="through" pos="IN" ne="O" offset="(616, 622)" index="22"></token>
+  <token token="court" lemma="court" pos="NN" ne="O" offset="(624, 628)" index="23"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(629, 629)" index="24"></token>
+  <token token="rather" lemma="rather" pos="RB" ne="O" offset="(631, 636)" index="25"></token>
+  <token token="than" lemma="than" pos="IN" ne="O" offset="(638, 641)" index="26"></token>
+  <token token="executive" lemma="executive" pos="NN" ne="O" offset="(643, 651)" index="27"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(652, 652)" index="28"></token>
+  <token token="fiat" lemma="fiat" pos="NN" ne="O" offset="(654, 657)" index="29"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(658, 658)" index="30"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="caught-5" type="root"></dependency>
+  <dependency head="deprived-12" dependent="Russia-9" type="nsubjpass"></dependency>
+  <dependency head="deprived-12" dependent="may-10" type="aux"></dependency>
+  <dependency head="deprived-12" dependent="be-11" type="auxpass"></dependency>
+  <dependency head="deprived-12" dependent="capital-15" type="nmod"></dependency>
+  <dependency head="capital-15" dependent="of-13" type="case"></dependency>
+  <dependency head="capital-15" dependent="the-14" type="det"></dependency>
+  <dependency head="capital-15" dependent="needs-17" type="acl:relcl"></dependency>
+  <dependency head="needs-17" dependent="it-16" type="nsubj"></dependency>
+  <dependency head="needs-17" dependent="grow-19" type="xcomp"></dependency>
+  <dependency head="grow-19" dependent="to-18" type="mark"></dependency>
+  <dependency head="markets-3" dependent="the-2" type="det"></dependency>
+  <dependency head="caught-5" dependent="deprived-12" type="conj"></dependency>
+  <dependency head="caught-5" dependent="But-1" type="cc"></dependency>
+  <dependency head="caught-5" dependent="markets-3" type="nsubj"></dependency>
+  <dependency head="caught-5" dependent="have-4" type="aux"></dependency>
+  <dependency head="caught-5" dependent="on-6" type="nmod"></dependency>
+  <dependency head="caught-5" dependent="and-8" type="cc"></dependency>
+  <parsetree>
+   ( ROOT ( S ( CC But ) ( S ( NP ( DT the ) ( NNS markets ) ) ( VP ( VBP have ) ( VP ( VBN caught ) ( PP ( IN on ) ) ) ) ) ( , , ) ( CC and ) ( S ( NP ( NNP Russia ) ) ( VP ( MD may ) ( VP ( VB be ) ( VP ( VBN deprived ) ( PP ( IN of ) ( NP ( NP ( DT the ) ( NN capital ) ) ( SBAR ( S ( NP ( PRP it ) ) ( VP ( VBZ needs ) ( S ( VP ( TO to ) ( VP ( VB grow ) ) ) ) ) ) ) ) ) ) ) ) ) ( . . ) ) )
+  </parsetree>
+  <token token="But" lemma="but" pos="CC" ne="O" offset="(660, 662)" index="1"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(664, 666)" index="2"></token>
+  <token token="markets" lemma="market" pos="NNS" ne="O" offset="(668, 674)" index="3"></token>
+  <token token="have" lemma="have" pos="VBP" ne="O" offset="(676, 679)" index="4"></token>
+  <token token="caught" lemma="catch" pos="VBN" ne="O" offset="(681, 686)" index="5"></token>
+  <token token="on" lemma="on" pos="IN" ne="O" offset="(688, 689)" index="6"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(690, 690)" index="7"></token>
+  <token token="and" lemma="and" pos="CC" ne="O" offset="(692, 694)" index="8"></token>
+  <token token="Russia" lemma="Russia" pos="NNP" ne="LOCATION" offset="(696, 701)" index="9"></token>
+  <token token="may" lemma="may" pos="MD" ne="O" offset="(703, 705)" index="10"></token>
+  <token token="be" lemma="be" pos="VB" ne="O" offset="(707, 708)" index="11"></token>
+  <token token="deprived" lemma="deprive" pos="VBN" ne="O" offset="(710, 717)" index="12"></token>
+  <token token="of" lemma="of" pos="IN" ne="O" offset="(719, 720)" index="13"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(722, 724)" index="14"></token>
+  <token token="capital" lemma="capital" pos="NN" ne="O" offset="(726, 732)" index="15"></token>
+  <token token="it" lemma="it" pos="PRP" ne="O" offset="(734, 735)" index="16"></token>
+  <token token="needs" lemma="need" pos="VBZ" ne="O" offset="(737, 741)" index="17"></token>
+  <token token="to" lemma="to" pos="TO" ne="O" offset="(743, 744)" index="18"></token>
+  <token token="grow" lemma="grow" pos="VB" ne="O" offset="(746, 749)" index="19"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(750, 750)" index="20"></token>
+ </sentence>
+ <sentence>
+  <dependency head="ROOT-0" dependent="expect-3" type="root"></dependency>
+  <dependency head="trends-16" dependent="given-13" type="case"></dependency>
+  <dependency head="trends-16" dependent="the-14" type="det"></dependency>
+  <dependency head="trends-16" dependent="current-15" type="amod"></dependency>
+  <dependency head="trends-16" dependent="there-17" type="advmod"></dependency>
+  <dependency head="Blame-22" dependent="over-31" type="compound:prt"></dependency>
+  <dependency head="Blame-22" dependent="trends-16" type="nmod"></dependency>
+  <dependency head="Blame-22" dependent="they-19" type="nsubj"></dependency>
+  <dependency head="Blame-22" dependent="'ll-20" type="aux"></dependency>
+  <dependency head="Blame-22" dependent="just-21" type="advmod"></dependency>
+  <dependency head="Blame-22" dependent="West-24" type="dobj"></dependency>
+  <dependency head="West-24" dependent="them-30" type="acl:relcl"></dependency>
+  <dependency head="West-24" dependent="the-23" type="det"></dependency>
+  <dependency head="screws-29" dependent="plan-28" type="compound"></dependency>
+  <dependency head="screws-29" dependent="their-26" type="nmod:poss"></dependency>
+  <dependency head="screws-29" dependent="screwy-27" type="amod"></dependency>
+  <dependency head="them-30" dependent="screws-29" type="dep"></dependency>
+  <dependency head="them-30" dependent="when-25" type="advmod"></dependency>
+  <dependency head="expect-3" dependent="Do-1" type="aux"></dependency>
+  <dependency head="expect-3" dependent="n't-2" type="neg"></dependency>
+  <dependency head="expect-3" dependent="any-4" type="dobj"></dependency>
+  <dependency head="expect-3" dependent="Blame-22" type="parataxis"></dependency>
+  <dependency head="expect-3" dependent="reverse-10" type="xcomp"></dependency>
+  <dependency head="any-4" dependent="leadership-8" type="nmod"></dependency>
+  <dependency head="leadership-8" dependent="of-5" type="case"></dependency>
+  <dependency head="leadership-8" dependent="the-6" type="det"></dependency>
+  <dependency head="leadership-8" dependent="Russian-7" type="amod"></dependency>
+  <dependency head="reverse-10" dependent="to-9" type="mark"></dependency>
+  <dependency head="reverse-10" dependent="course-11" type="dobj"></dependency>
+  <parsetree>
+   ( ROOT ( S ( S ( VP ( VBP Do ) ( RB n't ) ( VP ( VB expect ) ( NP ( NP ( DT any ) ) ( PP ( IN of ) ( NP ( DT the ) ( JJ Russian ) ( NN leadership ) ) ) ) ( S ( VP ( TO to ) ( VP ( VB reverse ) ( NP ( NN course ) ) ) ) ) ) ) ) ( : ; ) ( S ( PP ( VBN given ) ( NP ( NP ( DT the ) ( JJ current ) ( NNS trends ) ) ( ADVP ( RB there ) ) ) ) ( , , ) ( NP ( PRP they ) ) ( VP ( MD 'll ) ( ADVP ( RB just ) ) ( VP ( VB Blame ) ( NP ( NP ( DT the ) ( NNP West ) ) ( SBAR ( WHADVP ( WRB when ) ) ( S ( NP ( PRP$ their ) ( JJ screwy ) ( NN plan ) ( NNS screws ) ) ( NP ( PRP them ) ) ) ) ) ( PRT ( RP over ) ) ) ) ) ( . . ) ) )
+  </parsetree>
+  <token token="Do" lemma="do" pos="VBP" ne="O" offset="(752, 753)" index="1"></token>
+  <token token="n't" lemma="not" pos="RB" ne="O" offset="(754, 756)" index="2"></token>
+  <token token="expect" lemma="expect" pos="VB" ne="O" offset="(758, 763)" index="3"></token>
+  <token token="any" lemma="any" pos="DT" ne="O" offset="(765, 767)" index="4"></token>
+  <token token="of" lemma="of" pos="IN" ne="O" offset="(769, 770)" index="5"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(772, 774)" index="6"></token>
+  <token token="Russian" lemma="russian" pos="JJ" ne="O" offset="(776, 782)" index="7"></token>
+  <token token="leadership" lemma="leadership" pos="NN" ne="O" offset="(784, 793)" index="8"></token>
+  <token token="to" lemma="to" pos="TO" ne="O" offset="(795, 796)" index="9"></token>
+  <token token="reverse" lemma="reverse" pos="VB" ne="O" offset="(798, 804)" index="10"></token>
+  <token token="course" lemma="course" pos="NN" ne="O" offset="(806, 811)" index="11"></token>
+  <token token=";" lemma=";" pos=":" ne="O" offset="(812, 812)" index="12"></token>
+  <token token="given" lemma="give" pos="VBN" ne="O" offset="(814, 818)" index="13"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(820, 822)" index="14"></token>
+  <token token="current" lemma="current" pos="JJ" ne="O" offset="(824, 830)" index="15"></token>
+  <token token="trends" lemma="trend" pos="NNS" ne="O" offset="(832, 837)" index="16"></token>
+  <token token="there" lemma="there" pos="RB" ne="O" offset="(839, 843)" index="17"></token>
+  <token token="," lemma="," pos="," ne="O" offset="(844, 844)" index="18"></token>
+  <token token="they" lemma="they" pos="PRP" ne="O" offset="(846, 849)" index="19"></token>
+  <token token="'ll" lemma="will" pos="MD" ne="O" offset="(850, 852)" index="20"></token>
+  <token token="just" lemma="just" pos="RB" ne="O" offset="(854, 857)" index="21"></token>
+  <token token="Blame" lemma="blame" pos="VB" ne="O" offset="(859, 863)" index="22"></token>
+  <token token="the" lemma="the" pos="DT" ne="O" offset="(865, 867)" index="23"></token>
+  <token token="West" lemma="West" pos="NNP" ne="O" offset="(869, 872)" index="24"></token>
+  <token token="when" lemma="when" pos="WRB" ne="O" offset="(874, 877)" index="25"></token>
+  <token token="their" lemma="they" pos="PRP$" ne="O" offset="(879, 883)" index="26"></token>
+  <token token="screwy" lemma="screwy" pos="JJ" ne="O" offset="(885, 890)" index="27"></token>
+  <token token="plan" lemma="plan" pos="NN" ne="O" offset="(892, 895)" index="28"></token>
+  <token token="screws" lemma="screw" pos="NNS" ne="O" offset="(897, 902)" index="29"></token>
+  <token token="them" lemma="they" pos="PRP" ne="O" offset="(904, 907)" index="30"></token>
+  <token token="over" lemma="over" pos="RP" ne="O" offset="(909, 912)" index="31"></token>
+  <token token="." lemma="." pos="." ne="O" offset="(913, 913)" index="32"></token>
+ </sentence>
+</doc>
