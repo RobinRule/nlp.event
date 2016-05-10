@@ -18,14 +18,13 @@ public class ACECorpus implements Corpus {
 			rootdir = new File(src);
 
 			doclist = new LinkedList<nlp.corpus.document.ACEDocument>();
+			System.out.println(doclist.size());
 			for(File d : this.getFileList(rootdir))
 				doclist.add(new ACEDocument(d));
 			
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-	}
-	public ACECorpus(){
 	}
 	private LinkedList<File> getFileList(File strPath) {
 		File[] files = strPath.listFiles(); // 该文件目录下文件全部放入数组
@@ -41,6 +40,9 @@ public class ACECorpus implements Corpus {
 		}
 		return filelist;
 	}
+	/* (non-Javadoc)
+	 * @see nlp.corpus.Corpus#nextDocument()
+	 */
 	@Override
 	public Document nextDocument() {
 		// TODO Auto-generated method stub
@@ -59,6 +61,10 @@ public class ACECorpus implements Corpus {
 	public Integer size() {
 		// TODO Auto-generated method stub
 		return this.doclist.size();
+	}
+	@Override
+	public Document getDocByIndex(int index) {
+		return this.doclist.get(index);
 	}
 
 }

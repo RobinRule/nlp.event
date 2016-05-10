@@ -14,43 +14,62 @@ import net.didion.jwnl.data.Word;
 import net.didion.jwnl.dictionary.Dictionary;
 import nlp.annotator.util.AnnotatedToken;
 
-public class WordNet extends Features{
+import nlp.event.Feature.Feature;
 
-	public WordNet(){		
+public class WordNet extends Feature{
+	public Dictionary dict;
+
+	public WordNet(){
+		configureJWordNet();
+		dict = Dictionary.getInstance();
 	}
 	
-	public String getName(){
+	public String getname(){
 		return "WordNet";
 	}
-	
-	public String getValue(AnnotatedToken t) throws JWNLException{
+	public String getValue(AnnotatedToken t){
+		if(t.getIndex().equals(0))	
+			return "-NULL-";
 		String value = "-NULL-";
-		POS wordNetPosTag = tagTransfer(t.getPos());
-		
-		if(!wordNetPosTag.equals(null)){
-			value = getWordNetID(wordNetPosTag, t.getToken());
+		String token = t.getToken();
+		char firstLetter = t.getPos().charAt(0);
+
+		if(firstLetter == 'N'){
+			value = getWordNetID(POS.NOUN, token);
+		} 
+		else if(firstLetter == 'V'){
+			value = getWordNetID(POS.VERB, token);
 		}
+		else if(firstLetter == 'J'){
+			value = getWordNetID(POS.ADJECTIVE, token);
+		}
+		else if (firstLetter == 'R'){
+			value = getWordNetID(POS.ADVERB, token);
+		}else{
+			return "-NULL-";
+		}		
 		return value;
 	}
 	
-	public POS tagTransfer (String posTag){
-		if(posTag.equals("noun")){
-			return POS.NOUN;
-		}else if (posTag.equals("verb")){
-			return POS.VERB;
-		}else if (posTag.equals("adv")){
-			return POS.ADVERB;
-		}else if (posTag.equals("adj")){
-			return POS.ADJECTIVE;
-		}else{
-			return null;
-		}	
-	}
-	
-	private String getWordNetID(POS wordNetPosTag, String token) throws JWNLException{
-		Dictionary dictionary = Dictionary.getInstance();
-		IndexWord word = dictionary.lookupIndexWord(wordNetPosTag, token);
-		Synset[] senses = word.getSenses();
+	private String getWordNetID(POS wordNetPosTag, String token){
+		
+		IndexWord word = null;
+		try {
+			word = dict.lookupIndexWord(wordNetPosTag, token);
+		} catch (JWNLException e) {
+			e.printStackTrace();
+			return "-NULL-";
+		}
+		if (word==null)
+			return "-NULL-";
+		Synset[] senses;
+		try {
+			senses = word.getSenses();
+		} catch (JWNLException e) {
+			e.printStackTrace();
+			return "-NULL-";
+		}
+
 		String firstSenseKey = senses[0].getSenseKey(token);
 		return firstSenseKey;
 	}
@@ -61,8 +80,9 @@ public class WordNet extends Features{
 			JWNL.initialize(new FileInputStream("data/WordNet/property/file_properties.xml"));
 		} catch (Exception ex) {
 			ex.printStackTrace();
-			System.out.println(ex);
+
 			System.exit(-1);
 		}
 	}
+
 }

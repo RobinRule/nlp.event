@@ -2,6 +2,7 @@ package nlp.event.Feature;
 
 import org.jsoup.nodes.Document;
 
+import net.didion.jwnl.JWNLException;
 import nlp.annotator.util.AnnotatedDoc;
 import nlp.annotator.util.AnnotatedSentence;
 import nlp.annotator.util.AnnotatedToken;

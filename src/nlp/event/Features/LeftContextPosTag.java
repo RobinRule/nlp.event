@@ -8,23 +8,31 @@ import edu.stanford.nlp.maxent.Features;
 import nlp.annotator.util.AnnotatedDoc;
 import nlp.annotator.util.AnnotatedSentence;
 import nlp.annotator.util.AnnotatedToken;
+
+import nlp.event.Feature.CompoundFeature;
 import nlp.event.Feature.Feature;
 
-public class LeftContextPosTag extends Features{
+public class LeftContextPosTag extends CompoundFeature{
+
 
 	public LeftContextPosTag() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public String getName(){
-		return "LeftContextPosTag";
-	}
-	
+
 	public String getValue(AnnotatedToken t){
-		AnnotatedSentence s = t.getParent();
-		Iterator it = s.iterator();
 		
-		AnnotatedToken current = (AnnotatedToken) it.next();
+		if(t.getIndex().equals(0))	
+			return "-NULL-:-NULL-:-NULL-";
+	
+		AnnotatedSentence s = t.getParent();
+		Iterator<AnnotatedToken> it = s.iterator();	
+		AnnotatedToken current = it.next();
+		
+		if (current.getIndex().equals(0)) 
+			current = it.next();
+		
+
 		AnnotatedToken first = null;
 		String firstPosTag = "-NULL-";
 		AnnotatedToken second = null;
@@ -34,17 +42,29 @@ public class LeftContextPosTag extends Features{
 		
 		while(!current.equals(t)){
 			third = second;
-			if (!third.equals(null))
+			if (third!= null)
 				thirdPosTag = third.getPos();
 			second = first;
-			if (!second.equals(null))
+			if (second!= null)
 				secPosTag = second.getPos();
 			first = current;
-			if (!first.equals(null))
+			if (first!= null)
 				firstPosTag = first.getPos();
 			current = (AnnotatedToken) it.next();
 		}							
-		return thirdPosTag + secPosTag + firstPosTag;
+		return thirdPosTag.replace(':', '~') + ":" + secPosTag.replace(':', '~') + ":" + firstPosTag.replace(':', '~');
+	}
+
+	@Override
+	public String getMineName() {
+		// TODO Auto-generated method stub
+		return "LeftContextPosTag";
+	}
+
+	@Override
+	public String getname() {
+		// TODO Auto-generated method stub
+		return "LCPT3:LCPT2:LCPT1";
 	}
 	
 	

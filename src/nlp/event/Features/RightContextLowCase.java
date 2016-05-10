@@ -1,36 +1,36 @@
 package nlp.event.Features;
 
-import java.io.IOException;
+
 import java.util.Iterator;
 
-import edu.stanford.nlp.maxent.Features;
-import nlp.annotator.pipeline.AnnotateAutomator;
-import nlp.annotator.util.AnnotatedDoc;
 import nlp.annotator.util.AnnotatedSentence;
 import nlp.annotator.util.AnnotatedToken;
-import nlp.corpus.ACECorpus;
+import nlp.event.Feature.CompoundFeature;
 
-public class RightContextLowCase {
+public class RightContextLowCase extends CompoundFeature{
 
 	public RightContextLowCase() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public String getName(){
-		return "RightContextLowerCase";
-	}
-	
 	public String getValue(AnnotatedToken t){
-		AnnotatedSentence s = t.getParent();		
-		Iterator it = s.iterator();
 		
-		AnnotatedToken current = (AnnotatedToken) it.next();
+		if(t.getIndex().equals(0))	
+			return "-NULL-:-NULL-:-NULL-";
+		
+		AnnotatedSentence s = t.getParent();		
+		Iterator<AnnotatedToken> it = s.iterator();
+		
+		AnnotatedToken current = it.next();
+		if (current.getIndex().equals(0)) 
+			current = it.next();
+		
 		AnnotatedToken first = null;
-		String firstLC = "*";
+		String firstLC = "-NULL-";
 		AnnotatedToken second = null;
-		String secLC = "*";
+		String secLC = "-NULL-";
 		AnnotatedToken third = null;
-		String thirdLC = "*";
+		String thirdLC = "-NULL-";
 		
 		while (!current.equals(t)){
 			current = (AnnotatedToken) it.next();	
@@ -48,16 +48,18 @@ public class RightContextLowCase {
 				}
 			}
 		}
-		return firstLC + secLC + thirdLC;
+		return firstLC.replace(':', '~') + ":" + secLC.replace(':', '~') + ":" + thirdLC.replace(':', '~');
 	}
-	
-	public static void main (String [] args) throws ClassNotFoundException, IOException{
-		AnnotateAutomator aAutomator = new AnnotateAutomator(null, true);
-		aAutomator.setCorpus(new ACECorpus("./data/ACE/"));
-		aAutomator.annotate();
-		AnnotatedDoc aDoc = aAutomator.getAnnotatedDoc();
-		AnnotatedSentence aSen = new AnnotatedSentence(aDoc);
-		AnnotatedToken aToken = new AnnotatedToken("test", aSen);
-		
+
+	@Override
+	public String getMineName() {
+		// TODO Auto-generated method stub
+		return "RightContextLowerCase";
+	}
+
+	@Override
+	public String getname() {
+		// TODO Auto-generated method stub
+		return "RCLC1:RCLC2:RCLC3";
 	}
 }

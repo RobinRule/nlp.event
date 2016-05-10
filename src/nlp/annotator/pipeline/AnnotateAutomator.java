@@ -29,7 +29,7 @@ public class AnnotateAutomator {
 		this.pipe = new Pipeline();
 		this.corpus = corpus;
 		this.AnnotateLevel = doc;
-		//logger = new MyLogger();
+		this.aCorpus = new LinkedList<AnnotatedDoc>();
 	}
 	/**
 	 * @param sentence set the annotation process as doc by doc
@@ -39,6 +39,7 @@ public class AnnotateAutomator {
 	public AnnotateAutomator(Boolean doc) throws ClassNotFoundException, IOException {
 		this.pipe = new Pipeline();
 		this.AnnotateLevel = doc;
+		this.aCorpus = new LinkedList<AnnotatedDoc>();
 	}
 	public void setCorpus(Corpus corpus){
 		this.corpus = corpus;
@@ -51,13 +52,16 @@ public class AnnotateAutomator {
 	 * only annotate one document at a time
 	 * @return true if success, false if failed. Failed situation including no more unannotated document when
 	 * annotateLeve == true or corpus waiting to be annotate is empty.
+	 * @throws IOException 
 	 */
-	public Boolean annotate(){
+	public Boolean annotate() throws IOException{
 		log.info("Start to annotate.");
 		if(this.AnnotateLevel){
 			log.info("Work in doc level.");
-			if(!corpus.empty())
+			if(!corpus.empty()){
 				this.aDoc_now = this.pipe.annotate(this.corpus.nextDocument());
+				this.aCorpus.add(this.aDoc_now);
+				}
 			else{
 				log.info("Fail to annotate.");
 				return false;
@@ -71,11 +75,11 @@ public class AnnotateAutomator {
 		log.info("Annotate Finished.");
 		return true;
 	}
-	/**return the whole annotated corpus, works only when annotate has been executed and AnnotateLevel is false.
+	/**return the whole annotated corpus, works only when annotate has been executed..
 	 * @return the whole annotated corpus
 	 */
 	public LinkedList<AnnotatedDoc> getaCorpus(){
-		if(!this.AnnotateLevel && corpus.empty())
+		if(corpus.empty())
 			return aCorpus;
 		return null;
 	}

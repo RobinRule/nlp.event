@@ -2,25 +2,31 @@ package nlp.event.Features;
 
 import java.util.Iterator;
 
-import edu.stanford.nlp.maxent.Features;
+
 import nlp.annotator.util.AnnotatedSentence;
 import nlp.annotator.util.AnnotatedToken;
+import nlp.event.Feature.CompoundFeature;
 
-public class RightContextPosTag extends Features{
+public class RightContextPosTag extends CompoundFeature{
+
 
 	public RightContextPosTag() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public String getName(){
-		return "RightContextPosTag";
-	}
+
 	
 	public String getValue(AnnotatedToken t){
-		AnnotatedSentence s = t.getParent();		
-		Iterator it = s.iterator();
+		if(t.getIndex().equals(0))	
+			return "-NULL-:-NULL-:-NULL-";
 		
-		AnnotatedToken current = (AnnotatedToken) it.next();
+		AnnotatedSentence s = t.getParent();		
+		Iterator<AnnotatedToken> it = s.iterator();
+		
+		AnnotatedToken current = it.next();
+		if (current.getIndex().equals(0)) 
+			current = it.next();
+		
 		AnnotatedToken first = null;
 		String firstPosTag = "-NULL-";
 		AnnotatedToken second = null;
@@ -45,7 +51,21 @@ public class RightContextPosTag extends Features{
 			}
 		}
 		
-		return firstPosTag + secPosTag + thirdPosTag;
+
+		return firstPosTag.replace(':', '~') + ":" + secPosTag.replace(':', '~') + ":" + thirdPosTag.replace(':', '~');
+	}
+
+	@Override
+	public String getMineName() {
+		// TODO Auto-generated method stub
+		return "RightContextPosTag";
+	}
+
+	@Override
+	public String getname() {
+		// TODO Auto-generated method stub
+		return "RCPT1:PCPT2:RCPT3";
+
 	}
 
 }

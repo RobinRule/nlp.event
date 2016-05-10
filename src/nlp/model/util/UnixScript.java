@@ -24,7 +24,7 @@ public class UnixScript {
 	public UnixScript(String f) throws IOException{
 		this.pre = f;
 		pB = new ProcessBuilder();
-		pB.directory(new File("/Users/Robin/Documents/Program/EclipseWorkSpace/EventExtractor"));
+		pB.directory(new File("./"));
 		//pB.redirectOutput(new File("/Users/Robin/Documents/Program/EclipseWorkSpace/EventExtractor/out"));
 		//pB.redirectError(new File("/Users/Robin/Documents/Program/EclipseWorkSpace/EventExtractor/err"));
 		stdout = new StringBuilder();

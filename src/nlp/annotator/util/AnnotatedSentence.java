@@ -7,20 +7,25 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
+import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.ling.IndexedWord;
 import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TypedDependency;
+import edu.stanford.nlp.util.CoreMap;
+import nlp.annotator.util.entity.EntityMention;
 
 public class AnnotatedSentence implements Iterable<AnnotatedToken>{
 	private ArrayList<AnnotatedToken> tokenlist;
 	private AnnotatedDoc parent;
 	private LinkedList<MyDependency> deplist;
+	private ArrayList<EntityMention> mentions;
 	private MyTree parsetree;
-	
+	private CoreMap annotation;
 	public AnnotatedSentence(AnnotatedDoc p) {
 		this.parent = p;
-		tokenlist = new ArrayList<AnnotatedToken>();
+		this.tokenlist = new ArrayList<AnnotatedToken>();
 		this.deplist = new LinkedList<MyDependency>();
+		this.mentions = new ArrayList<EntityMention>();
 		AnnotatedToken root = new AnnotatedToken("ROOT",this);
 		root.setIndex(0);
 		tokenlist.add(root);
@@ -28,11 +33,18 @@ public class AnnotatedSentence implements Iterable<AnnotatedToken>{
 	}
 	public AnnotatedSentence() {
 		this.parent = null;
-		tokenlist = new ArrayList<AnnotatedToken>();
+		this.tokenlist = new ArrayList<AnnotatedToken>();
 		this.deplist = new LinkedList<MyDependency>();
+		this.mentions = new ArrayList<EntityMention>();
 		AnnotatedToken root = new AnnotatedToken("ROOT",this);
 		root.setIndex(0);
 		tokenlist.add(root);
+	}
+	public ArrayList<EntityMention> getMentions(){
+		return this.mentions;
+	}
+	public Boolean add(EntityMention em){
+		return this.mentions.add(em);
 	}
 	public Boolean add(AnnotatedToken token){
 		token.setParent(this);
@@ -143,5 +155,14 @@ public class AnnotatedSentence implements Iterable<AnnotatedToken>{
 				i++;
 		}
 		this.setParseTree(q.getFirst());
+	}
+	public Integer size(){
+		return this.tokenlist.size();
+	}
+	public CoreMap getAnnotation() {
+		return annotation;
+	}
+	public void setAnnotation(CoreMap annotation) {
+		this.annotation = annotation;
 	}
 }

@@ -18,4 +18,28 @@ public class Megam implements Model {
 		
 	}
 
+	@Override
+	public Float getRecall() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Float getPrecision() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Float getAccuracy() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Float getFvalue(int b) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
